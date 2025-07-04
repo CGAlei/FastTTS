@@ -1,0 +1,4157 @@
+[
+  {
+    "word": "焦虑",
+    "timestamp": 90,
+    "isInDB": true
+  },
+  {
+    "word": "这个",
+    "timestamp": 800,
+    "isInDB": false
+  },
+  {
+    "word": "词",
+    "timestamp": 990,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 1380,
+    "isInDB": false
+  },
+  {
+    "word": "现代",
+    "timestamp": 1570,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 1980,
+    "isInDB": false
+  },
+  {
+    "word": "中",
+    "timestamp": 2290,
+    "isInDB": false
+  },
+  {
+    "word": "频频",
+    "timestamp": 2500,
+    "isInDB": false
+  },
+  {
+    "word": "出现",
+    "timestamp": 3060,
+    "isInDB": false
+  },
+  {
+    "word": "几乎",
+    "timestamp": 3880,
+    "isInDB": false
+  },
+  {
+    "word": "成",
+    "timestamp": 4290,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 4480,
+    "isInDB": false
+  },
+  {
+    "word": "每个",
+    "timestamp": 4820,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 4910,
+    "isInDB": false
+  },
+  {
+    "word": "心头",
+    "timestamp": 5150,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 5620,
+    "isInDB": false
+  },
+  {
+    "word": "阴影",
+    "timestamp": 5700,
+    "isInDB": false
+  },
+  {
+    "word": "尤其是",
+    "timestamp": 6690,
+    "isInDB": false
+  },
+  {
+    "word": "那种",
+    "timestamp": 7270,
+    "isInDB": false
+  },
+  {
+    "word": "茫然",
+    "timestamp": 7420,
+    "isInDB": true
+  },
+  {
+    "word": "中",
+    "timestamp": 8189.999999999999,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 8370,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 8430,
+    "isInDB": true
+  },
+  {
+    "word": "它",
+    "timestamp": 9250,
+    "isInDB": false
+  },
+  {
+    "word": "不是",
+    "timestamp": 9380,
+    "isInDB": false
+  },
+  {
+    "word": "简单",
+    "timestamp": 9710,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 9970,
+    "isInDB": false
+  },
+  {
+    "word": "压力",
+    "timestamp": 10050,
+    "isInDB": false
+  },
+  {
+    "word": "或",
+    "timestamp": 11210,
+    "isInDB": false
+  },
+  {
+    "word": "困惑",
+    "timestamp": 11460,
+    "isInDB": true
+  },
+  {
+    "word": "而是",
+    "timestamp": 11740,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 12020,
+    "isInDB": false
+  },
+  {
+    "word": "种",
+    "timestamp": 12120,
+    "isInDB": false
+  },
+  {
+    "word": "深深",
+    "timestamp": 12880,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 13300,
+    "isInDB": false
+  },
+  {
+    "word": "无力感",
+    "timestamp": 13530,
+    "isInDB": false
+  },
+  {
+    "word": "仿佛",
+    "timestamp": 14090,
+    "isInDB": true
+  },
+  {
+    "word": "站",
+    "timestamp": 14610,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 14840,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 14990,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 15440,
+    "isInDB": false
+  },
+  {
+    "word": "十字路口",
+    "timestamp": 15530,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 16660,
+    "isInDB": false
+  },
+  {
+    "word": "看",
+    "timestamp": 16790,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 17070,
+    "isInDB": false
+  },
+  {
+    "word": "到",
+    "timestamp": 17160,
+    "isInDB": false
+  },
+  {
+    "word": "任何",
+    "timestamp": 17310,
+    "isInDB": false
+  },
+  {
+    "word": "明确",
+    "timestamp": 17890,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 18380,
+    "isInDB": false
+  },
+  {
+    "word": "方向",
+    "timestamp": 18440,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 19360,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 19500,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 19620,
+    "isInDB": false
+  },
+  {
+    "word": "过",
+    "timestamp": 20000,
+    "isInDB": false
+  },
+  {
+    "word": "这样",
+    "timestamp": 20200,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 20250,
+    "isInDB": false
+  },
+  {
+    "word": "时刻",
+    "timestamp": 20320,
+    "isInDB": false
+  },
+  {
+    "word": "早上",
+    "timestamp": 21260,
+    "isInDB": false
+  },
+  {
+    "word": "醒来",
+    "timestamp": 21410,
+    "isInDB": false
+  },
+  {
+    "word": "心里",
+    "timestamp": 21820,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 22460,
+    "isInDB": false
+  },
+  {
+    "word": "纠结",
+    "timestamp": 23070,
+    "isInDB": true
+  },
+  {
+    "word": "着",
+    "timestamp": 23490,
+    "isInDB": false
+  },
+  {
+    "word": "我",
+    "timestamp": 23830,
+    "isInDB": false
+  },
+  {
+    "word": "要",
+    "timestamp": 23990,
+    "isInDB": false
+  },
+  {
+    "word": "做",
+    "timestamp": 24150,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 24440,
+    "isInDB": false
+  },
+  {
+    "word": "这种",
+    "timestamp": 25310,
+    "isInDB": false
+  },
+  {
+    "word": "感觉",
+    "timestamp": 25590,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 26100,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 26380,
+    "isInDB": false
+  },
+  {
+    "word": "烦躁",
+    "timestamp": 26530,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 27480,
+    "isInDB": false
+  },
+  {
+    "word": "又",
+    "timestamp": 27650,
+    "isInDB": false
+  },
+  {
+    "word": "无可奈何",
+    "timestamp": 27810,
+    "isInDB": false
+  },
+  {
+    "word": "为什么",
+    "timestamp": 28510,
+    "isInDB": false
+  },
+  {
+    "word": "会",
+    "timestamp": 29310,
+    "isInDB": false
+  },
+  {
+    "word": "这样",
+    "timestamp": 29830,
+    "isInDB": false
+  },
+  {
+    "word": "呢",
+    "timestamp": 30450,
+    "isInDB": false
+  },
+  {
+    "word": "其实",
+    "timestamp": 30800,
+    "isInDB": false
+  },
+  {
+    "word": "这种",
+    "timestamp": 31590,
+    "isInDB": false
+  },
+  {
+    "word": "茫然",
+    "timestamp": 32170,
+    "isInDB": true
+  },
+  {
+    "word": "正是",
+    "timestamp": 32439.999999999996,
+    "isInDB": false
+  },
+  {
+    "word": "源自",
+    "timestamp": 32780,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 33310,
+    "isInDB": false
+  },
+  {
+    "word": "所",
+    "timestamp": 33550,
+    "isInDB": false
+  },
+  {
+    "word": "处",
+    "timestamp": 33810,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 33960,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 34040,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 34650,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 34870,
+    "isInDB": false
+  },
+  {
+    "word": "节奏",
+    "timestamp": 35600,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 35880,
+    "isInDB": false
+  },
+  {
+    "word": "剧烈",
+    "timestamp": 35960,
+    "isInDB": false
+  },
+  {
+    "word": "变化",
+    "timestamp": 36390,
+    "isInDB": false
+  },
+  {
+    "word": "过去",
+    "timestamp": 37200,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 37530,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 37590,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 38120,
+    "isInDB": false
+  },
+  {
+    "word": "物质",
+    "timestamp": 38630,
+    "isInDB": false
+  },
+  {
+    "word": "匮乏",
+    "timestamp": 39010,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 39540,
+    "isInDB": false
+  },
+  {
+    "word": "有着",
+    "timestamp": 39720,
+    "isInDB": false
+  },
+  {
+    "word": "清晰",
+    "timestamp": 39910,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 40860,
+    "isInDB": false
+  },
+  {
+    "word": "轨迹",
+    "timestamp": 41320,
+    "isInDB": false
+  },
+  {
+    "word": "人们",
+    "timestamp": 41430,
+    "isInDB": false
+  },
+  {
+    "word": "知道",
+    "timestamp": 41530,
+    "isInDB": false
+  },
+  {
+    "word": "明天",
+    "timestamp": 42250,
+    "isInDB": false
+  },
+  {
+    "word": "该",
+    "timestamp": 42390,
+    "isInDB": false
+  },
+  {
+    "word": "干什么",
+    "timestamp": 42700,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 43290,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 43770,
+    "isInDB": false
+  },
+  {
+    "word": "艰苦",
+    "timestamp": 44300,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 44960,
+    "isInDB": false
+  },
+  {
+    "word": "心中",
+    "timestamp": 45130,
+    "isInDB": false
+  },
+  {
+    "word": "有着",
+    "timestamp": 45380,
+    "isInDB": false
+  },
+  {
+    "word": "稳定",
+    "timestamp": 45720,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 46230,
+    "isInDB": false
+  },
+  {
+    "word": "信仰",
+    "timestamp": 46320,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 46860,
+    "isInDB": false
+  },
+  {
+    "word": "秩序",
+    "timestamp": 47040,
+    "isInDB": true
+  },
+  {
+    "word": "而",
+    "timestamp": 47760,
+    "isInDB": false
+  },
+  {
+    "word": "今天",
+    "timestamp": 47880,
+    "isInDB": false
+  },
+  {
+    "word": "这种",
+    "timestamp": 48760,
+    "isInDB": false
+  },
+  {
+    "word": "旧",
+    "timestamp": 49080,
+    "isInDB": false
+  },
+  {
+    "word": "秩序",
+    "timestamp": 49290,
+    "isInDB": true
+  },
+  {
+    "word": "崩溃",
+    "timestamp": 49560,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 50050,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 50400,
+    "isInDB": false
+  },
+  {
+    "word": "新",
+    "timestamp": 50580,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 50790,
+    "isInDB": false
+  },
+  {
+    "word": "价值",
+    "timestamp": 50850,
+    "isInDB": false
+  },
+  {
+    "word": "体系",
+    "timestamp": 51260,
+    "isInDB": true
+  },
+  {
+    "word": "尚未",
+    "timestamp": 51670,
+    "isInDB": false
+  },
+  {
+    "word": "建立",
+    "timestamp": 52090,
+    "isInDB": false
+  },
+  {
+    "word": "这就",
+    "timestamp": 52600,
+    "isInDB": false
+  },
+  {
+    "word": "像",
+    "timestamp": 52820,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 53140,
+    "isInDB": false
+  },
+  {
+    "word": "座",
+    "timestamp": 53350,
+    "isInDB": false
+  },
+  {
+    "word": "建筑物",
+    "timestamp": 53530,
+    "isInDB": false
+  },
+  {
+    "word": "旧",
+    "timestamp": 53790,
+    "isInDB": false
+  },
+  {
+    "word": "基座",
+    "timestamp": 54630,
+    "isInDB": false
+  },
+  {
+    "word": "崩塌",
+    "timestamp": 55100,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 55390,
+    "isInDB": false
+  },
+  {
+    "word": "新",
+    "timestamp": 55610,
+    "isInDB": false
+  },
+  {
+    "word": "基座",
+    "timestamp": 56390,
+    "isInDB": false
+  },
+  {
+    "word": "还",
+    "timestamp": 57220,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 57350,
+    "isInDB": false
+  },
+  {
+    "word": "建设",
+    "timestamp": 57510,
+    "isInDB": false
+  },
+  {
+    "word": "中",
+    "timestamp": 57860,
+    "isInDB": false
+  },
+  {
+    "word": "人们",
+    "timestamp": 58630,
+    "isInDB": false
+  },
+  {
+    "word": "只能",
+    "timestamp": 59030,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 59170,
+    "isInDB": false
+  },
+  {
+    "word": "废墟",
+    "timestamp": 59310,
+    "isInDB": true
+  },
+  {
+    "word": "上",
+    "timestamp": 59840,
+    "isInDB": false
+  },
+  {
+    "word": "徘徊",
+    "timestamp": 60050,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 60910,
+    "isInDB": true
+  },
+  {
+    "word": "自然",
+    "timestamp": 61340,
+    "isInDB": false
+  },
+  {
+    "word": "随之而来",
+    "timestamp": 61750,
+    "isInDB": false
+  },
+  {
+    "word": "回顾",
+    "timestamp": 61990,
+    "isInDB": false
+  },
+  {
+    "word": "过去",
+    "timestamp": 62710,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 63350,
+    "isInDB": false
+  },
+  {
+    "word": "岁月",
+    "timestamp": 63420,
+    "isInDB": false
+  },
+  {
+    "word": "物质",
+    "timestamp": 64180.00000000001,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 64360,
+    "isInDB": false
+  },
+  {
+    "word": "匮乏",
+    "timestamp": 64459.99999999999,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 65420,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 65960,
+    "isInDB": false
+  },
+  {
+    "word": "简单",
+    "timestamp": 66040,
+    "isInDB": false
+  },
+  {
+    "word": "构成",
+    "timestamp": 66340,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 66810,
+    "isInDB": false
+  },
+  {
+    "word": "稳定",
+    "timestamp": 66990,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 67460,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 67570,
+    "isInDB": false
+  },
+  {
+    "word": "节奏",
+    "timestamp": 67780,
+    "isInDB": false
+  },
+  {
+    "word": "那时候",
+    "timestamp": 67890,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 68080,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 68270,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 68970,
+    "isInDB": false
+  },
+  {
+    "word": "吃",
+    "timestamp": 70340,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 70950,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 71040,
+    "isInDB": false
+  },
+  {
+    "word": "好",
+    "timestamp": 71220,
+    "isInDB": false
+  },
+  {
+    "word": "住",
+    "timestamp": 71870,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 72040,
+    "isInDB": false
+  },
+  {
+    "word": "简陋",
+    "timestamp": 72120,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 72960,
+    "isInDB": false
+  },
+  {
+    "word": "至少",
+    "timestamp": 73130,
+    "isInDB": false
+  },
+  {
+    "word": "对",
+    "timestamp": 73430,
+    "isInDB": false
+  },
+  {
+    "word": "未来",
+    "timestamp": 73850,
+    "isInDB": false
+  },
+  {
+    "word": "并没有",
+    "timestamp": 74390,
+    "isInDB": false
+  },
+  {
+    "word": "太",
+    "timestamp": 74850,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 75080,
+    "isInDB": false
+  },
+  {
+    "word": "迷茫",
+    "timestamp": 75230,
+    "isInDB": true
+  },
+  {
+    "word": "生活",
+    "timestamp": 76220,
+    "isInDB": false
+  },
+  {
+    "word": "本来",
+    "timestamp": 76680,
+    "isInDB": false
+  },
+  {
+    "word": "就是",
+    "timestamp": 77090,
+    "isInDB": false
+  },
+  {
+    "word": "这样",
+    "timestamp": 77400,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 78080,
+    "isInDB": false
+  },
+  {
+    "word": "太",
+    "timestamp": 78390,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 78590,
+    "isInDB": false
+  },
+  {
+    "word": "选择",
+    "timestamp": 79010,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 79520,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 79690,
+    "isInDB": false
+  },
+  {
+    "word": "太",
+    "timestamp": 80070,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 80300,
+    "isInDB": false
+  },
+  {
+    "word": "诱惑",
+    "timestamp": 81370,
+    "isInDB": false
+  },
+  {
+    "word": "起码",
+    "timestamp": 81510,
+    "isInDB": false
+  },
+  {
+    "word": "信仰",
+    "timestamp": 81780,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 82430,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 82520,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 82760,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 82990,
+    "isInDB": false
+  },
+  {
+    "word": "活",
+    "timestamp": 83110,
+    "isInDB": false
+  },
+  {
+    "word": "下去",
+    "timestamp": 83390,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 83790,
+    "isInDB": false
+  },
+  {
+    "word": "力量",
+    "timestamp": 83860,
+    "isInDB": false
+  },
+  {
+    "word": "这",
+    "timestamp": 84870,
+    "isInDB": false
+  },
+  {
+    "word": "是否",
+    "timestamp": 84960,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 85260,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 85400,
+    "isInDB": false
+  },
+  {
+    "word": "想起",
+    "timestamp": 85540,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 85950,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 86040,
+    "isInDB": false
+  },
+  {
+    "word": "曾经",
+    "timestamp": 86350,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 86730,
+    "isInDB": false
+  },
+  {
+    "word": "童年",
+    "timestamp": 86810,
+    "isInDB": false
+  },
+  {
+    "word": "或者",
+    "timestamp": 87380,
+    "isInDB": false
+  },
+  {
+    "word": "父辈们",
+    "timestamp": 87680,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 87970,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 88140,
+    "isInDB": false
+  },
+  {
+    "word": "呢",
+    "timestamp": 88240,
+    "isInDB": false
+  },
+  {
+    "word": "他们",
+    "timestamp": 88330,
+    "isInDB": false
+  },
+  {
+    "word": "或许",
+    "timestamp": 89430,
+    "isInDB": true
+  },
+  {
+    "word": "也",
+    "timestamp": 89950,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 90140,
+    "isInDB": false
+  },
+  {
+    "word": "过",
+    "timestamp": 90340,
+    "isInDB": false
+  },
+  {
+    "word": "压力",
+    "timestamp": 90820,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 91260,
+    "isInDB": false
+  },
+  {
+    "word": "那",
+    "timestamp": 91430,
+    "isInDB": false
+  },
+  {
+    "word": "压力",
+    "timestamp": 91500,
+    "isInDB": false
+  },
+  {
+    "word": "更",
+    "timestamp": 92030,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 92240,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 92460,
+    "isInDB": false
+  },
+  {
+    "word": "对",
+    "timestamp": 92640,
+    "isInDB": false
+  },
+  {
+    "word": "现实",
+    "timestamp": 93220,
+    "isInDB": true
+  },
+  {
+    "word": "环境",
+    "timestamp": 93290,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 93800,
+    "isInDB": false
+  },
+  {
+    "word": "适应",
+    "timestamp": 93870,
+    "isInDB": false
+  },
+  {
+    "word": "而",
+    "timestamp": 94670,
+    "isInDB": false
+  },
+  {
+    "word": "非",
+    "timestamp": 94890,
+    "isInDB": false
+  },
+  {
+    "word": "对",
+    "timestamp": 95170,
+    "isInDB": false
+  },
+  {
+    "word": "未来",
+    "timestamp": 95630,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 95840,
+    "isInDB": false
+  },
+  {
+    "word": "迷茫",
+    "timestamp": 95940,
+    "isInDB": true
+  },
+  {
+    "word": "和",
+    "timestamp": 96470,
+    "isInDB": false
+  },
+  {
+    "word": "怀疑",
+    "timestamp": 96640,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 96850,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 96990,
+    "isInDB": false
+  },
+  {
+    "word": "目标",
+    "timestamp": 97310,
+    "isInDB": false
+  },
+  {
+    "word": "简单",
+    "timestamp": 98470,
+    "isInDB": false
+  },
+  {
+    "word": "明了",
+    "timestamp": 99450,
+    "isInDB": false
+  },
+  {
+    "word": "朝九晚五",
+    "timestamp": 99730,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 100240,
+    "isInDB": false
+  },
+  {
+    "word": "工作",
+    "timestamp": 100310,
+    "isInDB": false
+  },
+  {
+    "word": "围绕",
+    "timestamp": 100610,
+    "isInDB": false
+  },
+  {
+    "word": "家庭",
+    "timestamp": 101010,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 101760,
+    "isInDB": false
+  },
+  {
+    "word": "孩子",
+    "timestamp": 101930,
+    "isInDB": false
+  },
+  {
+    "word": "展开",
+    "timestamp": 102200,
+    "isInDB": false
+  },
+  {
+    "word": "大家",
+    "timestamp": 102550,
+    "isInDB": false
+  },
+  {
+    "word": "都",
+    "timestamp": 103290,
+    "isInDB": false
+  },
+  {
+    "word": "按部就班",
+    "timestamp": 104080,
+    "isInDB": false
+  },
+  {
+    "word": "地",
+    "timestamp": 104410,
+    "isInDB": false
+  },
+  {
+    "word": "活",
+    "timestamp": 104470,
+    "isInDB": false
+  },
+  {
+    "word": "着",
+    "timestamp": 104840,
+    "isInDB": false
+  },
+  {
+    "word": "难道",
+    "timestamp": 105260,
+    "isInDB": false
+  },
+  {
+    "word": "这种",
+    "timestamp": 105570,
+    "isInDB": false
+  },
+  {
+    "word": "单调",
+    "timestamp": 105740,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 105970,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 106100,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 106950,
+    "isInDB": false
+  },
+  {
+    "word": "价值",
+    "timestamp": 107590,
+    "isInDB": false
+  },
+  {
+    "word": "吗",
+    "timestamp": 107940,
+    "isInDB": false
+  },
+  {
+    "word": "事实上",
+    "timestamp": 108770,
+    "isInDB": false
+  },
+  {
+    "word": "这种",
+    "timestamp": 109280,
+    "isInDB": false
+  },
+  {
+    "word": "稳定",
+    "timestamp": 109780,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 110330,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 110420,
+    "isInDB": false
+  },
+  {
+    "word": "方式",
+    "timestamp": 110690,
+    "isInDB": false
+  },
+  {
+    "word": "即使",
+    "timestamp": 111800,
+    "isInDB": false
+  },
+  {
+    "word": "单调",
+    "timestamp": 112260,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 112510,
+    "isInDB": false
+  },
+  {
+    "word": "给予",
+    "timestamp": 112960,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 113880,
+    "isInDB": false
+  },
+  {
+    "word": "人们",
+    "timestamp": 114120,
+    "isInDB": false
+  },
+  {
+    "word": "归属感",
+    "timestamp": 114480,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 114810,
+    "isInDB": false
+  },
+  {
+    "word": "方向感",
+    "timestamp": 115010,
+    "isInDB": false
+  },
+  {
+    "word": "这是",
+    "timestamp": 116080,
+    "isInDB": false
+  },
+  {
+    "word": "现代人",
+    "timestamp": 116580,
+    "isInDB": false
+  },
+  {
+    "word": "普遍",
+    "timestamp": 116990,
+    "isInDB": false
+  },
+  {
+    "word": "缺失",
+    "timestamp": 117510,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 118050,
+    "isInDB": false
+  },
+  {
+    "word": "然而",
+    "timestamp": 118660,
+    "isInDB": false
+  },
+  {
+    "word": "时代",
+    "timestamp": 119410,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 119880,
+    "isInDB": false
+  },
+  {
+    "word": "变迁",
+    "timestamp": 119970,
+    "isInDB": false
+  },
+  {
+    "word": "带来",
+    "timestamp": 120570,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 120950,
+    "isInDB": false
+  },
+  {
+    "word": "彻底",
+    "timestamp": 120990,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 121260,
+    "isInDB": false
+  },
+  {
+    "word": "突破",
+    "timestamp": 121410,
+    "isInDB": true
+  },
+  {
+    "word": "和",
+    "timestamp": 122090,
+    "isInDB": false
+  },
+  {
+    "word": "颠覆",
+    "timestamp": 122290,
+    "isInDB": false
+  },
+  {
+    "word": "八",
+    "timestamp": 123410,
+    "isInDB": false
+  },
+  {
+    "word": "十",
+    "timestamp": 123570,
+    "isInDB": false
+  },
+  {
+    "word": "年代",
+    "timestamp": 123700,
+    "isInDB": false
+  },
+  {
+    "word": "改革",
+    "timestamp": 124060,
+    "isInDB": false
+  },
+  {
+    "word": "开放",
+    "timestamp": 124340,
+    "isInDB": false
+  },
+  {
+    "word": "之后",
+    "timestamp": 124730,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 125370,
+    "isInDB": false
+  },
+  {
+    "word": "方式",
+    "timestamp": 125720,
+    "isInDB": false
+  },
+  {
+    "word": "迅速",
+    "timestamp": 126170,
+    "isInDB": false
+  },
+  {
+    "word": "多元化",
+    "timestamp": 126720,
+    "isInDB": false
+  },
+  {
+    "word": "人们",
+    "timestamp": 127700,
+    "isInDB": false
+  },
+  {
+    "word": "开始",
+    "timestamp": 127890,
+    "isInDB": false
+  },
+  {
+    "word": "拼命",
+    "timestamp": 128270.00000000001,
+    "isInDB": false
+  },
+  {
+    "word": "赚钱",
+    "timestamp": 128850,
+    "isInDB": false
+  },
+  {
+    "word": "逐渐",
+    "timestamp": 129699.99999999999,
+    "isInDB": true
+  },
+  {
+    "word": "形成",
+    "timestamp": 130060,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 130470,
+    "isInDB": false
+  },
+  {
+    "word": "赚钱",
+    "timestamp": 130610.00000000001,
+    "isInDB": false
+  },
+  {
+    "word": "就是",
+    "timestamp": 131230,
+    "isInDB": false
+  },
+  {
+    "word": "信仰",
+    "timestamp": 131540,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 132110,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 132180,
+    "isInDB": false
+  },
+  {
+    "word": "主流",
+    "timestamp": 132560,
+    "isInDB": true
+  },
+  {
+    "word": "这种",
+    "timestamp": 133400,
+    "isInDB": false
+  },
+  {
+    "word": "转变",
+    "timestamp": 133700,
+    "isInDB": true
+  },
+  {
+    "word": "让",
+    "timestamp": 133950,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 134380,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 134670,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 134810,
+    "isInDB": false
+  },
+  {
+    "word": "看到",
+    "timestamp": 135010,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 135420,
+    "isInDB": false
+  },
+  {
+    "word": "希望",
+    "timestamp": 135670,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 136230,
+    "isInDB": false
+  },
+  {
+    "word": "体验",
+    "timestamp": 136400,
+    "isInDB": false
+  },
+  {
+    "word": "到",
+    "timestamp": 136850,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 137020,
+    "isInDB": false
+  },
+  {
+    "word": "前所未有",
+    "timestamp": 137100,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 137990,
+    "isInDB": false
+  },
+  {
+    "word": "自由",
+    "timestamp": 138150,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 138610,
+    "isInDB": false
+  },
+  {
+    "word": "可能性",
+    "timestamp": 138800,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 139830,
+    "isInDB": false
+  },
+  {
+    "word": "同时",
+    "timestamp": 140000,
+    "isInDB": false
+  },
+  {
+    "word": "这样",
+    "timestamp": 140500,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 140770,
+    "isInDB": false
+  },
+  {
+    "word": "目标",
+    "timestamp": 140870,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 141440,
+    "isInDB": false
+  },
+  {
+    "word": "明确",
+    "timestamp": 141690,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 141740,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 142580,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 142900,
+    "isInDB": false
+  },
+  {
+    "word": "陷入",
+    "timestamp": 143100,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 143520,
+    "isInDB": false
+  },
+  {
+    "word": "另",
+    "timestamp": 143610,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 143820,
+    "isInDB": false
+  },
+  {
+    "word": "种",
+    "timestamp": 143930,
+    "isInDB": false
+  },
+  {
+    "word": "困境",
+    "timestamp": 144120,
+    "isInDB": true
+  },
+  {
+    "word": "竞争",
+    "timestamp": 145190,
+    "isInDB": false
+  },
+  {
+    "word": "激烈",
+    "timestamp": 145440,
+    "isInDB": true
+  },
+  {
+    "word": "压力",
+    "timestamp": 146160,
+    "isInDB": false
+  },
+  {
+    "word": "巨大",
+    "timestamp": 146320,
+    "isInDB": false
+  },
+  {
+    "word": "且",
+    "timestamp": 147010,
+    "isInDB": false
+  },
+  {
+    "word": "不断",
+    "timestamp": 147240,
+    "isInDB": false
+  },
+  {
+    "word": "涨",
+    "timestamp": 147510,
+    "isInDB": false
+  },
+  {
+    "word": "高",
+    "timestamp": 147760,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 148200,
+    "isInDB": false
+  },
+  {
+    "word": "期望值",
+    "timestamp": 148280,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 149370,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 149500,
+    "isInDB": false
+  },
+  {
+    "word": "难以",
+    "timestamp": 149730,
+    "isInDB": true
+  },
+  {
+    "word": "喘息",
+    "timestamp": 150040,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 151240,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 151400,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 151530,
+    "isInDB": false
+  },
+  {
+    "word": "发现",
+    "timestamp": 151770,
+    "isInDB": false
+  },
+  {
+    "word": "身边",
+    "timestamp": 152580,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 152850,
+    "isInDB": false
+  },
+  {
+    "word": "朋友",
+    "timestamp": 152960,
+    "isInDB": false
+  },
+  {
+    "word": "常常",
+    "timestamp": 153520,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 154080,
+    "isInDB": false
+  },
+  {
+    "word": "忙碌",
+    "timestamp": 154210,
+    "isInDB": false
+  },
+  {
+    "word": "中",
+    "timestamp": 154680,
+    "isInDB": false
+  },
+  {
+    "word": "迷失",
+    "timestamp": 155770,
+    "isInDB": false
+  },
+  {
+    "word": "追求",
+    "timestamp": 156000,
+    "isInDB": true
+  },
+  {
+    "word": "物质",
+    "timestamp": 156500,
+    "isInDB": false
+  },
+  {
+    "word": "上",
+    "timestamp": 156610,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 156800,
+    "isInDB": false
+  },
+  {
+    "word": "富足",
+    "timestamp": 156860,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 157110,
+    "isInDB": false
+  },
+  {
+    "word": "忽略",
+    "timestamp": 157710,
+    "isInDB": true
+  },
+  {
+    "word": "了",
+    "timestamp": 158380,
+    "isInDB": false
+  },
+  {
+    "word": "内心",
+    "timestamp": 158750,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 159260,
+    "isInDB": false
+  },
+  {
+    "word": "平静",
+    "timestamp": 159320,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 160300,
+    "isInDB": false
+  },
+  {
+    "word": "不是",
+    "timestamp": 160520,
+    "isInDB": false
+  },
+  {
+    "word": "觉得",
+    "timestamp": 160780,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 161060,
+    "isInDB": false
+  },
+  {
+    "word": "像是",
+    "timestamp": 161400,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 161710,
+    "isInDB": false
+  },
+  {
+    "word": "不停",
+    "timestamp": 161840,
+    "isInDB": false
+  },
+  {
+    "word": "跑步",
+    "timestamp": 162250,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 162620,
+    "isInDB": false
+  },
+  {
+    "word": "马拉松",
+    "timestamp": 162680,
+    "isInDB": false
+  },
+  {
+    "word": "选手",
+    "timestamp": 163020,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 163590,
+    "isInDB": false
+  },
+  {
+    "word": "始终",
+    "timestamp": 164010,
+    "isInDB": true
+  },
+  {
+    "word": "看",
+    "timestamp": 164630,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 164890,
+    "isInDB": false
+  },
+  {
+    "word": "到",
+    "timestamp": 164960,
+    "isInDB": false
+  },
+  {
+    "word": "终点",
+    "timestamp": 165130,
+    "isInDB": false
+  },
+  {
+    "word": "这",
+    "timestamp": 166220,
+    "isInDB": false
+  },
+  {
+    "word": "正是",
+    "timestamp": 166340,
+    "isInDB": false
+  },
+  {
+    "word": "现代",
+    "timestamp": 166660,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 166870,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 166930,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 166990,
+    "isInDB": false
+  },
+  {
+    "word": "个",
+    "timestamp": 167170,
+    "isInDB": false
+  },
+  {
+    "word": "症结",
+    "timestamp": 167720,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 168520,
+    "isInDB": false
+  },
+  {
+    "word": "目标",
+    "timestamp": 169030,
+    "isInDB": false
+  },
+  {
+    "word": "明确",
+    "timestamp": 170050,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 170410,
+    "isInDB": false
+  },
+  {
+    "word": "缺乏",
+    "timestamp": 170670,
+    "isInDB": false
+  },
+  {
+    "word": "内在",
+    "timestamp": 170860,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 171040,
+    "isInDB": false
+  },
+  {
+    "word": "精神",
+    "timestamp": 171120,
+    "isInDB": false
+  },
+  {
+    "word": "支撑",
+    "timestamp": 171740,
+    "isInDB": true
+  },
+  {
+    "word": "容易",
+    "timestamp": 172280,
+    "isInDB": false
+  },
+  {
+    "word": "导致",
+    "timestamp": 172610,
+    "isInDB": false
+  },
+  {
+    "word": "疲惫",
+    "timestamp": 172830,
+    "isInDB": true
+  },
+  {
+    "word": "和",
+    "timestamp": 173510,
+    "isInDB": false
+  },
+  {
+    "word": "迷惘",
+    "timestamp": 173690,
+    "isInDB": false
+  },
+  {
+    "word": "更",
+    "timestamp": 174520,
+    "isInDB": false
+  },
+  {
+    "word": "令",
+    "timestamp": 174660,
+    "isInDB": false
+  },
+  {
+    "word": "人",
+    "timestamp": 174820,
+    "isInDB": false
+  },
+  {
+    "word": "困惑",
+    "timestamp": 174960,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 175490,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 175600,
+    "isInDB": false
+  },
+  {
+    "word": "现代",
+    "timestamp": 176220,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 176650,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 176910,
+    "isInDB": false
+  },
+  {
+    "word": "信息",
+    "timestamp": 176980,
+    "isInDB": false
+  },
+  {
+    "word": "爆炸",
+    "timestamp": 177370,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 177860,
+    "isInDB": false
+  },
+  {
+    "word": "自媒体",
+    "timestamp": 178020,
+    "isInDB": false
+  },
+  {
+    "word": "时代",
+    "timestamp": 178800,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 178990,
+    "isInDB": false
+  },
+  {
+    "word": "到来",
+    "timestamp": 179050,
+    "isInDB": false
+  },
+  {
+    "word": "使",
+    "timestamp": 179800,
+    "isInDB": false
+  },
+  {
+    "word": "人们",
+    "timestamp": 180150,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 180280,
+    "isInDB": false
+  },
+  {
+    "word": "精神",
+    "timestamp": 180360,
+    "isInDB": false
+  },
+  {
+    "word": "世界",
+    "timestamp": 180870,
+    "isInDB": false
+  },
+  {
+    "word": "被",
+    "timestamp": 181390,
+    "isInDB": false
+  },
+  {
+    "word": "迅速",
+    "timestamp": 181530,
+    "isInDB": false
+  },
+  {
+    "word": "分化",
+    "timestamp": 182010,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 182540,
+    "isInDB": false
+  },
+  {
+    "word": "碎片化",
+    "timestamp": 182690,
+    "isInDB": false
+  },
+  {
+    "word": "每天",
+    "timestamp": 183620,
+    "isInDB": false
+  },
+  {
+    "word": "打开",
+    "timestamp": 183970,
+    "isInDB": false
+  },
+  {
+    "word": "手机",
+    "timestamp": 185060,
+    "isInDB": false
+  },
+  {
+    "word": "铺天盖地",
+    "timestamp": 185550,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 185740,
+    "isInDB": false
+  },
+  {
+    "word": "短",
+    "timestamp": 185900,
+    "isInDB": false
+  },
+  {
+    "word": "视频",
+    "timestamp": 186220,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 186600,
+    "isInDB": false
+  },
+  {
+    "word": "信息",
+    "timestamp": 186750,
+    "isInDB": false
+  },
+  {
+    "word": "充斥",
+    "timestamp": 187360,
+    "isInDB": false
+  },
+  {
+    "word": "着",
+    "timestamp": 187890,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 188140,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 188230,
+    "isInDB": false
+  },
+  {
+    "word": "视野",
+    "timestamp": 188300,
+    "isInDB": true
+  },
+  {
+    "word": "促使",
+    "timestamp": 189100,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 189510,
+    "isInDB": false
+  },
+  {
+    "word": "不断",
+    "timestamp": 189860,
+    "isInDB": false
+  },
+  {
+    "word": "对比",
+    "timestamp": 190270,
+    "isInDB": false
+  },
+  {
+    "word": "焦躁",
+    "timestamp": 191160,
+    "isInDB": false
+  },
+  {
+    "word": "甚至",
+    "timestamp": 191960,
+    "isInDB": false
+  },
+  {
+    "word": "怀疑",
+    "timestamp": 192360,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 193000,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 193300,
+    "isInDB": false
+  },
+  {
+    "word": "价值",
+    "timestamp": 193380,
+    "isInDB": false
+  },
+  {
+    "word": "可是",
+    "timestamp": 194180,
+    "isInDB": false
+  },
+  {
+    "word": "我们",
+    "timestamp": 194920,
+    "isInDB": false
+  },
+  {
+    "word": "真的",
+    "timestamp": 195180,
+    "isInDB": false
+  },
+  {
+    "word": "了解",
+    "timestamp": 195490,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 195930,
+    "isInDB": false
+  },
+  {
+    "word": "到底",
+    "timestamp": 196240,
+    "isInDB": false
+  },
+  {
+    "word": "需要",
+    "timestamp": 196570,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 196770,
+    "isInDB": false
+  },
+  {
+    "word": "吗",
+    "timestamp": 197070,
+    "isInDB": false
+  },
+  {
+    "word": "当",
+    "timestamp": 198150,
+    "isInDB": false
+  },
+  {
+    "word": "所有",
+    "timestamp": 198350,
+    "isInDB": false
+  },
+  {
+    "word": "外界",
+    "timestamp": 198870,
+    "isInDB": false
+  },
+  {
+    "word": "声音",
+    "timestamp": 199270,
+    "isInDB": false
+  },
+  {
+    "word": "都",
+    "timestamp": 199650,
+    "isInDB": false
+  },
+  {
+    "word": "喧嚣",
+    "timestamp": 200180,
+    "isInDB": false
+  },
+  {
+    "word": "不止",
+    "timestamp": 200380,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 200790,
+    "isInDB": false
+  },
+  {
+    "word": "时候",
+    "timestamp": 200870,
+    "isInDB": false
+  },
+  {
+    "word": "如何",
+    "timestamp": 201640,
+    "isInDB": false
+  },
+  {
+    "word": "才能",
+    "timestamp": 202240,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 202940,
+    "isInDB": false
+  },
+  {
+    "word": "心中",
+    "timestamp": 203100,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 203290,
+    "isInDB": false
+  },
+  {
+    "word": "声音",
+    "timestamp": 203350,
+    "isInDB": false
+  },
+  {
+    "word": "被",
+    "timestamp": 204020,
+    "isInDB": false
+  },
+  {
+    "word": "听见",
+    "timestamp": 204180,
+    "isInDB": false
+  },
+  {
+    "word": "答案",
+    "timestamp": 204900,
+    "isInDB": true
+  },
+  {
+    "word": "或许",
+    "timestamp": 205670,
+    "isInDB": true
+  },
+  {
+    "word": "是",
+    "timestamp": 206160,
+    "isInDB": false
+  },
+  {
+    "word": "自我",
+    "timestamp": 206530,
+    "isInDB": false
+  },
+  {
+    "word": "意识",
+    "timestamp": 206900,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 207330,
+    "isInDB": false
+  },
+  {
+    "word": "觉醒",
+    "timestamp": 207420,
+    "isInDB": false
+  },
+  {
+    "word": "这不",
+    "timestamp": 208440,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 208690,
+    "isInDB": false
+  },
+  {
+    "word": "简单",
+    "timestamp": 208840,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 209060,
+    "isInDB": false
+  },
+  {
+    "word": "跟风",
+    "timestamp": 209130,
+    "isInDB": false
+  },
+  {
+    "word": "或",
+    "timestamp": 209780,
+    "isInDB": false
+  },
+  {
+    "word": "盲目",
+    "timestamp": 209980,
+    "isInDB": true
+  },
+  {
+    "word": "努力",
+    "timestamp": 210350,
+    "isInDB": false
+  },
+  {
+    "word": "而是",
+    "timestamp": 211070,
+    "isInDB": false
+  },
+  {
+    "word": "要",
+    "timestamp": 211330,
+    "isInDB": false
+  },
+  {
+    "word": "真正",
+    "timestamp": 211480,
+    "isInDB": false
+  },
+  {
+    "word": "认识",
+    "timestamp": 211730,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 212370,
+    "isInDB": false
+  },
+  {
+    "word": "理解",
+    "timestamp": 212990,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 213440,
+    "isInDB": false
+  },
+  {
+    "word": "为何",
+    "timestamp": 213800,
+    "isInDB": false
+  },
+  {
+    "word": "而",
+    "timestamp": 214200,
+    "isInDB": false
+  },
+  {
+    "word": "活",
+    "timestamp": 214420,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 215090,
+    "isInDB": false
+  },
+  {
+    "word": "内心",
+    "timestamp": 215440,
+    "isInDB": false
+  },
+  {
+    "word": "渴望",
+    "timestamp": 215860,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 216420,
+    "isInDB": false
+  },
+  {
+    "word": "到底",
+    "timestamp": 216530,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 216920,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 217130,
+    "isInDB": false
+  },
+  {
+    "word": "想",
+    "timestamp": 217560,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 217820,
+    "isInDB": false
+  },
+  {
+    "word": "想",
+    "timestamp": 217900,
+    "isInDB": false
+  },
+  {
+    "word": "如果",
+    "timestamp": 218560,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 218780,
+    "isInDB": false
+  },
+  {
+    "word": "早上",
+    "timestamp": 218930,
+    "isInDB": false
+  },
+  {
+    "word": "一睁眼",
+    "timestamp": 219180,
+    "isInDB": false
+  },
+  {
+    "word": "就",
+    "timestamp": 219910,
+    "isInDB": false
+  },
+  {
+    "word": "清楚",
+    "timestamp": 220040,
+    "isInDB": false
+  },
+  {
+    "word": "今天",
+    "timestamp": 220260,
+    "isInDB": false
+  },
+  {
+    "word": "要",
+    "timestamp": 220510,
+    "isInDB": false
+  },
+  {
+    "word": "做",
+    "timestamp": 220870,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 221130,
+    "isInDB": false
+  },
+  {
+    "word": "那",
+    "timestamp": 221820,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 221990,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 222150,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 222220,
+    "isInDB": false
+  },
+  {
+    "word": "是否",
+    "timestamp": 222820,
+    "isInDB": false
+  },
+  {
+    "word": "会",
+    "timestamp": 223260,
+    "isInDB": false
+  },
+  {
+    "word": "平静",
+    "timestamp": 223460,
+    "isInDB": false
+  },
+  {
+    "word": "许",
+    "timestamp": 223600,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 224170,
+    "isInDB": false
+  },
+  {
+    "word": "如果",
+    "timestamp": 224870,
+    "isInDB": false
+  },
+  {
+    "word": "连",
+    "timestamp": 225090,
+    "isInDB": false
+  },
+  {
+    "word": "这个",
+    "timestamp": 225280,
+    "isInDB": false
+  },
+  {
+    "word": "做",
+    "timestamp": 225460,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 225700,
+    "isInDB": false
+  },
+  {
+    "word": "都",
+    "timestamp": 225920,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 226080,
+    "isInDB": false
+  },
+  {
+    "word": "头绪",
+    "timestamp": 226320,
+    "isInDB": false
+  },
+  {
+    "word": "那",
+    "timestamp": 227220,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 227390,
+    "isInDB": true
+  },
+  {
+    "word": "和",
+    "timestamp": 227830,
+    "isInDB": false
+  },
+  {
+    "word": "迷茫",
+    "timestamp": 228010,
+    "isInDB": true
+  },
+  {
+    "word": "几乎",
+    "timestamp": 228570,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 228920,
+    "isInDB": false
+  },
+  {
+    "word": "必然",
+    "timestamp": 229060,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 229450,
+    "isInDB": false
+  },
+  {
+    "word": "结果",
+    "timestamp": 229520,
+    "isInDB": false
+  },
+  {
+    "word": "自我",
+    "timestamp": 230070,
+    "isInDB": false
+  },
+  {
+    "word": "意识",
+    "timestamp": 230420,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 230780,
+    "isInDB": false
+  },
+  {
+    "word": "觉醒",
+    "timestamp": 230860,
+    "isInDB": false
+  },
+  {
+    "word": "听",
+    "timestamp": 231430,
+    "isInDB": false
+  },
+  {
+    "word": "起来",
+    "timestamp": 231870,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 232010,
+    "isInDB": false
+  },
+  {
+    "word": "复杂",
+    "timestamp": 232170,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 232960,
+    "isInDB": false
+  },
+  {
+    "word": "其实",
+    "timestamp": 233140,
+    "isInDB": false
+  },
+  {
+    "word": "十分",
+    "timestamp": 233640,
+    "isInDB": false
+  },
+  {
+    "word": "朴实",
+    "timestamp": 233880,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 234350,
+    "isInDB": false
+  },
+  {
+    "word": "直接",
+    "timestamp": 234540,
+    "isInDB": false
+  },
+  {
+    "word": "它",
+    "timestamp": 235530,
+    "isInDB": false
+  },
+  {
+    "word": "就是",
+    "timestamp": 235690,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 236010,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 236150,
+    "isInDB": false
+  },
+  {
+    "word": "从",
+    "timestamp": 236310,
+    "isInDB": false
+  },
+  {
+    "word": "被动",
+    "timestamp": 236590,
+    "isInDB": false
+  },
+  {
+    "word": "接受",
+    "timestamp": 237380,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 237690,
+    "isInDB": false
+  },
+  {
+    "word": "既定",
+    "timestamp": 237970,
+    "isInDB": false
+  },
+  {
+    "word": "规则",
+    "timestamp": 238360,
+    "isInDB": false
+  },
+  {
+    "word": "转变",
+    "timestamp": 238760,
+    "isInDB": true
+  },
+  {
+    "word": "为",
+    "timestamp": 239230,
+    "isInDB": false
+  },
+  {
+    "word": "主动",
+    "timestamp": 240250,
+    "isInDB": true
+  },
+  {
+    "word": "选择",
+    "timestamp": 241000,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 241210,
+    "isInDB": false
+  },
+  {
+    "word": "规划",
+    "timestamp": 241360,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 241810,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 242110,
+    "isInDB": false
+  },
+  {
+    "word": "人生",
+    "timestamp": 242180,
+    "isInDB": false
+  },
+  {
+    "word": "道路",
+    "timestamp": 242620,
+    "isInDB": false
+  },
+  {
+    "word": "过去",
+    "timestamp": 243570,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 244360,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 244720,
+    "isInDB": false
+  },
+  {
+    "word": "主流",
+    "timestamp": 244820,
+    "isInDB": true
+  },
+  {
+    "word": "价值观",
+    "timestamp": 245330,
+    "isInDB": false
+  },
+  {
+    "word": "如",
+    "timestamp": 246130,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 246360,
+    "isInDB": false
+  },
+  {
+    "word": "本",
+    "timestamp": 246530,
+    "isInDB": false
+  },
+  {
+    "word": "攻略",
+    "timestamp": 246760,
+    "isInDB": false
+  },
+  {
+    "word": "书",
+    "timestamp": 247280,
+    "isInDB": false
+  },
+  {
+    "word": "告诉",
+    "timestamp": 247960,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 248290,
+    "isInDB": false
+  },
+  {
+    "word": "该",
+    "timestamp": 248750,
+    "isInDB": false
+  },
+  {
+    "word": "怎么",
+    "timestamp": 248900,
+    "isInDB": false
+  },
+  {
+    "word": "做",
+    "timestamp": 249150,
+    "isInDB": false
+  },
+  {
+    "word": "跟着",
+    "timestamp": 249810,
+    "isInDB": false
+  },
+  {
+    "word": "走",
+    "timestamp": 250150,
+    "isInDB": false
+  },
+  {
+    "word": "就",
+    "timestamp": 250420,
+    "isInDB": false
+  },
+  {
+    "word": "行",
+    "timestamp": 250600,
+    "isInDB": false
+  },
+  {
+    "word": "今天",
+    "timestamp": 251330,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 251710,
+    "isInDB": false
+  },
+  {
+    "word": "世界",
+    "timestamp": 251800,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 252530,
+    "isInDB": false
+  },
+  {
+    "word": "固定",
+    "timestamp": 252900,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 253340,
+    "isInDB": false
+  },
+  {
+    "word": "模式",
+    "timestamp": 253410,
+    "isInDB": true
+  },
+  {
+    "word": "没有",
+    "timestamp": 254250,
+    "isInDB": false
+  },
+  {
+    "word": "万能",
+    "timestamp": 254980,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 255200,
+    "isInDB": false
+  },
+  {
+    "word": "攻略",
+    "timestamp": 255260,
+    "isInDB": false
+  },
+  {
+    "word": "任务",
+    "timestamp": 256190,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 256600.00000000003,
+    "isInDB": false
+  },
+  {
+    "word": "挑战",
+    "timestamp": 256769.99999999997,
+    "isInDB": true
+  },
+  {
+    "word": "变得",
+    "timestamp": 257079.99999999997,
+    "isInDB": false
+  },
+  {
+    "word": "随机",
+    "timestamp": 257990,
+    "isInDB": false
+  },
+  {
+    "word": "且",
+    "timestamp": 258290.00000000003,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 258500,
+    "isInDB": false
+  },
+  {
+    "word": "样",
+    "timestamp": 258730.00000000003,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 259310,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 259459.99999999997,
+    "isInDB": false
+  },
+  {
+    "word": "不是",
+    "timestamp": 259610,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 259790.00000000003,
+    "isInDB": false
+  },
+  {
+    "word": "感受",
+    "timestamp": 259970.00000000003,
+    "isInDB": true
+  },
+  {
+    "word": "到",
+    "timestamp": 260459.99999999997,
+    "isInDB": false
+  },
+  {
+    "word": "有时候",
+    "timestamp": 261010,
+    "isInDB": false
+  },
+  {
+    "word": "努力",
+    "timestamp": 261550,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 261910.00000000003,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 262000,
+    "isInDB": false
+  },
+  {
+    "word": "久",
+    "timestamp": 262330,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 262990,
+    "isInDB": false
+  },
+  {
+    "word": "发现",
+    "timestamp": 263180,
+    "isInDB": false
+  },
+  {
+    "word": "前路",
+    "timestamp": 263630,
+    "isInDB": false
+  },
+  {
+    "word": "依然",
+    "timestamp": 264190,
+    "isInDB": true
+  },
+  {
+    "word": "模糊",
+    "timestamp": 264590,
+    "isInDB": false
+  },
+  {
+    "word": "这就",
+    "timestamp": 265590,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 265980,
+    "isInDB": false
+  },
+  {
+    "word": "因为",
+    "timestamp": 266100,
+    "isInDB": false
+  },
+  {
+    "word": "缺乏",
+    "timestamp": 266550,
+    "isInDB": false
+  },
+  {
+    "word": "清晰",
+    "timestamp": 267210,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 267630,
+    "isInDB": false
+  },
+  {
+    "word": "自我",
+    "timestamp": 267870,
+    "isInDB": false
+  },
+  {
+    "word": "信仰",
+    "timestamp": 268240,
+    "isInDB": false
+  },
+  {
+    "word": "支撑",
+    "timestamp": 268770,
+    "isInDB": true
+  },
+  {
+    "word": "从",
+    "timestamp": 268910,
+    "isInDB": false
+  },
+  {
+    "word": "某种",
+    "timestamp": 269320,
+    "isInDB": false
+  },
+  {
+    "word": "意义",
+    "timestamp": 269670,
+    "isInDB": false
+  },
+  {
+    "word": "上",
+    "timestamp": 270110,
+    "isInDB": false
+  },
+  {
+    "word": "来说",
+    "timestamp": 270370,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 271280,
+    "isInDB": true
+  },
+  {
+    "word": "是",
+    "timestamp": 271670,
+    "isInDB": false
+  },
+  {
+    "word": "提醒",
+    "timestamp": 271850,
+    "isInDB": true
+  },
+  {
+    "word": "我们",
+    "timestamp": 272230,
+    "isInDB": false
+  },
+  {
+    "word": "必须",
+    "timestamp": 272610,
+    "isInDB": false
+  },
+  {
+    "word": "建立",
+    "timestamp": 273080,
+    "isInDB": false
+  },
+  {
+    "word": "属于",
+    "timestamp": 273480,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 273840,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 274340,
+    "isInDB": false
+  },
+  {
+    "word": "精神",
+    "timestamp": 274420,
+    "isInDB": false
+  },
+  {
+    "word": "坐标",
+    "timestamp": 274940,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 275750,
+    "isInDB": false
+  },
+  {
+    "word": "能",
+    "timestamp": 275870,
+    "isInDB": false
+  },
+  {
+    "word": "再",
+    "timestamp": 276050,
+    "isInDB": false
+  },
+  {
+    "word": "依赖",
+    "timestamp": 276230,
+    "isInDB": true
+  },
+  {
+    "word": "外界",
+    "timestamp": 276630,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 277060,
+    "isInDB": false
+  },
+  {
+    "word": "标准",
+    "timestamp": 277120,
+    "isInDB": false
+  },
+  {
+    "word": "来",
+    "timestamp": 277370,
+    "isInDB": false
+  },
+  {
+    "word": "定义",
+    "timestamp": 277790,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 278170,
+    "isInDB": false
+  },
+  {
+    "word": "有人",
+    "timestamp": 279000,
+    "isInDB": false
+  },
+  {
+    "word": "可能",
+    "timestamp": 279310,
+    "isInDB": false
+  },
+  {
+    "word": "会",
+    "timestamp": 279560,
+    "isInDB": false
+  },
+  {
+    "word": "问",
+    "timestamp": 279870,
+    "isInDB": false
+  },
+  {
+    "word": "这",
+    "timestamp": 280270,
+    "isInDB": false
+  },
+  {
+    "word": "听",
+    "timestamp": 280570,
+    "isInDB": false
+  },
+  {
+    "word": "起来",
+    "timestamp": 280880,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 281050,
+    "isInDB": false
+  },
+  {
+    "word": "哲学",
+    "timestamp": 281290,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 282110,
+    "isInDB": false
+  },
+  {
+    "word": "具体",
+    "timestamp": 282300,
+    "isInDB": false
+  },
+  {
+    "word": "该",
+    "timestamp": 282800,
+    "isInDB": false
+  },
+  {
+    "word": "怎么",
+    "timestamp": 283000,
+    "isInDB": false
+  },
+  {
+    "word": "做",
+    "timestamp": 283260,
+    "isInDB": false
+  },
+  {
+    "word": "呢",
+    "timestamp": 283610,
+    "isInDB": false
+  },
+  {
+    "word": "其实",
+    "timestamp": 284360,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 284630,
+    "isInDB": false
+  },
+  {
+    "word": "简单",
+    "timestamp": 284870,
+    "isInDB": false
+  },
+  {
+    "word": "关键",
+    "timestamp": 285630,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 286170,
+    "isInDB": false
+  },
+  {
+    "word": "要",
+    "timestamp": 286340,
+    "isInDB": false
+  },
+  {
+    "word": "静下",
+    "timestamp": 286540,
+    "isInDB": false
+  },
+  {
+    "word": "心",
+    "timestamp": 286880,
+    "isInDB": false
+  },
+  {
+    "word": "来",
+    "timestamp": 287370,
+    "isInDB": false
+  },
+  {
+    "word": "问问",
+    "timestamp": 287580,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 288050,
+    "isInDB": false
+  },
+  {
+    "word": "我",
+    "timestamp": 288760,
+    "isInDB": false
+  },
+  {
+    "word": "真正",
+    "timestamp": 288910,
+    "isInDB": false
+  },
+  {
+    "word": "想要",
+    "timestamp": 289300,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 289860,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 289970,
+    "isInDB": false
+  },
+  {
+    "word": "什么",
+    "timestamp": 290180,
+    "isInDB": false
+  },
+  {
+    "word": "我",
+    "timestamp": 290880,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 291020,
+    "isInDB": false
+  },
+  {
+    "word": "价值",
+    "timestamp": 291090,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 291570,
+    "isInDB": false
+  },
+  {
+    "word": "目标",
+    "timestamp": 291750,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 292260,
+    "isInDB": false
+  },
+  {
+    "word": "哪里",
+    "timestamp": 292430,
+    "isInDB": false
+  },
+  {
+    "word": "不要",
+    "timestamp": 293150,
+    "isInDB": false
+  },
+  {
+    "word": "被",
+    "timestamp": 293500,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 293650,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 294060,
+    "isInDB": false
+  },
+  {
+    "word": "喧嚣",
+    "timestamp": 294150,
+    "isInDB": false
+  },
+  {
+    "word": "左右",
+    "timestamp": 294640,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 295360,
+    "isInDB": false
+  },
+  {
+    "word": "不要",
+    "timestamp": 295540,
+    "isInDB": false
+  },
+  {
+    "word": "害怕",
+    "timestamp": 295950,
+    "isInDB": false
+  },
+  {
+    "word": "停",
+    "timestamp": 296450,
+    "isInDB": false
+  },
+  {
+    "word": "下来",
+    "timestamp": 296750,
+    "isInDB": false
+  },
+  {
+    "word": "思考",
+    "timestamp": 297030,
+    "isInDB": false
+  },
+  {
+    "word": "可能",
+    "timestamp": 298100,
+    "isInDB": false
+  },
+  {
+    "word": "有人",
+    "timestamp": 298410,
+    "isInDB": false
+  },
+  {
+    "word": "选择",
+    "timestamp": 298890,
+    "isInDB": false
+  },
+  {
+    "word": "旅游",
+    "timestamp": 299170,
+    "isInDB": false
+  },
+  {
+    "word": "把",
+    "timestamp": 300060,
+    "isInDB": false
+  },
+  {
+    "word": "探索",
+    "timestamp": 300260,
+    "isInDB": false
+  },
+  {
+    "word": "世界",
+    "timestamp": 300630,
+    "isInDB": false
+  },
+  {
+    "word": "作为",
+    "timestamp": 301010,
+    "isInDB": false
+  },
+  {
+    "word": "动力",
+    "timestamp": 301300,
+    "isInDB": false
+  },
+  {
+    "word": "有人",
+    "timestamp": 301990,
+    "isInDB": false
+  },
+  {
+    "word": "喜欢",
+    "timestamp": 302270,
+    "isInDB": false
+  },
+  {
+    "word": "安静",
+    "timestamp": 302770,
+    "isInDB": false
+  },
+  {
+    "word": "地",
+    "timestamp": 303170,
+    "isInDB": false
+  },
+  {
+    "word": "生活",
+    "timestamp": 303240,
+    "isInDB": false
+  },
+  {
+    "word": "享受",
+    "timestamp": 304030,
+    "isInDB": false
+  },
+  {
+    "word": "自然",
+    "timestamp": 304580,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 305100,
+    "isInDB": false
+  },
+  {
+    "word": "书籍",
+    "timestamp": 305260,
+    "isInDB": false
+  },
+  {
+    "word": "这些",
+    "timestamp": 305580,
+    "isInDB": false
+  },
+  {
+    "word": "都",
+    "timestamp": 306270,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 306700,
+    "isInDB": false
+  },
+  {
+    "word": "各自",
+    "timestamp": 306890,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 307210,
+    "isInDB": false
+  },
+  {
+    "word": "信仰",
+    "timestamp": 307310,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 307740,
+    "isInDB": false
+  },
+  {
+    "word": "目标",
+    "timestamp": 307900,
+    "isInDB": false
+  },
+  {
+    "word": "无论",
+    "timestamp": 308760,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 309060,
+    "isInDB": false
+  },
+  {
+    "word": "奋斗",
+    "timestamp": 309240,
+    "isInDB": true
+  },
+  {
+    "word": "还是",
+    "timestamp": 309870,
+    "isInDB": false
+  },
+  {
+    "word": "躺平",
+    "timestamp": 310380,
+    "isInDB": false
+  },
+  {
+    "word": "只要",
+    "timestamp": 311020,
+    "isInDB": false
+  },
+  {
+    "word": "你",
+    "timestamp": 311330,
+    "isInDB": false
+  },
+  {
+    "word": "清楚",
+    "timestamp": 311470,
+    "isInDB": false
+  },
+  {
+    "word": "自己",
+    "timestamp": 312010,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 312320,
+    "isInDB": false
+  },
+  {
+    "word": "选择",
+    "timestamp": 312380,
+    "isInDB": false
+  },
+  {
+    "word": "并",
+    "timestamp": 313270,
+    "isInDB": false
+  },
+  {
+    "word": "能",
+    "timestamp": 313440,
+    "isInDB": false
+  },
+  {
+    "word": "为",
+    "timestamp": 313630,
+    "isInDB": false
+  },
+  {
+    "word": "之",
+    "timestamp": 313760,
+    "isInDB": false
+  },
+  {
+    "word": "努力",
+    "timestamp": 313930,
+    "isInDB": false
+  },
+  {
+    "word": "都",
+    "timestamp": 314700,
+    "isInDB": false
+  },
+  {
+    "word": "能",
+    "timestamp": 314860,
+    "isInDB": false
+  },
+  {
+    "word": "从",
+    "timestamp": 315020,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 315250,
+    "isInDB": true
+  },
+  {
+    "word": "中",
+    "timestamp": 316200,
+    "isInDB": false
+  },
+  {
+    "word": "获得",
+    "timestamp": 316490,
+    "isInDB": false
+  },
+  {
+    "word": "解脱",
+    "timestamp": 316920,
+    "isInDB": false
+  },
+  {
+    "word": "盲目",
+    "timestamp": 317410,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 317890,
+    "isInDB": false
+  },
+  {
+    "word": "奋斗",
+    "timestamp": 317960,
+    "isInDB": true
+  },
+  {
+    "word": "或者",
+    "timestamp": 318480,
+    "isInDB": false
+  },
+  {
+    "word": "无所作为",
+    "timestamp": 318790,
+    "isInDB": false
+  },
+  {
+    "word": "才",
+    "timestamp": 318980,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 319750,
+    "isInDB": false
+  },
+  {
+    "word": "让",
+    "timestamp": 320130,
+    "isInDB": false
+  },
+  {
+    "word": "焦虑",
+    "timestamp": 320690,
+    "isInDB": true
+  },
+  {
+    "word": "持续",
+    "timestamp": 321190,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 321730,
+    "isInDB": false
+  },
+  {
+    "word": "根源",
+    "timestamp": 321800,
+    "isInDB": false
+  }
+]

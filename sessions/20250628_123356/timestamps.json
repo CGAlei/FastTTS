@@ -1,0 +1,1012 @@
+[
+  {
+    "word": "中国",
+    "timestamp": 210,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 680,
+    "isInDB": false
+  },
+  {
+    "word": "日本",
+    "timestamp": 850,
+    "isInDB": false
+  },
+  {
+    "word": "这",
+    "timestamp": 1270,
+    "isInDB": false
+  },
+  {
+    "word": "两",
+    "timestamp": 1600,
+    "isInDB": false
+  },
+  {
+    "word": "个",
+    "timestamp": 1750,
+    "isInDB": false
+  },
+  {
+    "word": "邻近",
+    "timestamp": 2210,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 2580,
+    "isInDB": false
+  },
+  {
+    "word": "国家",
+    "timestamp": 2640,
+    "isInDB": false
+  },
+  {
+    "word": "历史",
+    "timestamp": 3270,
+    "isInDB": false
+  },
+  {
+    "word": "文化",
+    "timestamp": 3620,
+    "isInDB": false
+  },
+  {
+    "word": "虽然",
+    "timestamp": 4000,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 4270,
+    "isInDB": false
+  },
+  {
+    "word": "相似",
+    "timestamp": 4430,
+    "isInDB": false
+  },
+  {
+    "word": "之",
+    "timestamp": 4570,
+    "isInDB": false
+  },
+  {
+    "word": "处",
+    "timestamp": 4890,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 5760,
+    "isInDB": false
+  },
+  {
+    "word": "深入",
+    "timestamp": 5910,
+    "isInDB": false
+  },
+  {
+    "word": "探究",
+    "timestamp": 6110,
+    "isInDB": false
+  },
+  {
+    "word": "后",
+    "timestamp": 6330,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 6660,
+    "isInDB": false
+  },
+  {
+    "word": "发现",
+    "timestamp": 7420,
+    "isInDB": false
+  },
+  {
+    "word": "它们",
+    "timestamp": 7950,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 8180,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 8330,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 8580,
+    "isInDB": false
+  },
+  {
+    "word": "基本",
+    "timestamp": 8710,
+    "isInDB": false
+  },
+  {
+    "word": "结构",
+    "timestamp": 9430,
+    "isInDB": true
+  },
+  {
+    "word": "上",
+    "timestamp": 9640,
+    "isInDB": false
+  },
+  {
+    "word": "存在",
+    "timestamp": 10090,
+    "isInDB": false
+  },
+  {
+    "word": "着",
+    "timestamp": 10570,
+    "isInDB": false
+  },
+  {
+    "word": "显",
+    "timestamp": 10680,
+    "isInDB": false
+  },
+  {
+    "word": "着",
+    "timestamp": 11060,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 11240,
+    "isInDB": false
+  },
+  {
+    "word": "差异",
+    "timestamp": 11330,
+    "isInDB": false
+  },
+  {
+    "word": "这",
+    "timestamp": 12220,
+    "isInDB": false
+  },
+  {
+    "word": "正是",
+    "timestamp": 12440,
+    "isInDB": false
+  },
+  {
+    "word": "为什么",
+    "timestamp": 12860,
+    "isInDB": false
+  },
+  {
+    "word": "两",
+    "timestamp": 13190,
+    "isInDB": false
+  },
+  {
+    "word": "国",
+    "timestamp": 13690,
+    "isInDB": false
+  },
+  {
+    "word": "后来",
+    "timestamp": 14190,
+    "isInDB": false
+  },
+  {
+    "word": "走上",
+    "timestamp": 14220,
+    "isInDB": false
+  },
+  {
+    "word": "完全",
+    "timestamp": 14660,
+    "isInDB": false
+  },
+  {
+    "word": "不同",
+    "timestamp": 15190,
+    "isInDB": false
+  },
+  {
+    "word": "发展",
+    "timestamp": 15500,
+    "isInDB": false
+  },
+  {
+    "word": "道路",
+    "timestamp": 15880,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 16260.000000000002,
+    "isInDB": false
+  },
+  {
+    "word": "根本",
+    "timestamp": 16350.000000000002,
+    "isInDB": false
+  },
+  {
+    "word": "原因",
+    "timestamp": 16690,
+    "isInDB": false
+  },
+  {
+    "word": "大家",
+    "timestamp": 17950,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 18220,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 18360,
+    "isInDB": false
+  },
+  {
+    "word": "想",
+    "timestamp": 18580,
+    "isInDB": false
+  },
+  {
+    "word": "过",
+    "timestamp": 18790,
+    "isInDB": false
+  },
+  {
+    "word": "为什么",
+    "timestamp": 19730,
+    "isInDB": false
+  },
+  {
+    "word": "中国",
+    "timestamp": 20140,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 20830,
+    "isInDB": false
+  },
+  {
+    "word": "日本",
+    "timestamp": 20980,
+    "isInDB": false
+  },
+  {
+    "word": "看似",
+    "timestamp": 21530,
+    "isInDB": false
+  },
+  {
+    "word": "同文",
+    "timestamp": 22290,
+    "isInDB": false
+  },
+  {
+    "word": "同种",
+    "timestamp": 22780,
+    "isInDB": false
+  },
+  {
+    "word": "甚至",
+    "timestamp": 23550,
+    "isInDB": false
+  },
+  {
+    "word": "共享",
+    "timestamp": 24060,
+    "isInDB": false
+  },
+  {
+    "word": "很",
+    "timestamp": 24610,
+    "isInDB": false
+  },
+  {
+    "word": "多",
+    "timestamp": 24860,
+    "isInDB": false
+  },
+  {
+    "word": "文化",
+    "timestamp": 25000,
+    "isInDB": false
+  },
+  {
+    "word": "元素",
+    "timestamp": 25450,
+    "isInDB": false
+  },
+  {
+    "word": "却",
+    "timestamp": 26300,
+    "isInDB": false
+  },
+  {
+    "word": "能",
+    "timestamp": 26490,
+    "isInDB": false
+  },
+  {
+    "word": "衍生",
+    "timestamp": 26650,
+    "isInDB": true
+  },
+  {
+    "word": "出",
+    "timestamp": 27030,
+    "isInDB": false
+  },
+  {
+    "word": "截然不同",
+    "timestamp": 27740,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 28830,
+    "isInDB": false
+  },
+  {
+    "word": "政治",
+    "timestamp": 28920,
+    "isInDB": true
+  },
+  {
+    "word": "体制",
+    "timestamp": 29280,
+    "isInDB": true
+  },
+  {
+    "word": "和",
+    "timestamp": 29960,
+    "isInDB": false
+  },
+  {
+    "word": "社会",
+    "timestamp": 30120,
+    "isInDB": false
+  },
+  {
+    "word": "结构",
+    "timestamp": 30680,
+    "isInDB": true
+  },
+  {
+    "word": "不",
+    "timestamp": 31400,
+    "isInDB": false
+  },
+  {
+    "word": "正是",
+    "timestamp": 31510,
+    "isInDB": false
+  },
+  {
+    "word": "因为",
+    "timestamp": 32009.999999999996,
+    "isInDB": false
+  },
+  {
+    "word": "他们",
+    "timestamp": 32400,
+    "isInDB": false
+  },
+  {
+    "word": "内在",
+    "timestamp": 33050,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 33240,
+    "isInDB": false
+  },
+  {
+    "word": "这些",
+    "timestamp": 33330,
+    "isInDB": false
+  },
+  {
+    "word": "结构性",
+    "timestamp": 33760,
+    "isInDB": false
+  },
+  {
+    "word": "差异",
+    "timestamp": 34490,
+    "isInDB": false
+  },
+  {
+    "word": "成为",
+    "timestamp": 35250,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 36420,
+    "isInDB": false
+  },
+  {
+    "word": "历史",
+    "timestamp": 36750,
+    "isInDB": false
+  },
+  {
+    "word": "发展",
+    "timestamp": 36960,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 38760,
+    "isInDB": false
+  },
+  {
+    "word": "分水岭",
+    "timestamp": 38900,
+    "isInDB": false
+  },
+  {
+    "word": "吗",
+    "timestamp": 39020,
+    "isInDB": false
+  },
+  {
+    "word": "比如说",
+    "timestamp": 39670,
+    "isInDB": false
+  },
+  {
+    "word": "古代",
+    "timestamp": 39940,
+    "isInDB": false
+  },
+  {
+    "word": "中国",
+    "timestamp": 40430,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 40830,
+    "isInDB": false
+  },
+  {
+    "word": "政权",
+    "timestamp": 40900,
+    "isInDB": false
+  },
+  {
+    "word": "合法性",
+    "timestamp": 41310,
+    "isInDB": false
+  },
+  {
+    "word": "建立",
+    "timestamp": 42340,
+    "isInDB": false
+  },
+  {
+    "word": "在",
+    "timestamp": 42810,
+    "isInDB": false
+  },
+  {
+    "word": "德上",
+    "timestamp": 43140,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 44050,
+    "isInDB": false
+  },
+  {
+    "word": "就是",
+    "timestamp": 44210,
+    "isInDB": false
+  },
+  {
+    "word": "君主",
+    "timestamp": 44860,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 45510,
+    "isInDB": false
+  },
+  {
+    "word": "道德",
+    "timestamp": 45640,
+    "isInDB": false
+  },
+  {
+    "word": "品质",
+    "timestamp": 46050,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 46550,
+    "isInDB": false
+  },
+  {
+    "word": "能力",
+    "timestamp": 46720,
+    "isInDB": false
+  },
+  {
+    "word": "如果",
+    "timestamp": 47850,
+    "isInDB": false
+  },
+  {
+    "word": "一",
+    "timestamp": 48210,
+    "isInDB": false
+  },
+  {
+    "word": "个",
+    "timestamp": 48360,
+    "isInDB": false
+  },
+  {
+    "word": "朝代",
+    "timestamp": 48450,
+    "isInDB": false
+  },
+  {
+    "word": "丧失",
+    "timestamp": 48850,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 49320,
+    "isInDB": false
+  },
+  {
+    "word": "德",
+    "timestamp": 49670,
+    "isInDB": false
+  },
+  {
+    "word": "人民",
+    "timestamp": 50480,
+    "isInDB": false
+  },
+  {
+    "word": "和",
+    "timestamp": 50990,
+    "isInDB": false
+  },
+  {
+    "word": "士人",
+    "timestamp": 51150,
+    "isInDB": false
+  },
+  {
+    "word": "就",
+    "timestamp": 51710,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 51930,
+    "isInDB": false
+  },
+  {
+    "word": "推翻",
+    "timestamp": 52240,
+    "isInDB": true
+  },
+  {
+    "word": "它",
+    "timestamp": 52910,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 53080,
+    "isInDB": false
+  },
+  {
+    "word": "理由",
+    "timestamp": 53180,
+    "isInDB": false
+  },
+  {
+    "word": "所以",
+    "timestamp": 55100,
+    "isInDB": false
+  },
+  {
+    "word": "中国",
+    "timestamp": 55370,
+    "isInDB": false
+  },
+  {
+    "word": "历史",
+    "timestamp": 55750,
+    "isInDB": false
+  },
+  {
+    "word": "上",
+    "timestamp": 56110,
+    "isInDB": false
+  },
+  {
+    "word": "有",
+    "timestamp": 56340,
+    "isInDB": false
+  },
+  {
+    "word": "频繁",
+    "timestamp": 56660,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 57360,
+    "isInDB": false
+  },
+  {
+    "word": "朝代",
+    "timestamp": 57530,
+    "isInDB": false
+  },
+  {
+    "word": "更替",
+    "timestamp": 58180,
+    "isInDB": true
+  },
+  {
+    "word": "这",
+    "timestamp": 59190,
+    "isInDB": false
+  },
+  {
+    "word": "也",
+    "timestamp": 59310,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 59500,
+    "isInDB": false
+  },
+  {
+    "word": "汤武",
+    "timestamp": 59810,
+    "isInDB": false
+  },
+  {
+    "word": "革命",
+    "timestamp": 60410,
+    "isInDB": false
+  },
+  {
+    "word": "思想",
+    "timestamp": 60840,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 61420,
+    "isInDB": false
+  },
+  {
+    "word": "体现",
+    "timestamp": 61630,
+    "isInDB": true
+  },
+  {
+    "word": "而",
+    "timestamp": 62650,
+    "isInDB": false
+  },
+  {
+    "word": "日本",
+    "timestamp": 62790,
+    "isInDB": false
+  },
+  {
+    "word": "则",
+    "timestamp": 63140,
+    "isInDB": false
+  },
+  {
+    "word": "不同",
+    "timestamp": 63290,
+    "isInDB": false
+  },
+  {
+    "word": "天皇",
+    "timestamp": 64730.00000000001,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 65330,
+    "isInDB": false
+  },
+  {
+    "word": "地位",
+    "timestamp": 65500,
+    "isInDB": false
+  },
+  {
+    "word": "几乎",
+    "timestamp": 65730,
+    "isInDB": false
+  },
+  {
+    "word": "是",
+    "timestamp": 66120,
+    "isInDB": false
+  },
+  {
+    "word": "终生",
+    "timestamp": 66290,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 66790,
+    "isInDB": false
+  },
+  {
+    "word": "变",
+    "timestamp": 66970,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 67180,
+    "isInDB": false
+  },
+  {
+    "word": "象征",
+    "timestamp": 67250,
+    "isInDB": false
+  },
+  {
+    "word": "即便",
+    "timestamp": 68340,
+    "isInDB": false
+  },
+  {
+    "word": "实际",
+    "timestamp": 68850,
+    "isInDB": true
+  },
+  {
+    "word": "权力",
+    "timestamp": 69300,
+    "isInDB": false
+  },
+  {
+    "word": "有限",
+    "timestamp": 69630,
+    "isInDB": false
+  },
+  {
+    "word": "但",
+    "timestamp": 70330,
+    "isInDB": false
+  },
+  {
+    "word": "天皇",
+    "timestamp": 70550,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 71030,
+    "isInDB": false
+  },
+  {
+    "word": "身份",
+    "timestamp": 71090,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 71520,
+    "isInDB": false
+  },
+  {
+    "word": "会",
+    "timestamp": 71680,
+    "isInDB": false
+  },
+  {
+    "word": "被",
+    "timestamp": 71860,
+    "isInDB": false
+  },
+  {
+    "word": "轻易",
+    "timestamp": 72030,
+    "isInDB": true
+  },
+  {
+    "word": "推翻",
+    "timestamp": 72200,
+    "isInDB": true
+  },
+  {
+    "word": "这种",
+    "timestamp": 72250,
+    "isInDB": false
+  },
+  {
+    "word": "永远",
+    "timestamp": 72500,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 72610,
+    "isInDB": false
+  },
+  {
+    "word": "天皇",
+    "timestamp": 72750,
+    "isInDB": false
+  },
+  {
+    "word": "观念",
+    "timestamp": 73520,
+    "isInDB": true
+  },
+  {
+    "word": "让",
+    "timestamp": 74490,
+    "isInDB": false
+  },
+  {
+    "word": "日本",
+    "timestamp": 75730,
+    "isInDB": false
+  },
+  {
+    "word": "避免",
+    "timestamp": 76200,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 76600,
+    "isInDB": false
+  },
+  {
+    "word": "像",
+    "timestamp": 76750,
+    "isInDB": false
+  },
+  {
+    "word": "中国",
+    "timestamp": 76980,
+    "isInDB": false
+  },
+  {
+    "word": "那样",
+    "timestamp": 77540,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 77810,
+    "isInDB": false
+  },
+  {
+    "word": "频繁",
+    "timestamp": 77910,
+    "isInDB": true
+  },
+  {
+    "word": "政权",
+    "timestamp": 78390,
+    "isInDB": false
+  },
+  {
+    "word": "更替",
+    "timestamp": 78860,
+    "isInDB": true
+  },
+  {
+    "word": "这样",
+    "timestamp": 79100,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 79260,
+    "isInDB": false
+  },
+  {
+    "word": "政治",
+    "timestamp": 79820,
+    "isInDB": true
+  },
+  {
+    "word": "文化",
+    "timestamp": 80710,
+    "isInDB": false
+  },
+  {
+    "word": "差异",
+    "timestamp": 81120,
+    "isInDB": false
+  },
+  {
+    "word": "难道",
+    "timestamp": 81880,
+    "isInDB": false
+  },
+  {
+    "word": "不",
+    "timestamp": 82300,
+    "isInDB": false
+  },
+  {
+    "word": "正是",
+    "timestamp": 82400,
+    "isInDB": false
+  },
+  {
+    "word": "两",
+    "timestamp": 82860,
+    "isInDB": false
+  },
+  {
+    "word": "国",
+    "timestamp": 83110,
+    "isInDB": false
+  },
+  {
+    "word": "命运",
+    "timestamp": 83950,
+    "isInDB": false
+  },
+  {
+    "word": "分道扬镳",
+    "timestamp": 84290,
+    "isInDB": true
+  },
+  {
+    "word": "的",
+    "timestamp": 84800,
+    "isInDB": false
+  },
+  {
+    "word": "根源",
+    "timestamp": 84900,
+    "isInDB": false
+  },
+  {
+    "word": "吗",
+    "timestamp": 85260,
+    "isInDB": false
+  }
+]

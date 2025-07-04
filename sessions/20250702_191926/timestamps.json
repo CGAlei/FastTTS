@@ -1,0 +1,172 @@
+[
+  {
+    "word": "我",
+    "timestamp": 0,
+    "isInDB": false
+  },
+  {
+    "word": "深信",
+    "timestamp": 259.82608695652175,
+    "isInDB": false
+  },
+  {
+    "word": "生命",
+    "timestamp": 1039.304347826087,
+    "isInDB": false
+  },
+  {
+    "word": "本身",
+    "timestamp": 1558.9565217391305,
+    "isInDB": false
+  },
+  {
+    "word": "并未",
+    "timestamp": 2078.608695652174,
+    "isInDB": false
+  },
+  {
+    "word": "预设",
+    "timestamp": 2598.2608695652175,
+    "isInDB": false
+  },
+  {
+    "word": "任何",
+    "timestamp": 3117.913043478261,
+    "isInDB": false
+  },
+  {
+    "word": "固有",
+    "timestamp": 3637.5652173913045,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 4157.217391304348,
+    "isInDB": false
+  },
+  {
+    "word": "先验",
+    "timestamp": 4676.869565217392,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 5196.521739130436,
+    "isInDB": false
+  },
+  {
+    "word": "意义",
+    "timestamp": 5456.347826086958,
+    "isInDB": false
+  },
+  {
+    "word": "宇宙",
+    "timestamp": 6235.826086956524,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 6755.478260869568,
+    "isInDB": false
+  },
+  {
+    "word": "物理",
+    "timestamp": 7015.30434782609,
+    "isInDB": false
+  },
+  {
+    "word": "法则",
+    "timestamp": 7534.956521739134,
+    "isInDB": false
+  },
+  {
+    "word": "构筑",
+    "timestamp": 8054.608695652178,
+    "isInDB": false
+  },
+  {
+    "word": "了",
+    "timestamp": 8574.260869565222,
+    "isInDB": false
+  },
+  {
+    "word": "一个",
+    "timestamp": 8834.086956521744,
+    "isInDB": false
+  },
+  {
+    "word": "没有",
+    "timestamp": 9353.739130434788,
+    "isInDB": false
+  },
+  {
+    "word": "剧本",
+    "timestamp": 9873.391304347831,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 10393.043478260875,
+    "isInDB": false
+  },
+  {
+    "word": "舞台",
+    "timestamp": 10652.869565217397,
+    "isInDB": true
+  },
+  {
+    "word": "星辰",
+    "timestamp": 11432.347826086963,
+    "isInDB": false
+  },
+  {
+    "word": "循轨",
+    "timestamp": 11952.000000000007,
+    "isInDB": false
+  },
+  {
+    "word": "运转",
+    "timestamp": 12471.652173913051,
+    "isInDB": false
+  },
+  {
+    "word": "对",
+    "timestamp": 13251.130434782617,
+    "isInDB": false
+  },
+  {
+    "word": "地球",
+    "timestamp": 13510.95652173914,
+    "isInDB": false
+  },
+  {
+    "word": "上",
+    "timestamp": 14030.608695652183,
+    "isInDB": false
+  },
+  {
+    "word": "发生",
+    "timestamp": 14290.434782608705,
+    "isInDB": false
+  },
+  {
+    "word": "的",
+    "timestamp": 14810.086956521749,
+    "isInDB": false
+  },
+  {
+    "word": "一切",
+    "timestamp": 15069.913043478271,
+    "isInDB": false
+  },
+  {
+    "word": "悲欢离合",
+    "timestamp": 15589.565217391315,
+    "isInDB": false
+  },
+  {
+    "word": "无动于衷",
+    "timestamp": 16628.869565217403,
+    "isInDB": false
+  }
+]

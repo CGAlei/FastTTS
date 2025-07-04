@@ -1,0 +1,19 @@
+2025-06-21 00:00:13 - main - ERROR - [main.py:1357] - Error in define_word endpoint: No module named 'openai'
+2025-06-21 18:59:05 - main - ERROR - [main.py:1857] - Error renaming session 20250621_173207: name 'render_session_item' is not defined
+2025-06-21 18:59:05 - main - ERROR - [main.py:1857] - Error renaming session 20250621_173207: name 'render_session_item' is not defined
+2025-06-21 18:59:16 - main - ERROR - [main.py:1857] - Error renaming session 20250621_173207: name 'render_session_item' is not defined
+2025-06-21 18:59:16 - main - ERROR - [main.py:1857] - Error renaming session 20250621_173207: name 'render_session_item' is not defined
+2025-06-21 19:43:35 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:43:39 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:43:40 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:43:40 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:43:41 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:43:58 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:09 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:09 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:09 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:13 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:13 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:14 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:15 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'
+2025-06-21 19:44:15 - main - ERROR - [main.py:673] - Error filtering sessions: 'NoneType' object has no attribute 'lower'

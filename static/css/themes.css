@@ -1,0 +1,2363 @@
+/* Theme Button Styles */
+.theme-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.theme-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.theme-btn.active {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-default { background: #ffffff; color: #000; }
+.theme-contrast { background: #000000; color: #fff; }
+.theme-dark { background: #1a1a1a; color: #e5e5e5; }
+
+/* High Contrast Theme - CSS Custom Properties Override */
+.high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cccccc;
+    --color-text-tertiary: #888888;
+    --color-border: #666666;
+    --color-border-hover: #888888;
+    --color-bg-subtle: #1a1a1a;
+    --color-bg-hover: #333333;
+}
+
+.high-contrast .word-part {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: 2px solid #666666;
+}
+
+.high-contrast .word-part.mouse-hover {
+    background-color: #555555 !important;
+    border-color: #888888;
+}
+
+.high-contrast .word-part.bg-yellow-400 {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border-color: #cccc00 !important;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.4);
+}
+
+/* Override bg-yellow-400 base colors immediately for high contrast */
+.high-contrast .word-part.bg-yellow-400 * {
+    color: #000000 !important;
+}
+
+.high-contrast .word-part.bg-yellow-400 .chinese-char {
+    color: #000000 !important;
+}
+
+.high-contrast .word-part.bg-yellow-400 .pinyin-text {
+    color: #333333 !important;
+}
+
+/* High contrast karaoke text colors */
+.high-contrast .word-part.bg-yellow-400 .chinese-char {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+.high-contrast .word-part.bg-yellow-400 .pinyin-text {
+    color: #333333 !important;
+    font-weight: bold !important;
+}
+
+.high-contrast .pinyin-text {
+    color: #cccccc !important;
+}
+
+.high-contrast .chinese-char {
+    color: #ffffff;
+}
+
+/* High Contrast - Complete UI Theme */
+.high-contrast .app-container {
+    background-color: #000000 !important;
+}
+
+.high-contrast .main-content {
+    background-color: #000000 !important;
+}
+
+.high-contrast.main-content {
+    background-color: #000000 !important;
+}
+
+.high-contrast .karaoke-area {
+    background-color: #000000 !important;
+}
+
+.high-contrast .left-sidebar {
+    background-color: #1a1a1a !important;
+    border-right: 2px solid #666666;
+}
+
+.high-contrast .left-sidebar-header {
+    background-color: #1a1a1a !important;
+    border-bottom: 2px solid #666666 !important;
+}
+
+.high-contrast .left-sidebar-content {
+    background-color: #1a1a1a !important;
+}
+
+.high-contrast .right-sidebar {
+    background-color: #1a1a1a !important;
+    border-left: 2px solid #666666;
+}
+
+.high-contrast .accessibility-controls {
+    background-color: #1a1a1a !important;
+    border: 2px solid #666666;
+    color: #ffffff !important;
+}
+
+.high-contrast .input-area {
+    background-color: #1a1a1a !important;
+    border: 2px solid #666666;
+}
+
+.high-contrast .chat-input-container {
+    background-color: #333333 !important;
+    border: 2px solid #888888;
+}
+
+.high-contrast .chat-input-container textarea {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .mini-audio-player {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%) !important;
+    border: 2px solid #666666;
+}
+
+.high-contrast .mini-audio-player .time-display {
+    color: #ffffff !important;
+}
+
+.high-contrast .mini-audio-player .progress-container {
+    background: #666666 !important;
+}
+
+.high-contrast .font-btn {
+    background: #333333 !important;
+    color: #ffffff !important;
+    border: 2px solid #888888;
+}
+
+.high-contrast .font-btn.active {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #cccc00;
+}
+
+.high-contrast .theme-btn {
+    border: 3px solid #888888;
+}
+
+.high-contrast .sidebar-toggle {
+    background: #333333 !important;
+    border: 2px solid #888888;
+    color: #ffffff !important;
+}
+
+.high-contrast .punctuation-part {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: 2px solid #666666;
+}
+
+.high-contrast .input-action-btn {
+    background-color: #333333 !important;
+    border: 2px solid #888888 !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .input-action-btn:hover {
+    background-color: #ffff00 !important;
+    border-color: #cccc00 !important;
+    color: #000000 !important;
+}
+
+.high-contrast .session-item {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #666666 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+.high-contrast .session-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.high-contrast .session-date {
+    color: #cccccc !important;
+}
+
+.high-contrast .session-item:hover {
+    background-color: #333333 !important;
+    border-bottom: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transform: translateX(4px);
+}
+
+.high-contrast .session-item:hover .session-title {
+    color: #ffffff !important;
+}
+
+.high-contrast .session-item:hover .session-date {
+    color: #ffffff !important;
+}
+
+.high-contrast .session-item.active {
+    background-color: #ffff00 !important;
+    border-color: #ffffff;
+    color: #000000 !important;
+    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.4);
+}
+
+/* High Contrast Favorite Button Styles */
+.high-contrast .favorite-btn {
+    background-color: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .favorite-inactive {
+    color: #cccccc !important;
+    opacity: 0.8 !important;
+}
+
+.high-contrast .favorite-active {
+    color: #ffff00 !important;
+    text-shadow: 0 0 4px rgba(255, 255, 0, 0.8) !important;
+}
+
+.high-contrast .favorite-active:hover {
+    color: #ffffff !important;
+    background-color: #ffff00 !important;
+    border-radius: 4px !important;
+}
+
+.high-contrast .favorite-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* High Contrast Filter Controls */
+.high-contrast .filter-controls-row {
+    border: 2px solid #888888 !important;
+    background-color: #333333 !important;
+}
+
+.high-contrast .filter-search-input {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 0 10px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: normal !important;
+    vertical-align: middle !important;
+}
+
+.high-contrast .filter-search-input::placeholder {
+    color: #cccccc !important;
+}
+
+/* High Contrast Filter Controls - Compact */
+.high-contrast .filter-toggle-btn-compact {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-left: none !important;
+}
+
+.high-contrast .filter-toggle-btn-compact:hover {
+    background-color: #555555 !important;
+    transform: scale(1.05) !important;
+}
+
+.high-contrast .filter-toggle-btn-compact.active {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 0, 0.8) !important;
+}
+
+.high-contrast .clear-filters-btn-compact {
+    background-color: #333333 !important;
+    color: #ff6666 !important;
+    border: none !important;
+    border-left: none !important;
+}
+
+.high-contrast .clear-filters-btn-compact:hover {
+    background-color: #ff6666 !important;
+    color: #000000 !important;
+    transform: scale(1.05) !important;
+}
+
+/* High Contrast New Session Button */
+.high-contrast .new-session-btn {
+    background: #333333 !important;
+    border: 2px solid #888888 !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .new-session-btn:hover {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+/* High Contrast Delete Button */
+.high-contrast .delete-btn {
+    color: #ff6666 !important;
+    background: none !important;
+}
+
+.high-contrast .delete-btn:hover {
+    background-color: #ff6666 !important;
+    color: #000000 !important;
+}
+
+/* ================================
+   RANGE SLIDERS THEME SUPPORT
+   ================================ */
+
+/* Dark Mode Sliders */
+.dark-mode .speed-slider,
+.dark-mode .slider {
+    background: linear-gradient(to right, #60a5fa 0%, #60a5fa 50%, #374151 50%, #374151 100%);
+}
+
+.dark-mode .speed-slider::-webkit-slider-thumb,
+.dark-mode .slider::-webkit-slider-thumb {
+    background: #60a5fa;
+    border: 2px solid #1f2937;
+}
+
+.dark-mode .speed-slider::-webkit-slider-thumb:hover,
+.dark-mode .slider::-webkit-slider-thumb:hover {
+    background: #3b82f6;
+}
+
+.dark-mode .speed-slider::-moz-range-thumb,
+.dark-mode .slider::-moz-range-thumb {
+    background: #60a5fa;
+    border: 2px solid #1f2937;
+}
+
+.dark-mode .speed-slider::-moz-range-thumb:hover,
+.dark-mode .slider::-moz-range-thumb:hover {
+    background: #3b82f6;
+}
+
+/* High Contrast Sliders */
+.high-contrast .speed-slider,
+.high-contrast .slider {
+    background: linear-gradient(to right, #ffff00 0%, #ffff00 50%, #333333 50%, #333333 100%) !important;
+    border: 2px solid #ffffff !important;
+}
+
+.high-contrast .speed-slider::-webkit-slider-thumb,
+.high-contrast .slider::-webkit-slider-thumb {
+    background: #ffff00 !important;
+    border: 2px solid #000000 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 0, 0.8) !important;
+}
+
+.high-contrast .speed-slider::-webkit-slider-thumb:hover,
+.high-contrast .slider::-webkit-slider-thumb:hover {
+    background: #ffffff !important;
+    transform: scale(1.2) !important;
+}
+
+.high-contrast .speed-slider::-moz-range-thumb,
+.high-contrast .slider::-moz-range-thumb {
+    background: #ffff00 !important;
+    border: 2px solid #000000 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 0, 0.8) !important;
+}
+
+.high-contrast .speed-slider::-moz-range-thumb:hover,
+.high-contrast .slider::-moz-range-thumb:hover {
+    background: #ffffff !important;
+    transform: scale(1.2) !important;
+}
+
+/* High Contrast Filter Controls - Legacy */
+.high-contrast .filter-toggle-btn {
+    background-color: #333333 !important;
+    border: 2px solid #888888 !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .filter-toggle-btn:hover {
+    background-color: #555555 !important;
+    border-color: #aaaaaa !important;
+}
+
+.high-contrast .filter-toggle-btn.active {
+    background-color: #ffff00 !important;
+    border-color: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 0, 0.8) !important;
+}
+
+.high-contrast .clear-filters-btn {
+    background-color: #333333 !important;
+    border: 2px solid #888888 !important;
+    color: #ff6666 !important;
+}
+
+.high-contrast .clear-filters-btn:hover {
+    background-color: #ff6666 !important;
+    border-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* High Contrast Session Active State */
+.high-contrast .session-item.active {
+    background-color: rgba(255, 255, 0, 0.2) !important;
+    border-left: 4px solid #cccc00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 255, 0, 0.3) !important;
+    transform: translateY(-1px);
+    position: relative;
+}
+
+.high-contrast .session-item.active::before {
+    background: linear-gradient(90deg, rgba(255, 255, 0, 0.15) 0%, rgba(255, 255, 0, 0.05) 100%) !important;
+}
+
+.high-contrast .session-item.active .session-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.high-contrast .session-item.active .session-date {
+    color: #cccccc !important;
+}
+
+/* Dark Mode - CSS Custom Properties Override */
+.dark-mode {
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-tertiary: #9ca3af;
+    --color-border: #374151;
+    --color-border-hover: #4b5563;
+    --color-bg-subtle: #1f2937;
+    --color-bg-hover: #374151;
+}
+
+/* Dark Mode UI Components */
+.dark-mode .app-container {
+    background-color: #111827;
+}
+
+.dark-mode .main-content {
+    background-color: #111827;
+}
+
+.dark-mode .left-sidebar {
+    background-color: #1f2937;
+    border-right: 1px solid #374151;
+}
+
+.dark-mode .left-sidebar-header {
+    background-color: #1f2937;
+    border-bottom: 1px solid #374151;
+}
+
+.dark-mode .left-sidebar-content {
+    background-color: #1f2937;
+}
+
+.dark-mode .right-sidebar {
+    background-color: #1f2937;
+    border-left: 1px solid #374151;
+}
+
+/* Dark Mode Session Items */
+.dark-mode .session-item {
+    background-color: #1f2937;
+    border-bottom: 1px solid #374151;
+    color: #f9fafb;
+}
+
+.dark-mode .session-item:hover {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+.dark-mode .session-item.active {
+    background-color: rgba(251, 191, 36, 0.1);
+    border-left: 4px solid #f59e0b;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.15);
+}
+
+.dark-mode .session-item.active::before {
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.08) 0%, rgba(251, 191, 36, 0.03) 100%);
+}
+
+.dark-mode .session-title {
+    color: #f9fafb;
+}
+
+.dark-mode .session-date {
+    color: #9ca3af;
+}
+
+/* Dark Mode Buttons */
+.dark-mode .favorite-btn {
+    background: none;
+}
+
+.dark-mode .favorite-inactive {
+    color: #6b7280;
+}
+
+.dark-mode .delete-btn {
+    color: #f87171;
+}
+
+.dark-mode .delete-btn:hover {
+    background-color: #450a0a;
+    color: #fca5a5;
+}
+
+/* Dark Mode Filter Controls */
+.dark-mode .filter-controls-row {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+.dark-mode .filter-search-input {
+    background-color: #374151;
+    color: #f9fafb;
+    padding: 0 10px;
+    margin: 0;
+    font-size: 13px;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.dark-mode .filter-search-input::placeholder {
+    color: #9ca3af;
+}
+
+.dark-mode .filter-toggle-btn-compact {
+    background-color: #374151;
+    color: #d1d5db;
+    border: none !important;
+    border-left: none !important;
+}
+
+.dark-mode .filter-toggle-btn-compact:hover {
+    background-color: #4b5563;
+    color: #f9fafb;
+    transform: scale(1.05);
+}
+
+.dark-mode .filter-toggle-btn-compact.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.dark-mode .clear-filters-btn-compact {
+    background-color: #374151;
+    color: #f87171;
+    border: none !important;
+    border-left: none !important;
+}
+
+.dark-mode .clear-filters-btn-compact:hover {
+    background-color: #450a0a;
+    color: #fca5a5;
+    transform: scale(1.05);
+}
+
+/* Dark Mode New Session Button */
+.dark-mode .new-session-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border: 1px solid #1d4ed8;
+}
+
+/* Dark Mode Word Container Hover States */
+.dark-mode .word-part:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4), 0 0 0 2px rgba(96, 165, 250, 0.3);
+    transform: translateY(-2px);
+}
+
+.dark-mode .word-part:hover .pinyin-text {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.dark-mode .word-part:hover .chinese-char {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Dark Mode Click States */
+.dark-mode .word-part.mouse-left-click {
+    background-color: #93c5fd !important;
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+.dark-mode .word-part.mouse-right-click {
+    background-color: #fde68a !important;
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+}
+
+.dark-mode .word-part:active {
+    transform: scale(0.98);
+    transition: all 0.05s ease;
+}
+
+/* High Contrast Word Container Hover States */
+.high-contrast .word-part:hover {
+    border-color: #ffffff;
+    outline: 3px solid #ffffff;
+    outline-offset: -1px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.6), 0 0 0 2px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.high-contrast .word-part:hover .pinyin-text {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.high-contrast .word-part:hover .chinese-char {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* High Contrast Click States */
+.high-contrast .word-part.mouse-left-click {
+    background-color: #93c5fd !important;
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+.high-contrast .word-part.mouse-right-click {
+    background-color: #fde68a !important;
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+}
+
+.high-contrast .word-part:active {
+    transform: scale(0.98);
+    transition: all 0.05s ease;
+}
+
+/* Dark Mode Theme */
+.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .word-part {
+    background-color: #333333 !important;
+    color: #e5e5e5 !important;
+    border: 2px solid #444444;
+}
+
+.dark-mode .word-part.mouse-hover {
+    background-color: #444444 !important;
+    border-color: #666666;
+}
+
+.dark-mode .word-part.bg-yellow-400 {
+    background-color: #fbbf24 !important;
+    color: #1a1a1a !important;
+    border-color: #d97706 !important;
+    box-shadow: 0 4px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Override bg-yellow-400 base colors immediately for dark mode */
+.dark-mode .word-part.bg-yellow-400 * {
+    color: #1a1a1a !important;
+}
+
+.dark-mode .word-part.bg-yellow-400 .chinese-char {
+    color: #1a1a1a !important;
+}
+
+.dark-mode .word-part.bg-yellow-400 .pinyin-text {
+    color: #374151 !important;
+}
+
+/* Dark mode karaoke text colors */
+.dark-mode .word-part.bg-yellow-400 .chinese-char {
+    color: #1a1a1a !important;
+    font-weight: bold !important;
+}
+
+.dark-mode .word-part.bg-yellow-400 .pinyin-text {
+    color: #374151 !important;
+    font-weight: bold !important;
+}
+
+.dark-mode .pinyin-text {
+    color: #999999 !important;
+}
+
+.dark-mode .chinese-char {
+    color: #e5e5e5;
+}
+
+/* Dark Mode - Complete UI Theme */
+.dark-mode .app-container {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .main-content {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode.main-content {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .karaoke-area {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .left-sidebar {
+    background-color: #2d2d2d !important;
+    border-right: 1px solid #444444;
+}
+
+.dark-mode .right-sidebar {
+    background-color: #2d2d2d !important;
+    border-left: 1px solid #444444;
+}
+
+.dark-mode .accessibility-controls {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444444;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .input-area {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444444;
+}
+
+.dark-mode .chat-input-container {
+    background-color: #333333 !important;
+    border: 1px solid #555555;
+}
+
+.dark-mode .chat-input-container textarea {
+    background-color: #333333 !important;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .mini-audio-player {
+    background: linear-gradient(135deg, #2d2d2d 0%, #333333 100%) !important;
+    border: 1px solid #444444;
+}
+
+.dark-mode .mini-audio-player .time-display {
+    color: #cccccc !important;
+}
+
+.dark-mode .mini-audio-player .progress-container {
+    background: #444444 !important;
+}
+
+.dark-mode .font-btn {
+    background: #333333 !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #555555;
+}
+
+.dark-mode .font-btn.active {
+    background: #3b82f6 !important;
+    color: white !important;
+}
+
+.dark-mode .theme-btn {
+    border: 2px solid #555555;
+}
+
+.dark-mode .theme-dark {
+    background: #1a1a1a;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .sidebar-toggle {
+    background: #333333 !important;
+    border: 1px solid #555555;
+    color: #cccccc !important;
+}
+
+.dark-mode .punctuation-part {
+    background-color: #333333 !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #444444;
+}
+
+.dark-mode .input-action-btn {
+    background-color: #374151 !important;
+    border: 1px solid #6b7280 !important;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .input-action-btn:hover {
+    background-color: #4b5563 !important;
+    border-color: #9ca3af !important;
+    color: #f1f5f9 !important;
+}
+
+.dark-mode .session-item {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    margin: 0.5rem;
+    padding: 1rem;
+    color: #f1f5f9 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.dark-mode .session-item * {
+    color: #f1f5f9 !important;
+}
+
+.dark-mode .session-item:hover {
+    background-color: #000000 !important;
+    border: 2px solid #e5e5e5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.dark-mode .session-item:hover * {
+    color: #ffffff !important;
+}
+
+.dark-mode .session-item.active {
+    background-color: #2563eb !important;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Fix text contrast in dark mode session items */
+.dark-mode .session-item .text-gray-800 {
+    color: #f1f5f9 !important;
+}
+
+.dark-mode .session-item .text-gray-500 {
+    color: #94a3b8 !important;
+}
+
+/* Dark Mode Favorite Button Styles */
+.dark-mode .favorite-btn {
+    background-color: transparent !important;
+    border: none !important;
+    color: #e5e7eb !important;
+}
+
+.dark-mode .favorite-inactive {
+    color: #6b7280 !important;
+    opacity: 0.8 !important;
+}
+
+.dark-mode .favorite-active {
+    color: #fbbf24 !important;
+    filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.5)) !important;
+}
+
+.dark-mode .favorite-active:hover {
+    color: #f59e0b !important;
+}
+
+.dark-mode .favorite-btn:hover {
+    background-color: rgba(251, 191, 36, 0.1) !important;
+}
+
+/* Dark Mode Filter Controls - Compact */
+.dark-mode .filter-toggle-btn-compact {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #d1d5db !important;
+}
+
+.dark-mode .filter-toggle-btn-compact:hover {
+    background-color: #4b5563 !important;
+    border-color: #6b7280 !important;
+}
+
+.dark-mode .filter-toggle-btn-compact.active {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .clear-filters-btn-compact {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #f87171 !important;
+}
+
+.dark-mode .clear-filters-btn-compact:hover {
+    background-color: #4b5563 !important;
+    border-color: #6b7280 !important;
+}
+
+/* Dark Mode Filter Controls - Legacy */
+.dark-mode .filter-toggle-btn {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #d1d5db !important;
+}
+
+.dark-mode .filter-toggle-btn:hover {
+    background-color: #4b5563 !important;
+    border-color: #6b7280 !important;
+}
+
+.dark-mode .filter-toggle-btn.active {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .clear-filters-btn {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #f87171 !important;
+}
+
+.dark-mode .clear-filters-btn:hover {
+    background-color: #4b5563 !important;
+    border-color: #6b7280 !important;
+}
+
+/* Dark Mode Session Active State */
+.dark-mode .session-item.active {
+    background-color: #fbbf24 !important;
+    border-left: 4px solid #d97706 !important;
+    box-shadow: 0 4px 8px rgba(251, 191, 36, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+.dark-mode .session-item.active * {
+    color: #1a1a1a !important;
+}
+
+/* Theme background spacer */
+.theme-bg-spacer {
+    background-color: white;
+}
+
+.high-contrast .theme-bg-spacer {
+    background-color: #000000 !important;
+}
+
+.dark-mode .theme-bg-spacer {
+    background-color: #1a1a1a !important;
+}
+
+/* Enhanced theme rules with higher specificity */
+body.high-contrast,
+html.high-contrast,
+.high-contrast.main-content,
+.high-contrast.karaoke-area,
+.high-contrast #content-wrapper,
+#content-wrapper.high-contrast {
+    background-color: #000000 !important;
+}
+
+body.dark-mode,
+html.dark-mode,
+.dark-mode.main-content,
+.dark-mode.karaoke-area,
+.dark-mode #content-wrapper,
+#content-wrapper.dark-mode {
+    background-color: #1a1a1a !important;
+}
+
+/* Improved Delete Button Styling for All Themes */
+.delete-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    color: #ef4444;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+    transform: scale(1.1);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* Dark Mode New Session Button */
+.dark-mode .left-sidebar-header button {
+    background-color: #374151 !important;
+    border: 1px solid #6b7280 !important;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .left-sidebar-header button:hover {
+    background-color: #4b5563 !important;
+    border-color: #9ca3af !important;
+    color: #f1f5f9 !important;
+}
+
+/* Dark Mode Delete Button */
+.dark-mode .delete-btn {
+    color: #f87171;
+    background-color: transparent;
+}
+
+.dark-mode .delete-btn:hover {
+    background-color: #7f1d1d;
+    color: #fecaca;
+    border-color: #ef4444;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.4);
+}
+
+/* High Contrast Delete Button */
+.high-contrast .delete-btn {
+    color: #ff6666;
+    border: 2px solid #ff6666;
+    background-color: transparent;
+}
+
+.high-contrast .delete-btn:hover {
+    background-color: #ff6666;
+    color: #000000;
+    border-color: #ff4444;
+    box-shadow: 0 2px 4px rgba(255, 102, 102, 0.5);
+}
+
+/* Dark Mode Scrollbar Styles */
+.dark-mode .left-sidebar-content {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #2d2d2d;
+}
+
+.dark-mode .left-sidebar-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dark-mode .left-sidebar-content::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.dark-mode .left-sidebar-content::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 3px;
+}
+
+.dark-mode .left-sidebar-content::-webkit-scrollbar-thumb:hover {
+    background: #777777;
+}
+
+.dark-mode .main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #1a1a1a;
+}
+
+.dark-mode .main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark-mode .main-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.dark-mode .main-content::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 4px;
+}
+
+.dark-mode .main-content::-webkit-scrollbar-thumb:hover {
+    background: #777777;
+}
+
+/* Dark Mode Settings Modal */
+.dark-mode .modal-content {
+    background-color: #2d2d2d !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #444444;
+}
+
+.dark-mode .modal-header .close-btn {
+    color: #e5e5e5;
+}
+
+.dark-mode .modal-header .close-btn:hover {
+    background: #444444 !important;
+    color: #ffffff;
+}
+
+.dark-mode .voice-select {
+    background-color: #333333 !important;
+    color: #e5e5e5 !important;
+    border-color: #555555;
+}
+
+.dark-mode .voice-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.dark-mode .settings-btn {
+    background: linear-gradient(135deg, #444444 0%, #333333 100%) !important;
+    border: 1px solid #555555 !important;
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .settings-btn:hover {
+    background: linear-gradient(135deg, #555555 0%, #444444 100%) !important;
+}
+
+.dark-mode .speed-slider {
+    background: linear-gradient(to right, #3b82f6 0%, #3b82f6 50%, #555555 50%, #555555 100%) !important;
+}
+
+.dark-mode .speed-slider::-webkit-slider-thumb {
+    background: #2d2d2d !important;
+    border: 2px solid #3b82f6 !important;
+}
+
+.dark-mode .speed-slider::-moz-range-thumb {
+    background: #2d2d2d !important;
+    border: 2px solid #3b82f6 !important;
+}
+
+
+
+/* High Contrast Mode Scrollbar Styles */
+.high-contrast .left-sidebar-content {
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc #000000;
+}
+
+.high-contrast .left-sidebar-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.high-contrast .left-sidebar-content::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #666666;
+}
+
+.high-contrast .left-sidebar-content::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 3px;
+    border: 1px solid #888888;
+}
+
+.high-contrast .left-sidebar-content::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+    border-color: #aaaaaa;
+}
+
+.high-contrast .main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc #000000;
+}
+
+.high-contrast .main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.high-contrast .main-content::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #666666;
+}
+
+.high-contrast .main-content::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 4px;
+    border: 1px solid #888888;
+}
+
+.high-contrast .main-content::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+    border-color: #aaaaaa;
+}
+
+/* High Contrast Settings Modal */
+.high-contrast .modal-content {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+.high-contrast .modal-header .close-btn {
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .modal-header .close-btn:hover {
+    background: #333333 !important;
+    color: #ffff00 !important;
+}
+
+.high-contrast .voice-select {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+.high-contrast .voice-select:focus {
+    border-color: #ffff00 !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
+}
+
+.high-contrast .settings-btn {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .settings-btn:hover {
+    background: #333333 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+.high-contrast .speed-slider {
+    background: linear-gradient(to right, #ffff00 0%, #ffff00 50%, #666666 50%, #666666 100%) !important;
+}
+
+.high-contrast .speed-slider::-webkit-slider-thumb {
+    background: #000000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+.high-contrast .speed-slider::-moz-range-thumb {
+    background: #000000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+.high-contrast .speed-slider:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
+}
+
+/* Vocabulary Word Styling - Default Theme */
+.vocab-word {
+    background-color: rgba(173, 216, 230, 0.8) !important;
+    border-color: #7dd3fc !important;
+}
+
+/* Vocabulary Word Styling - Dark Mode */
+.dark-mode .vocab-word {
+    background-color: rgba(96, 165, 250, 0.3) !important;
+    border-color: #60a5fa;
+}
+
+/* Vocabulary Word Styling - High Contrast */
+.high-contrast .vocab-word {
+    background-color: rgba(100, 149, 237, 0.6) !important;
+    border: 3px solid #6495ed !important;
+}
+
+/* Ensure karaoke highlighting overrides vocabulary styling */
+.word-part.bg-yellow-400 {
+    background-color: #fbbf24 !important;
+}
+
+.dark-mode .word-part.bg-yellow-400 {
+    background-color: #fbbf24 !important;
+}
+
+.high-contrast .word-part.bg-yellow-400 {
+    background-color: #ffff00 !important;
+}
+
+/* Translation Popup Theme Support */
+
+/* Dark Mode Translation Popup */
+.dark-mode .popup-content {
+    background-color: #2d2d2d !important;
+    border-color: #555555;
+}
+
+.dark-mode .popup-header {
+    background: linear-gradient(135deg, #333333 0%, #2d2d2d 100%) !important;
+    border-bottom-color: #555555;
+}
+
+.dark-mode .chinese-word {
+    color: #e5e5e5 !important;
+}
+
+.dark-mode .popup-close {
+    color: #cccccc !important;
+}
+
+.dark-mode .popup-close:hover {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .translation-text {
+    color: #10b981 !important;
+}
+
+.dark-mode .translation-popup::before {
+    border-bottom-color: #555555;
+}
+
+.dark-mode .translation-popup::after {
+    border-bottom-color: #2d2d2d;
+}
+
+/* High Contrast Translation Popup */
+.high-contrast .popup-content {
+    background-color: #000000 !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+.high-contrast .popup-header {
+    background: linear-gradient(135deg, #333333 0%, #000000 100%) !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+.high-contrast .chinese-word {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.high-contrast .popup-close {
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .popup-close:hover {
+    background-color: #333333 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00;
+}
+
+.high-contrast .translation-text {
+    color: #00ff00 !important;
+    font-weight: bold !important;
+}
+
+.high-contrast .define-btn {
+    background: linear-gradient(135deg, #ffff00 0%, #cccc00 100%) !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .define-btn:hover {
+    background: linear-gradient(135deg, #ffffff 0%, #ffff00 100%) !important;
+    border-color: #ffff00;
+}
+
+.high-contrast .translation-popup::before {
+    border-bottom-color: #ffffff;
+}
+
+.high-contrast .translation-popup::after {
+    border-bottom-color: #000000;
+}
+
+/* Dark Mode Modal Styles */
+.dark-mode .modal-content {
+    background: #1f2937;
+    color: #f9fafb;
+    border: 1px solid #374151;
+}
+
+.dark-mode .modal-header {
+    background: #1f2937;
+    border-bottom-color: #374151;
+}
+
+.dark-mode .modal-header .close-btn {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+}
+
+.dark-mode .modal-header .close-btn:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+    color: #f9fafb;
+}
+
+.dark-mode .modal-content .bg-gray-50 {
+    background: #111827 !important;
+    border-color: #374151;
+}
+
+.dark-mode .modal-content .bg-gray-50:hover {
+    border-color: #4b5563;
+}
+
+.dark-mode .modal-content input,
+.dark-mode .modal-content select {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+/* ========================================
+   Dark Mode - Tabbed Settings Interface
+   ======================================== */
+
+.dark-mode .modal-header {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-bottom-color: #374151;
+}
+
+.dark-mode .modal-header h3 {
+    color: #f9fafb;
+}
+
+.dark-mode .settings-tabs {
+    background: #1f2937;
+    border-bottom-color: #374151;
+}
+
+.dark-mode .settings-tab {
+    color: #9ca3af;
+    background: #374151;
+}
+
+.dark-mode .settings-tab:hover {
+    color: #d1d5db;
+    background: #4b5563;
+}
+
+.dark-mode .settings-tab.active {
+    color: #f9fafb;
+    background: #111827;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .tab-content-container {
+    background: #111827;
+}
+
+.dark-mode .tab-content label {
+    color: #f3f4f6;
+}
+
+.dark-mode .tab-content h4 {
+    color: #f9fafb !important;
+}
+
+.dark-mode .tab-content input,
+.dark-mode .tab-content select {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+.dark-mode .tab-content input:focus,
+.dark-mode .tab-content select:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.dark-mode .tab-content input:hover,
+.dark-mode .tab-content select:hover {
+    border-color: #6b7280;
+}
+
+.dark-mode .speed-slider {
+    background: linear-gradient(to right, #4b5563 0%, #60a5fa 50%, #4b5563 100%);
+}
+
+.dark-mode .speed-slider::-webkit-slider-thumb {
+    background: #60a5fa;
+    border-color: #1f2937;
+}
+
+.dark-mode .speed-slider::-webkit-slider-thumb:hover {
+    background: #3b82f6;
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+
+.dark-mode .speed-slider::-moz-range-thumb {
+    background: #60a5fa;
+    border-color: #1f2937;
+}
+
+.dark-mode #minimax-status {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+.dark-mode .tab-content .bg-gray-50 {
+    background: #1f2937 !important;
+    border-color: #374151;
+}
+
+.dark-mode .tab-content button {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+.dark-mode .tab-content button:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+}
+
+.dark-mode .modal-content input::placeholder {
+    color: #9ca3af;
+}
+
+.dark-mode .modal-content input:focus,
+.dark-mode .modal-content select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .modal-content label {
+    color: #e5e7eb;
+}
+
+.dark-mode .modal-content p {
+    color: #9ca3af;
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-thumb {
+    background: #4b5563;
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* High Contrast Modal Styles */
+.high-contrast .modal-content {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .modal-header {
+    background: #000000;
+    border-bottom: 2px solid #ffffff;
+}
+
+.high-contrast .modal-header .close-btn {
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.high-contrast .modal-header .close-btn:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffff00;
+}
+
+.high-contrast .modal-content .bg-gray-50 {
+    background: #000000 !important;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .modal-content .bg-gray-50:hover {
+    border-color: #ffff00;
+}
+
+.high-contrast .modal-content input,
+.high-contrast .modal-content select {
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+/* ========================================
+   High Contrast - Tabbed Settings Interface
+   ======================================== */
+
+.high-contrast .modal-header {
+    background: #000000;
+    border-bottom: 3px solid #ffffff;
+}
+
+.high-contrast .modal-header h3 {
+    color: #ffffff;
+}
+
+.high-contrast .settings-tabs {
+    background: #000000;
+    border-bottom: 3px solid #ffffff;
+}
+
+.high-contrast .settings-tab {
+    color: #ffffff;
+    background: #333333;
+    border: 2px solid #ffffff;
+    font-weight: 600;
+}
+
+.high-contrast .settings-tab:hover {
+    color: #000000;
+    background: #ffff00;
+    border-color: #ffffff;
+}
+
+.high-contrast .settings-tab.active {
+    color: #ffff00;
+    background: #000000;
+    border-color: #ffff00;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(255, 255, 0, 0.3);
+}
+
+.high-contrast .tab-content-container {
+    background: #000000;
+}
+
+.high-contrast .tab-content label {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.high-contrast .tab-content h4 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.high-contrast .tab-content input,
+.high-contrast .tab-content select {
+    background: #000000;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.high-contrast .tab-content input:focus,
+.high-contrast .tab-content select:focus {
+    border-color: #ffff00;
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.3);
+    background: #111111;
+}
+
+.high-contrast .tab-content input:hover,
+.high-contrast .tab-content select:hover {
+    border-color: #ffff00;
+}
+
+.high-contrast .speed-slider {
+    background: linear-gradient(to right, #333333 0%, #ffff00 50%, #333333 100%);
+    height: 12px;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .speed-slider::-webkit-slider-thumb {
+    background: #ffff00;
+    border: 3px solid #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+.high-contrast .speed-slider::-webkit-slider-thumb:hover {
+    background: #ffffff;
+    border-color: #ffff00;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+.high-contrast .speed-slider::-moz-range-thumb {
+    background: #ffff00;
+    border: 3px solid #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+.high-contrast #minimax-status {
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.high-contrast .tab-content .bg-gray-50 {
+    background: #000000 !important;
+    border: 3px solid #ffffff;
+}
+
+.high-contrast .tab-content button {
+    background: #000000;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.high-contrast .tab-content button:hover {
+    background: #ffff00;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.high-contrast .tab-content button:active {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffff00;
+}
+
+.high-contrast .modal-content input::placeholder {
+    color: #cccccc;
+}
+
+.high-contrast .modal-content input:focus,
+.high-contrast .modal-content select:focus {
+    border-color: #ffff00;
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.3);
+}
+
+.high-contrast .modal-content label {
+    color: #ffffff;
+}
+
+.high-contrast .modal-content p {
+    color: #cccccc;
+}
+
+.high-contrast .modal-content::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #666666;
+}
+
+.high-contrast .modal-content::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border: 1px solid #888888;
+}
+
+.high-contrast .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+/* ========== COMPREHENSIVE VOCABULARY THEME SUPPORT ========== */
+
+/* Default Theme CSS Custom Properties */
+:root {
+    /* Vocabulary Sidebar Colors */
+    --vocab-header-bg: #ffffff;
+    --vocab-header-text: #1f2937;
+    --vocab-header-border: #e5e7eb;
+    --vocab-status-bg: #ffffff;
+    --vocab-status-text-primary: #6b7280;
+    --vocab-status-text-secondary: #9ca3af;
+    --vocab-content-bg: #ffffff;
+    
+    /* Vocabulary Display Areas */
+    --vocab-display-area-bg: #ffffff;
+    --vocab-container-bg: #ffffff;
+    --vocab-search-container-bg: #ffffff;
+    --vocab-search-input-bg: #ffffff;
+    --vocab-search-input-border: #e5e7eb;
+    --vocab-search-input-text: #1f2937;
+    
+    /* Vocabulary Cards */
+    --card-background: #ffffff;
+    --card-border-color: #e5e7eb;
+    --card-text-primary: #111827;
+    --card-text-secondary: #6b7280;
+    --card-text-muted: #9ca3af;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --card-shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Database Attribution Footer */
+    --db-footer-bg: #f9fafb;
+    --db-footer-border: #e5e7eb;
+    --db-footer-text-primary: #374151;
+    --db-footer-text-secondary: #6b7280;
+    --db-footer-text-accent: #3b82f6;
+    
+    /* Vocabulary Word Colors */
+    --vocab-word-title: #1f2937;
+    --vocab-word-pinyin: #7c3aed;
+    --vocab-word-translation: #059669;
+    --vocab-word-definition: #374151;
+    --vocab-word-grammar-bg: #dbeafe;
+    --vocab-word-grammar-text: #1e40af;
+    --vocab-word-example-bg: #f9fafb;
+    --vocab-word-example-text: #374151;
+    --vocab-word-synonym: #059669;
+    --vocab-word-antonym: #dc2626;
+    
+    /* Refresh Button */
+    --refresh-btn-bg: #f3f4f6;
+    --refresh-btn-border: #d1d5db;
+    --refresh-btn-text: #374151;
+    --refresh-btn-hover-bg: #e5e7eb;
+    --refresh-btn-hover-border: #9ca3af;
+    --refresh-btn-active-bg: #fef3c7;
+    --refresh-btn-active-border: #f59e0b;
+    --refresh-btn-active-text: #92400e;
+}
+
+/* Dark Mode Vocabulary Colors */
+.dark-mode {
+    /* Vocabulary Sidebar Colors */
+    --vocab-header-bg: #1f2937;
+    --vocab-header-text: #f9fafb;
+    --vocab-header-border: #374151;
+    --vocab-status-bg: #1f2937;
+    --vocab-status-text-primary: #d1d5db;
+    --vocab-status-text-secondary: #9ca3af;
+    --vocab-content-bg: #1f2937;
+    
+    /* Vocabulary Display Areas */
+    --vocab-display-area-bg: #1f2937;
+    --vocab-container-bg: #1f2937;
+    --vocab-search-container-bg: #1f2937;
+    --vocab-search-input-bg: #374151;
+    --vocab-search-input-border: #4b5563;
+    --vocab-search-input-text: #f9fafb;
+    
+    /* Vocabulary Cards */
+    --card-background: #1f2937;
+    --card-border-color: #374151;
+    --card-text-primary: #f9fafb;
+    --card-text-secondary: #d1d5db;
+    --card-text-muted: #9ca3af;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    --card-shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12);
+    --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+    
+    /* Database Attribution Footer */
+    --db-footer-bg: #111827;
+    --db-footer-border: #374151;
+    --db-footer-text-primary: #f9fafb;
+    --db-footer-text-secondary: #d1d5db;
+    --db-footer-text-accent: #60a5fa;
+    
+    /* Vocabulary Word Colors */
+    --vocab-word-title: #f9fafb;
+    --vocab-word-pinyin: #a78bfa;
+    --vocab-word-translation: #34d399;
+    --vocab-word-definition: #f9fafb;
+    --vocab-word-grammar-bg: #1e3a8a;
+    --vocab-word-grammar-text: #93c5fd;
+    --vocab-word-example-bg: #111827;
+    --vocab-word-example-text: #d1d5db;
+    --vocab-word-synonym: #34d399;
+    --vocab-word-antonym: #f87171;
+    
+    /* Refresh Button */
+    --refresh-btn-bg: #374151;
+    --refresh-btn-border: #4b5563;
+    --refresh-btn-text: #d1d5db;
+    --refresh-btn-hover-bg: #4b5563;
+    --refresh-btn-hover-border: #6b7280;
+    --refresh-btn-active-bg: #451a03;
+    --refresh-btn-active-border: #f59e0b;
+    --refresh-btn-active-text: #fbbf24;
+}
+
+/* High Contrast Vocabulary Colors */
+.high-contrast {
+    /* Vocabulary Sidebar Colors */
+    --vocab-header-bg: #000000;
+    --vocab-header-text: #ffffff;
+    --vocab-header-border: #ffffff;
+    --vocab-status-bg: #000000;
+    --vocab-status-text-primary: #ffffff;
+    --vocab-status-text-secondary: #cccccc;
+    --vocab-content-bg: #000000;
+    
+    /* Vocabulary Display Areas */
+    --vocab-display-area-bg: #000000;
+    --vocab-container-bg: #000000;
+    --vocab-search-container-bg: #000000;
+    --vocab-search-input-bg: #333333;
+    --vocab-search-input-border: #ffffff;
+    --vocab-search-input-text: #ffffff;
+    
+    /* Vocabulary Cards */
+    --card-background: #000000;
+    --card-border-color: #ffffff;
+    --card-text-primary: #ffffff;
+    --card-text-secondary: #ffffff;
+    --card-text-muted: #cccccc;
+    --card-shadow: 0 0 0 2px #ffffff;
+    --card-shadow-lg: 0 0 0 3px #ffffff;
+    --card-hover-shadow: 0 0 0 4px #ffff00;
+    
+    /* Database Attribution Footer */
+    --db-footer-bg: #000000;
+    --db-footer-border: #ffffff;
+    --db-footer-text-primary: #ffffff;
+    --db-footer-text-secondary: #cccccc;
+    --db-footer-text-accent: #ffff00;
+    
+    /* Vocabulary Word Colors */
+    --vocab-word-title: #ffffff;
+    --vocab-word-pinyin: #ffff00;
+    --vocab-word-translation: #00ff00;
+    --vocab-word-definition: #ffffff;
+    --vocab-word-grammar-bg: #333333;
+    --vocab-word-grammar-text: #ffff00;
+    --vocab-word-example-bg: #000000;
+    --vocab-word-example-text: #ffffff;
+    --vocab-word-synonym: #00ff00;
+    --vocab-word-antonym: #ff6666;
+    
+    /* Refresh Button */
+    --refresh-btn-bg: #333333;
+    --refresh-btn-border: #ffffff;
+    --refresh-btn-text: #ffffff;
+    --refresh-btn-hover-bg: #555555;
+    --refresh-btn-hover-border: #ffff00;
+    --refresh-btn-active-bg: #ffff00;
+    --refresh-btn-active-border: #ffffff;
+    --refresh-btn-active-text: #000000;
+}
+
+.high-contrast .vocab-card {
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .vocab-card:hover {
+    border-color: #ffff00;
+    box-shadow: 0 0 0 2px #ffff00;
+}
+
+.high-contrast .vocab-card-header .vocab-card-title {
+    color: #ffffff;
+}
+
+.high-contrast .vocab-card-header .vocab-card-subtitle {
+    color: #ffff00;
+}
+
+.high-contrast .vocab-card:hover .vocab-card-label {
+    color: #ffff00;
+}
+
+/* Theme-specific accent colors */
+.dark-mode .vocab-card:nth-child(1) {
+    border-left: 4px solid #10b981;
+}
+
+.dark-mode .vocab-card:nth-child(2) {
+    border-left: 4px solid #3b82f6;
+}
+
+.dark-mode .vocab-card:nth-child(3) {
+    border-left: 4px solid #8b5cf6;
+}
+
+.dark-mode .vocab-card:nth-child(4) {
+    border-left: 4px solid #f59e0b;
+}
+
+.dark-mode .vocab-card:nth-child(5) {
+    border-left: 4px solid #ef4444;
+}
+
+.high-contrast .vocab-card:nth-child(1),
+.high-contrast .vocab-card:nth-child(2),
+.high-contrast .vocab-card:nth-child(3),
+.high-contrast .vocab-card:nth-child(4),
+.high-contrast .vocab-card:nth-child(5) {
+    border-left: 4px solid #ffff00;
+}
+
+/* ===========================
+   Session Rename Theme Support
+   =========================== */
+
+/* Dark Mode Session Rename Styles */
+.dark-mode .session-title.custom-name {
+    color: #f9fafb;
+    font-weight: 600;
+}
+
+.dark-mode .session-title.auto-name {
+    color: #d1d5db;
+    font-style: italic;
+}
+
+.dark-mode .edit-session-btn {
+    color: #9ca3af;
+}
+
+.dark-mode .edit-session-btn:hover {
+    background-color: #374151;
+    color: #f3f4f6;
+}
+
+.dark-mode .edit-session-btn:active {
+    background-color: #4b5563;
+}
+
+.dark-mode .session-rename-input {
+    background: #374151;
+    border-color: #60a5fa;
+    color: #f9fafb;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.dark-mode .session-rename-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .session-item.editing {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid #60a5fa;
+}
+
+.dark-mode .session-item.renaming::after {
+    border-color: #4b5563;
+    border-top-color: #60a5fa;
+}
+
+/* High Contrast Session Rename Styles */
+.high-contrast .session-title.custom-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.high-contrast .session-title.auto-name {
+    color: #cccccc;
+    font-style: italic;
+}
+
+.high-contrast .edit-session-btn {
+    color: #ffffff;
+    border: 1px solid #ffff00;
+}
+
+.high-contrast .edit-session-btn:hover {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+.high-contrast .edit-session-btn:active {
+    background-color: #cccc00;
+}
+
+.high-contrast .session-rename-input {
+    background: #000000;
+    border: 3px solid #ffff00;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 0, 0.3);
+}
+
+.high-contrast .session-rename-input:focus {
+    border-color: #ffff00;
+    box-shadow: 0 0 0 4px rgba(255, 255, 0, 0.5);
+}
+
+.high-contrast .session-item.editing {
+    background-color: rgba(255, 255, 0, 0.1);
+    border-left: 4px solid #ffff00;
+}
+
+.high-contrast .session-item.renaming::after {
+    border-color: #666666;
+    border-top-color: #ffff00;
+}
+
+/* Progress Bar Theme Styles */
+
+/* Dark Mode Progress Bar */
+.dark-mode .progress {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+}
+
+.dark-mode .progress-bar {
+    background-color: #3b82f6;
+    color: #e5e5e5;
+}
+
+.dark-mode .progress-message {
+    color: #d1d5db;
+}
+
+/* High Contrast Progress Bar */
+.high-contrast .progress {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+}
+
+.high-contrast .progress-bar {
+    background-color: #ffff00;
+    color: #000000;
+    font-weight: bold;
+}
+
+.high-contrast .progress-message {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ========== THEME-AWARE CSS CLASSES ========== */
+
+/* Vocabulary Sidebar Theme Classes */
+.vocab-header-permanent {
+    background-color: var(--vocab-header-bg) !important;
+    color: var(--vocab-header-text) !important;
+    border-color: var(--vocab-header-border) !important;
+}
+
+.vocab-status-smart {
+    background-color: var(--vocab-status-bg) !important;
+    color: var(--vocab-status-text-primary) !important;
+}
+
+.vocab-status-text-primary {
+    color: var(--vocab-status-text-primary) !important;
+}
+
+.vocab-status-text-secondary {
+    color: var(--vocab-status-text-secondary) !important;
+}
+
+.vocabulary-display-area {
+    background-color: var(--vocab-content-bg) !important;
+}
+
+/* Vocabulary Card Theme Classes */
+.vocab-display-container {
+    background-color: var(--vocab-content-bg) !important;
+}
+
+.vocab-card {
+    background-color: var(--card-background) !important;
+    border-color: var(--card-border-color) !important;
+    box-shadow: var(--card-shadow) !important;
+}
+
+.vocab-card:hover {
+    box-shadow: var(--card-hover-shadow) !important;
+}
+
+.vocab-card-title {
+    color: var(--vocab-word-title) !important;
+}
+
+.vocab-card-subtitle {
+    color: var(--vocab-word-pinyin) !important;
+}
+
+.vocab-card-label {
+    color: var(--card-text-secondary) !important;
+}
+
+.vocab-card-content {
+    color: var(--card-text-primary) !important;
+}
+
+/* Vocabulary Word Specific Colors */
+.vocab-word-translation {
+    color: var(--vocab-word-translation) !important;
+}
+
+.vocab-word-definition {
+    color: var(--vocab-word-definition) !important;
+}
+
+.vocab-word-grammar-bg {
+    background-color: var(--vocab-word-grammar-bg) !important;
+}
+
+.vocab-word-grammar-text {
+    color: var(--vocab-word-grammar-text) !important;
+}
+
+.vocab-word-example-bg {
+    background-color: var(--vocab-word-example-bg) !important;
+    border-color: var(--card-border-color) !important;
+}
+
+.vocab-word-example-text {
+    color: var(--vocab-word-example-text) !important;
+}
+
+.vocab-word-synonym {
+    color: var(--vocab-word-synonym) !important;
+}
+
+.vocab-word-antonym {
+    color: var(--vocab-word-antonym) !important;
+}
+
+/* Database Attribution Footer */
+.database-attribution-footer {
+    background-color: var(--db-footer-bg) !important;
+    border-color: var(--db-footer-border) !important;
+}
+
+.db-footer-text-primary {
+    color: var(--db-footer-text-primary) !important;
+}
+
+.db-footer-text-secondary {
+    color: var(--db-footer-text-secondary) !important;
+}
+
+.db-footer-text-accent {
+    color: var(--db-footer-text-accent) !important;
+}
+
+/* Refresh Button Theme Classes */
+.refresh-vocab-btn {
+    background-color: var(--refresh-btn-bg) !important;
+    border-color: var(--refresh-btn-border) !important;
+    color: var(--refresh-btn-text) !important;
+}
+
+.refresh-vocab-btn:hover {
+    background-color: var(--refresh-btn-hover-bg) !important;
+    border-color: var(--refresh-btn-hover-border) !important;
+}
+
+.refresh-vocab-btn.refreshing {
+    background-color: var(--refresh-btn-active-bg) !important;
+    border-color: var(--refresh-btn-active-border) !important;
+    color: var(--refresh-btn-active-text) !important;
+}
+
+/* Database Attribution Theme Colors */
+.dark-mode .database-attribution-info .db-footer-text-primary {
+    color: #e5e7eb;
+}
+
+.dark-mode .database-attribution-info .db-footer-text-secondary {
+    color: #9ca3af;
+}
+
+.dark-mode .database-attribution-info .db-footer-text-accent {
+    color: #93c5fd;
+}
+
+.high-contrast .database-attribution-info .db-footer-text-primary,
+.high-contrast .database-attribution-info .db-footer-text-secondary,
+.high-contrast .database-attribution-info .db-footer-text-accent {
+    color: #ffffff;
+}
+
+/* ========== VOCABULARY CONTAINER THEME AWARENESS ========== */
+
+/* Vocabulary Display Area Theme Classes */
+.vocabulary-display-area {
+    background-color: var(--vocab-display-area-bg) !important;
+}
+
+.word-list-container {
+    background-color: var(--vocab-container-bg) !important;
+}
+
+.word-list-content {
+    background-color: var(--vocab-container-bg) !important;
+}
+
+.word-search-container {
+    background-color: var(--vocab-search-container-bg) !important;
+}
+
+.word-search-input {
+    background-color: var(--vocab-search-input-bg) !important;
+    border-color: var(--vocab-search-input-border) !important;
+    color: var(--vocab-search-input-text) !important;
+}
+
+.word-search-input::placeholder {
+    color: var(--vocab-status-text-secondary) !important;
+}
+
+
+/* Word Pagination Theme Support */
+.word-pagination {
+    background-color: var(--vocab-container-bg) !important;
+    border-color: var(--vocab-search-input-border) !important;
+}
+
+.pagination-btn {
+    background-color: var(--vocab-search-input-bg) !important;
+    border-color: var(--vocab-search-input-border) !important;
+    color: var(--vocab-search-input-text) !important;
+}
+
+.pagination-btn:hover {
+    background-color: var(--card-border-color) !important;
+}
+
+.pagination-info {
+    color: var(--vocab-status-text-primary) !important;
+}
+
+/* Word List Item Hover and Click Styles */
+.word-list-item-structured {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.word-list-item-structured:hover {
+    background-color: var(--card-border-color) !important;
+}
+
+.word-list-item-structured:active {
+    background-color: var(--vocab-search-input-bg) !important;
+}
+
+/* Minimal transitions - performance focused */
