@@ -1,0 +1,118 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+logs/
+app.log
+debug.log
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.db.old
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+*.flac
+
+# Session data
+sessions/
+session_metadata.json
+timestamps.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Conda/pip
+condaenv.*.requirements.txt
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Debug and test files
+debug_*
+test_output.*
+*.tmp
+*.temp
+
+# Documentation markdown (keep only README.md)
+fail*.md
+stars.md
+monday.md
+execution.md
+PROGRESS_BAR_DEBUGGING_REPORT.md
+BACKUP_INFO.txt
+
+# Images/Screenshots
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+
+# Batch/Shell scripts for local setup
+*.bat
+*.sh
+launch-*
+start_*
+backup_*
+
+# Package files
+=*
+
+# Claude AI files
+claude.md
+
+# Test directories
+test_AI/

@@ -1,1 +1,0 @@
-2025-06-20 23:59:58 - main - ERROR - [main.py:1357] - Error in define_word endpoint: No module named 'openai'
