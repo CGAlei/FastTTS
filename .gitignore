@@ -113,6 +113,20 @@ backup_*
 
 # Claude AI files
 claude.md
+.claude/
+
+# Prompt directories
+.prompts/
+
+# IDE files
+.vscode/
+
+# Environment and sensitive files
+.env
+.sesskey
+
+# Documentation (keep only main README.md)
+Technical_Information/
 
 # Test directories
 test_AI/

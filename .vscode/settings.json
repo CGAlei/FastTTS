@@ -1,8 +1,0 @@
-{
-    "python.defaultInterpreterPath": "/home/serinoac/miniconda3/envs/fasttts-mfa/bin/python",
-    "python.terminal.activateEnvironment": true,
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "terminal.integrated.env.linux": {
-        "CONDA_DEFAULT_ENV": "fasttts-mfa"
-    }
-}
