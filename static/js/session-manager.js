@@ -27,17 +27,28 @@ function restoreSidebarScrollPosition() {
 
 function setCurrentSession(sessionId) {
     currentSessionId = sessionId;
-    // Store in localStorage for persistence
-    if (sessionId) {
-        localStorage.setItem('currentSessionId', sessionId);
-    } else {
-        localStorage.removeItem('currentSessionId');
+    // Store in localStorage for persistence (with Firefox private mode fallback)
+    try {
+        if (sessionId) {
+            localStorage.setItem('currentSessionId', sessionId);
+        } else {
+            localStorage.removeItem('currentSessionId');
+        }
+    } catch (error) {
+        // Firefox private mode or localStorage disabled
+        console.warn('localStorage not available:', error.message);
     }
 }
 
 function getCurrentSession() {
     if (!currentSessionId) {
-        currentSessionId = localStorage.getItem('currentSessionId');
+        try {
+            currentSessionId = localStorage.getItem('currentSessionId');
+        } catch (error) {
+            // Firefox private mode or localStorage disabled
+            console.warn('localStorage not available:', error.message);
+            currentSessionId = null;
+        }
     }
     return currentSessionId;
 }
@@ -50,6 +61,10 @@ function createNewSession() {
         if (audioContainer) audioContainer.innerHTML = '';
         // Clear current session
         setCurrentSession(null);
+        
+        if (window.showTTSProgress) {
+            window.showTTSProgress('New session created', 'success');
+        }
     }
 }
 
@@ -90,12 +105,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function saveCurrentSession() {
+function saveCurrentSession(event) {
+    // Prevent form submission in Firefox
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
     const text = document.getElementById('custom-text').value;
+    
     if (!text.trim()) {
-        alert('Please enter some text before saving.');
+        if (window.showTTSProgress) {
+            window.showTTSProgress('Please enter some text before saving', 'warning');
+        } else {
+            alert('Please enter some text before saving.');
+        }
         return;
     }
+    
+    const requestBody = {
+        text: text,
+        wordData: window.currentWordData || [],
+        audioData: window.currentAudioData || null
+    };
     
     // Send request to save session
     fetch('/save-session', {
@@ -103,11 +135,7 @@ function saveCurrentSession() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            text: text,
-            wordData: window.currentWordData || [],
-            audioData: window.currentAudioData || null
-        })
+        body: JSON.stringify(requestBody)
     }).then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -116,15 +144,29 @@ function saveCurrentSession() {
     })
     .then(data => {
         if (data.success) {
-            alert('Session saved successfully!');
+            if (window.showTTSProgress) {
+                window.showTTSProgress('Session saved successfully!', 'success');
+            } else {
+                alert('Session saved successfully!');
+            }
             // Refresh session list
             location.reload();
         } else {
-            alert(`Failed to save session: ${data.error || 'Unknown error'}`);
+            const errorMsg = `Failed to save session: ${data.error || 'Unknown error'}`;
+            if (window.showTTSProgress) {
+                window.showTTSProgress(errorMsg, 'error');
+            } else {
+                alert(errorMsg);
+            }
         }
     }).catch(error => {
         console.error('Error saving session:', error);
-        alert(`Error saving session: ${error.message}`);
+        const errorMsg = `Error saving session: ${error.message}`;
+        if (window.showTTSProgress) {
+            window.showTTSProgress(errorMsg, 'error');
+        } else {
+            alert(errorMsg);
+        }
     });
 }
 

@@ -667,10 +667,29 @@ document.addEventListener('htmx:afterRequest', function(evt) {
                     // Cache DOM elements for efficient highlighting performance
                     cacheHighlightElements();
                     
-                    // Store audio data for session saving
-                    const audioSrc = audioElement.querySelector('source').src;
-                    if (audioSrc.startsWith('data:audio/mp3;base64,')) {
-                        window.currentAudioData = audioSrc.split(',')[1];
+                    // Store audio data for session saving with Firefox compatibility
+                    try {
+                        const sourceElement = audioElement ? audioElement.querySelector('source') : null;
+                        let audioSrc = null;
+                        
+                        // Try multiple methods for audio source extraction (Firefox compatibility)
+                        if (sourceElement && sourceElement.src) {
+                            audioSrc = sourceElement.src;
+                        } else if (audioElement.src) {
+                            audioSrc = audioElement.src;
+                        } else if (audioElement.currentSrc) {
+                            audioSrc = audioElement.currentSrc;
+                        }
+                        
+                        if (audioSrc && audioSrc.startsWith('data:audio/mp3;base64,')) {
+                            window.currentAudioData = audioSrc.split(',')[1];
+                        } else {
+                            window.currentAudioData = null;
+                            console.warn('Audio data extraction failed - session saving may not work');
+                        }
+                    } catch (error) {
+                        console.error('Error extracting audio data:', error);
+                        window.currentAudioData = null;
                     }
                     
                     // Get pinyin data

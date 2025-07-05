@@ -9,10 +9,19 @@ const DEFAULT_ENGINE = 'edge';
 
 class SettingsManager {
     constructor() {
-        this.currentVoice = localStorage.getItem('selectedVoice') || DEFAULT_VOICE;
-        this.currentSpeed = parseFloat(localStorage.getItem('selectedSpeed')) || DEFAULT_SPEED;
-        this.currentVolume = parseFloat(localStorage.getItem('selectedVolume')) || DEFAULT_VOLUME;
-        this.currentEngine = localStorage.getItem('selectedEngine') || DEFAULT_ENGINE;
+        // Initialize settings with localStorage fallback for Firefox private mode
+        try {
+            this.currentVoice = localStorage.getItem('selectedVoice') || DEFAULT_VOICE;
+            this.currentSpeed = parseFloat(localStorage.getItem('selectedSpeed')) || DEFAULT_SPEED;
+            this.currentVolume = parseFloat(localStorage.getItem('selectedVolume')) || DEFAULT_VOLUME;
+            this.currentEngine = localStorage.getItem('selectedEngine') || DEFAULT_ENGINE;
+        } catch (error) {
+            console.warn('localStorage not available, using defaults:', error.message);
+            this.currentVoice = DEFAULT_VOICE;
+            this.currentSpeed = DEFAULT_SPEED;
+            this.currentVolume = DEFAULT_VOLUME;
+            this.currentEngine = DEFAULT_ENGINE;
+        }
         this.modal = null;
         this.voiceSelector = null;
         this.speedSlider = null;
@@ -29,6 +38,24 @@ class SettingsManager {
         this.isInitialized = false;
         this.availableEngines = {};
         this.credentialsStatus = {};
+    }
+
+    // Safe localStorage operations for Firefox private mode compatibility
+    safeSetLocalStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (error) {
+            console.warn('localStorage not available:', error.message);
+        }
+    }
+
+    safeGetLocalStorage(key, defaultValue = null) {
+        try {
+            return localStorage.getItem(key) || defaultValue;
+        } catch (error) {
+            console.warn('localStorage not available:', error.message);
+            return defaultValue;
+        }
     }
 
     // Initialize settings manager
@@ -181,7 +208,7 @@ class SettingsManager {
     // Change TTS engine selection
     changeTTSEngine(engine) {
         this.currentEngine = engine;
-        localStorage.setItem('selectedEngine', engine);
+        this.safeSetLocalStorage('selectedEngine', engine);
         
         // Update available voices for this engine
         this.updateVoicesForEngine(engine);
@@ -235,7 +262,7 @@ class SettingsManager {
     // Change voice selection
     changeVoice(voice) {
         this.currentVoice = voice;
-        localStorage.setItem('selectedVoice', voice);
+        this.safeSetLocalStorage('selectedVoice', voice);
         
         // Show notification
         this.showNotification(`Voice changed to: ${this.getVoiceName(voice)}`);
@@ -245,7 +272,7 @@ class SettingsManager {
     changeSpeed(speed) {
         const speedValue = parseFloat(speed);
         this.currentSpeed = speedValue;
-        localStorage.setItem('selectedSpeed', speedValue.toString());
+        this.safeSetLocalStorage('selectedSpeed', speedValue.toString());
         
         // Update display
         this.updateSpeedDisplay(speedValue);
@@ -616,9 +643,11 @@ class SettingsManager {
 
     // Clear MiniMax credentials
     async clearMinimaxCredentials() {
-        if (!confirm('Are you sure you want to clear MiniMax credentials?')) {
-            return;
-        }
+        // Show custom notification instead of confirm() for Firefox compatibility
+        this.showNotification('Clearing MiniMax credentials...', 'warning');
+        
+        // Add a small delay to let user see the warning
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
         try {
             const response = await fetch('/save-credentials', {

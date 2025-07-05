@@ -277,6 +277,7 @@ def get_sessions():
     sessions_dir = str(path_manager.sessions_dir)
     sessions = []
     metadata_dict = get_session_metadata()
+    metadata_updated = False
     
     if os.path.exists(sessions_dir):
         for session_dir in sorted(os.listdir(sessions_dir), reverse=True):
@@ -289,12 +290,19 @@ def get_sessions():
                             session_data = json.load(f)
                         
                         # Get UI metadata or create default
-                        ui_metadata = metadata_dict.get(session_dir, {
-                            'is_favorite': False,
-                            'custom_name': None,
-                            'created_at': session_data.get('date', datetime.now().isoformat()),
-                            'modified_at': session_data.get('date', datetime.now().isoformat())
-                        })
+                        if session_dir not in metadata_dict:
+                            # New session discovered - create metadata entry
+                            ui_metadata = {
+                                'is_favorite': False,
+                                'custom_name': None,
+                                'created_at': session_data.get('date', datetime.now().isoformat()),
+                                'modified_at': session_data.get('date', datetime.now().isoformat())
+                            }
+                            metadata_dict[session_dir] = ui_metadata
+                            metadata_updated = True
+                            logger.info(f"Auto-discovered new session: {session_dir}")
+                        else:
+                            ui_metadata = metadata_dict[session_dir]
                         
                         sessions.append({
                             'id': session_dir,
@@ -305,6 +313,11 @@ def get_sessions():
                         })
                     except:
                         continue
+    
+    # Save updated metadata if new sessions were discovered
+    if metadata_updated:
+        save_session_metadata(metadata_dict)
+        logger.info("Session metadata updated with newly discovered sessions")
     
     return sessions
 
@@ -1207,6 +1220,13 @@ async def delete_session(session_id: str):
         if session_dir.exists():
             shutil.rmtree(session_dir)
             logger.info(f"Deleted session: {session_id}")
+        
+        # Remove from session metadata JSON
+        metadata = get_session_metadata()
+        if session_id in metadata:
+            del metadata[session_id]
+            save_session_metadata(metadata)
+            logger.info(f"Removed session {session_id} from metadata JSON")
         
         # Get updated session list after deletion
         remaining_sessions = get_sessions()
