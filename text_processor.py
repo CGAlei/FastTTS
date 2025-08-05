@@ -141,8 +141,20 @@ def preprocess_text_for_tts(text):
     text_with_chinese_numbers = convert_numbers_to_chinese(text)
     logger.debug(f"After number conversion: '{text_with_chinese_numbers}'")
     
-    # Step 2: Sanitize text to remove problematic symbols
-    final_text = sanitize_text_for_karaoke(text_with_chinese_numbers)
+    # Step 2: Convert Traditional Chinese to Simplified Chinese (proactive conversion)
+    try:
+        from utils.chinese_converter import get_chinese_converter
+        converter = get_chinese_converter()
+        text_simplified = converter.convert_text(text_with_chinese_numbers)
+        if text_simplified != text_with_chinese_numbers:
+            logger.info(f"📝 Traditional→Simplified conversion applied to input text")
+        logger.debug(f"After Traditional→Simplified conversion: '{text_simplified}'")
+    except Exception as e:
+        logger.warning(f"Chinese conversion failed during preprocessing: {e}")
+        text_simplified = text_with_chinese_numbers
+    
+    # Step 3: Sanitize text to remove problematic symbols
+    final_text = sanitize_text_for_karaoke(text_simplified)
     logger.debug(f"After sanitization: '{final_text}'")
     
     logger.info(f"Text preprocessing complete: '{text}' → '{final_text}'")

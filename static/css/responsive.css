@@ -1,33 +1,12 @@
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive Design - Simple 30% Width Rule */
+/* Mobile mode: Only when window ≤ 30% of typical monitor (576px on 1920px monitor) */
+@media (max-width: 576px) {
+    /* Hide right sidebar completely in mobile mode */
     .right-sidebar {
         display: none;
     }
-    .right-toggle {
-        display: none;
-    }
-    .left-toggle {
-        left: 264px;
-    }
-    .left-toggle.collapsed {
-        left: -18px;
-    }
-    .accessibility-controls {
-        left: 300px; /* 280px sidebar + 20px margin */
-        right: 20px;
-    }
-    .accessibility-controls.left-collapsed {
-        left: 20px;
-    }
-    .main-content {
-        right: 0px;
-    }
-    .input-area {
-        right: 20px;
-    }
-}
-
-@media (max-width: 768px) {
+    
+    /* Left sidebar becomes overlay */
     .left-sidebar {
         position: fixed;
         left: -300px;
@@ -42,15 +21,11 @@
     .left-sidebar.open {
         left: 0;
     }
-    .mobile-menu-toggle {
-        display: block;
-    }
+    
+    /* Main content and controls use full width */
     .main-content {
         left: 0;
         right: 0;
-    }
-    .left-toggle, .right-toggle {
-        display: none;
     }
     .accessibility-controls {
         left: 0px;

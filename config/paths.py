@@ -6,7 +6,7 @@ Automatically detects project root and provides relative paths
 import os
 import sys
 from pathlib import Path
-from typing import Optional, Union
+from typing import Dict, Optional, Union
 import logging
 
 logger = logging.getLogger(__name__)
@@ -185,17 +185,77 @@ class PathManager:
         """Get .env file path"""
         return self._project_root / ".env"
     
-    def get_session_dir(self, session_id: str) -> Path:
+    def get_session_dir(self, session_id: str, folder_name: str = None) -> Path:
         """
-        Get directory for specific session
+        Get directory for specific session, optionally within a folder
         
         Args:
             session_id: Session identifier
+            folder_name: Optional folder name for organization
             
         Returns:
             Path to session directory
         """
-        return self.sessions_dir / session_id
+        if folder_name:
+            return self.sessions_dir / folder_name / session_id
+        else:
+            # For backward compatibility and folder manager integration
+            # Try to get folder from folder manager if available
+            try:
+                from utils.folder_manager import get_folder_manager
+                folder_manager = get_folder_manager()
+                session_folder = folder_manager.get_session_folder(session_id)
+                if session_folder:
+                    return self.sessions_dir / session_folder / session_id
+            except ImportError:
+                pass  # Folder manager not available yet
+            
+            # Default to root level (backward compatibility)
+            return self.sessions_dir / session_id
+    
+    def find_all_sessions(self) -> Dict[str, str]:
+        """
+        Recursively find all sessions in the sessions directory
+        
+        Returns:
+            Dict mapping session_id -> folder_name (or None for root level)
+        """
+        sessions_found = {}
+        
+        if not self.sessions_dir.exists():
+            return sessions_found
+        
+        # Check root level sessions (backward compatibility)
+        for item in self.sessions_dir.iterdir():
+            if item.is_dir() and not item.name.startswith('.'):
+                # Check if this is a session directory (has metadata.json)
+                metadata_file = item / "metadata.json"
+                if metadata_file.exists():
+                    sessions_found[item.name] = None  # Root level session
+        
+        # Check folder-based sessions
+        for folder in self.sessions_dir.iterdir():
+            if folder.is_dir() and not folder.name.startswith('.'):
+                # Skip special files like folders.json
+                if folder.name in ['folders.json']:
+                    continue
+                    
+                # Check if this folder contains sessions
+                has_sessions = False
+                for session_dir in folder.iterdir():
+                    if session_dir.is_dir():
+                        metadata_file = session_dir / "metadata.json"
+                        if metadata_file.exists():
+                            sessions_found[session_dir.name] = folder.name
+                            has_sessions = True
+                
+                # If folder has no sessions but has metadata.json itself, it's a root session
+                if not has_sessions:
+                    metadata_file = folder / "metadata.json"
+                    if metadata_file.exists():
+                        sessions_found[folder.name] = None  # Root level session
+        
+        return sessions_found
     
     def get_session_file(self, session_id: str, filename: str) -> Path:
         """

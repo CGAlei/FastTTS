@@ -107,7 +107,7 @@ def render_right_sidebar():
                 hx_trigger="load",
                 hx_swap="innerHTML",
                 cls="vocab-tab-content",
-                style="height: calc(100vh - 48px); overflow-y: auto;"
+                style="height: calc(100vh - 120px); overflow-y: auto; padding-bottom: 10px;"
             ),
             
             cls="vocab-tabs-container flex flex-col flex-1"

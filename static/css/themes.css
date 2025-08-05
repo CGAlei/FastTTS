@@ -216,9 +216,7 @@
     font-weight: 600 !important;
 }
 
-.high-contrast .session-date {
-    color: #cccccc !important;
-}
+/* .high-contrast .session-date - removed, dates no longer displayed */
 
 .high-contrast .session-item:hover {
     background-color: #333333 !important;
@@ -232,9 +230,7 @@
     color: #ffffff !important;
 }
 
-.high-contrast .session-item:hover .session-date {
-    color: #ffffff !important;
-}
+/* .high-contrast .session-item:hover .session-date - removed, dates no longer displayed */
 
 .high-contrast .session-item.active {
     background-color: #ffff00 !important;
@@ -462,9 +458,7 @@
     font-weight: 600 !important;
 }
 
-.high-contrast .session-item.active .session-date {
-    color: #cccccc !important;
-}
+/* .high-contrast .session-item.active .session-date - removed, dates no longer displayed */
 
 /* Dark Mode - CSS Custom Properties Override */
 .dark-mode {
@@ -531,9 +525,7 @@
     color: #f9fafb;
 }
 
-.dark-mode .session-date {
-    color: #9ca3af;
-}
+/* .dark-mode .session-date - removed, dates no longer displayed */
 
 /* Dark Mode Buttons */
 .dark-mode .favorite-btn {
@@ -2361,3 +2353,35 @@ html.dark-mode,
 }
 
 /* Minimal transitions - performance focused */
+
+/* ========== FOLDER ACCORDION THEME SUPPORT ========== */
+
+/* Dark Mode Folder Content */
+.dark-mode .folder-content {
+    background: #1f2937 !important;
+    border-left-color: #374151;
+}
+
+.dark-mode .folder-header {
+    background: #374151 !important;
+}
+
+.dark-mode .folder-header.active {
+    background: #4b5563 !important;
+}
+
+/* High Contrast Folder Content */
+.high-contrast .folder-content {
+    background: #000000 !important;
+    border-left-color: #ffffff;
+}
+
+.high-contrast .folder-header {
+    background: #333333 !important;
+    border-color: #ffffff;
+}
+
+.high-contrast .folder-header.active {
+    background: #000000 !important;
+    border-color: #ffff00;
+}

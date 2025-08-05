@@ -144,13 +144,26 @@ function saveCurrentSession(event) {
     })
     .then(data => {
         if (data.success) {
+            // Show optimistic feedback with folder information
+            const message = data.message || 'Session saved successfully!';
             if (window.showTTSProgress) {
-                window.showTTSProgress('Session saved successfully!', 'success');
+                window.showTTSProgress(message, 'success');
             } else {
-                alert('Session saved successfully!');
+                alert(message);
             }
-            // Refresh session list
-            location.reload();
+            
+            // Set the new session as current
+            setCurrentSession(data.session_id);
+            
+            // Refresh session list via HTMX instead of full page reload
+            const sessionsList = document.getElementById('sessions-list');
+            if (sessionsList) {
+                // Trigger HTMX request to refresh sessions list
+                htmx.ajax('GET', '/filter-sessions', {
+                    target: '#sessions-list',
+                    swap: 'innerHTML'
+                });
+            }
         } else {
             const errorMsg = `Failed to save session: ${data.error || 'Unknown error'}`;
             if (window.showTTSProgress) {
@@ -304,6 +317,11 @@ function startSessionRename(sessionId) {
         return;
     }
     
+    // CRITICAL: Disable parent container's click handlers during rename
+    sessionItem.style.pointerEvents = 'none';
+    sessionItem.originalOnclick = sessionItem.onclick;
+    sessionItem.onclick = null;
+    
     const titleDiv = sessionItem.querySelector('.session-title');
     if (!titleDiv) {
         console.error('Session title not found');
@@ -340,6 +358,9 @@ function startSessionRename(sessionId) {
     // Set edit state
     sessionItem.classList.add('editing');
     currentEditingSession = sessionId;
+    
+    // Re-enable pointer events only for the input area
+    input.style.pointerEvents = 'auto';
     
     // Focus and select text
     setTimeout(() => {
@@ -425,6 +446,13 @@ function saveSessionRename() {
                 input.remove();
                 titleDiv.style.display = '';
                 sessionItem.classList.remove('editing');
+                
+                // CRITICAL: Restore parent container's click handlers
+                sessionItem.style.pointerEvents = '';
+                if (sessionItem.originalOnclick) {
+                    sessionItem.onclick = sessionItem.originalOnclick;
+                    sessionItem.originalOnclick = null;
+                }
             }
             
             // Reset editing state
@@ -470,6 +498,13 @@ function cancelSessionRename() {
         
         // Remove edit state
         sessionItem.classList.remove('editing');
+        
+        // CRITICAL: Restore parent container's click handlers
+        sessionItem.style.pointerEvents = '';
+        if (sessionItem.originalOnclick) {
+            sessionItem.onclick = sessionItem.originalOnclick;
+            sessionItem.originalOnclick = null;
+        }
     }
     
     // Reset editing state
@@ -778,3 +813,54 @@ function disconnectProgressSSE() {
     }
     progressSessionId = null;
 }
+
+// Open session JSON file in system editor
+function openSessionJSON(sessionId) {
+    fetch(`/open-session-json/${sessionId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Opened JSON file:', data.file);
+                // Show brief notification
+                showTTSProgress('JSON file opened in editor', 'success');
+                setTimeout(() => clearTTSProgress(), 2000);
+            } else {
+                console.error('Failed to open JSON file:', data.error);
+                showTTSProgress(`Error: ${data.error}`, 'error');
+                setTimeout(() => clearTTSProgress(), 3000);
+            }
+        })
+        .catch(error => {
+            console.error('Error opening JSON file:', error);
+            showTTSProgress('Error opening JSON file', 'error');
+            setTimeout(() => clearTTSProgress(), 3000);
+        });
+}
+
+// Simple right-click title editing - works everywhere, always!
+document.addEventListener('contextmenu', function(event) {
+    if (event.target.classList.contains('session-title')) {
+        event.preventDefault(); // Prevent browser context menu
+        event.stopPropagation(); // Prevent session loading
+        
+        console.log('Right-click detected on session title');
+        
+        // Get the session ID directly from the title element
+        const sessionId = event.target.getAttribute('data-session-id');
+        if (sessionId) {
+            console.log('Starting rename for session:', sessionId);
+            startSessionRename(sessionId);
+        } else {
+            console.error('No session ID found on title element');
+        }
+    }
+});
+
+// Prevent session loading when clicking on control buttons
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit-btn') || 
+        event.target.classList.contains('delete-btn') ||
+        event.target.classList.contains('favorite-btn')) {
+        event.stopPropagation();
+    }
+});

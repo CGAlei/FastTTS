@@ -1,8 +1,19 @@
-# Python
+# FastTTS .gitignore
+# Professional exclusion rules for GitHub repository
+
+# ================================================
+# PYTHON
+# ================================================
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -16,117 +27,200 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual environments
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
+# PyInstaller
+*.manifest
+*.spec
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Logs
-*.log
-*.log.*
-logs/
-app.log
-debug.log
-
-# Database files
-*.db
-*.db-shm
-*.db-wal
-*.db.old
-
-# Audio files
-*.mp3
-*.wav
-*.ogg
-*.flac
-
-# Session data
-sessions/
-session_metadata.json
-timestamps.json
-
-# Backup files
-*.bak
-*.backup
-*.old
-
-# Conda/pip
-condaenv.*.requirements.txt
+# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Debug and test files
-debug_*
-test_output.*
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+fasttts-env/
+fasttts-mfa/
+
+# ================================================
+# FASTTTS SPECIFIC DATA (Generated at Runtime)
+# ================================================
+
+# User Data Directories
+db/
+sessions/
+logs/
+
+# Application Logs
+*.log
+*.log.*
+app.log
+debug.log
+error.log*
+fasttts.log*
+
+# Session and Timing Files
+session_metadata.json
+timestamps.json
+folders.json.backup*
+
+# Audio Processing Files
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.TextGrid
+
+# MFA Cache and Temporary Files
+mfa_cache/
+mfa_models/
+.mfa/
+TextGrid/
+
+# TTS Engine Cache
+tts_cache/
+edge_tts_cache/
+minimax_cache/
+
+# Backup and Temporary Files
+*.bak
+*.backup
+*.old
 *.tmp
 *.temp
 
-# Documentation markdown (keep only README.md)
-fail*.md
-stars.md
-monday.md
-execution.md
-PROGRESS_BAR_DEBUGGING_REPORT.md
-BACKUP_INFO.txt
+# ================================================
+# SYSTEM FILES
+# ================================================
 
-# Images/Screenshots
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.tiff
-*.ico
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
-# Batch/Shell scripts for local setup
-*.bat
-*.sh
-launch-*
-start_*
-backup_*
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
 
-# Package files
-=*
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
-# Claude AI files
-claude.md
-.claude/
+# ================================================
+# IDE / EDITOR
+# ================================================
 
-# Prompt directories
-.prompts/
-
-# IDE files
+# Visual Studio Code
 .vscode/
+*.code-workspace
 
-# Environment and sensitive files
-.env
-.sesskey
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
 
-# Documentation (keep only main README.md)
-Technical_Information/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
 
-# Test directories
-test_AI/
+# Vim
+*.swp
+*.swo
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================================
+# CREDENTIALS & SECURITY
+# ================================================
+
+# Environment Files with API Keys
+.env*
+!.env.example
+
+# API Keys and Secrets
+*.key
+*.pem
+*.p12
+credentials.json
+secrets.json
+config.json
+private_key.json
+
+# ================================================
+# KEEP DIRECTORY STRUCTURE
+# ================================================
+
+# Keep important directories but exclude their contents
+sessions/*
+!sessions/.gitkeep
+
+db/*
+!db/.gitkeep
+
+logs/*
+!logs/.gitkeep

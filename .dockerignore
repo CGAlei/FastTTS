@@ -1,0 +1,180 @@
+# FastTTS .dockerignore
+# Exclude files from Docker build context for faster builds
+
+# ================================================
+# DEVELOPMENT FILES
+# ================================================
+
+# Git repository
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (except essential)
+*.md
+!README.md
+!INSTALLATION.md
+docs/
+screenshots/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ================================================
+# USER DATA (Generated at Runtime)
+# ================================================
+
+# Database files
+db/
+*.db
+*.db-shm
+*.db-wal
+*.db.old
+
+# Session data
+sessions/
+session_metadata.json
+timestamps.json
+folders.json*
+
+# Log files
+logs/
+*.log
+*.log.*
+app.log
+debug.log
+error.log*
+fasttts.log*
+
+# Audio files
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.TextGrid
+
+# ================================================
+# PYTHON BUILD ARTIFACTS
+# ================================================
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+fasttts-env/
+fasttts-mfa/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ================================================
+# SYSTEM AND TEMPORARY FILES
+# ================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+*.tmp
+
+# Linux
+*~
+.directory
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# ================================================
+# DOCKER
+# ================================================
+
+# Docker files (avoid recursive copying)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# ================================================
+# CREDENTIALS AND SECRETS
+# ================================================
+
+# Environment files
+.env*
+!.env.example
+
+# API keys and secrets
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# ================================================
+# CACHE AND BUILD ARTIFACTS
+# ================================================
+
+# MFA cache
+mfa_cache/
+mfa_models/
+.mfa/
+
+# TTS cache
+tts_cache/
+edge_tts_cache/
+minimax_cache/
+
+# Node.js (if any)
+node_modules/
+
+# ================================================
+# EXCLUDE LARGE DEVELOPMENT FILES
+# ================================================
+
+# Test files and directories
+test_*/
+tests/
+*.test.py
+
+# Coverage reports
+coverage.xml
+*.cover
+
+# Profiling
+*.prof
+
+# Large media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.avi

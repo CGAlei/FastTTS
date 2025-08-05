@@ -5,48 +5,6 @@ Reusable UI elements for FastTTS application.
 from fasthtml.common import *
 
 
-def render_mobile_toggle():
-    """
-    Renders the mobile menu toggle button.
-    
-    Returns:
-        Button: Mobile menu toggle button
-    """
-    return Button(
-        "☰",
-        onclick="toggleMobileMenu()",
-        cls="mobile-menu-toggle",
-        id="mobile-menu-toggle"
-    )
-
-
-def render_sidebar_toggles():
-    """
-    Renders the sidebar toggle buttons positioned outside sidebars.
-    
-    Returns:
-        Tuple[Button, Button]: Left and right sidebar toggle buttons
-    """
-    return (
-        # Left sidebar toggle
-        Button(
-            "⟨",
-            cls="sidebar-toggle left-toggle",
-            onclick="toggleLeftSidebar()",
-            id="left-toggle",
-            title="Collapse Sessions Panel",
-            **{"aria-label": "Toggle sessions panel visibility"}
-        ),
-        # Right sidebar toggle
-        Button(
-            "⟨",
-            cls="sidebar-toggle right-toggle",
-            onclick="toggleRightSidebar()",
-            id="right-toggle",
-            title="Collapse Dictionary Panel",
-            **{"aria-label": "Toggle dictionary panel visibility"}
-        )
-    )
 
 
 def render_accessibility_controls():
@@ -129,7 +87,7 @@ def render_input_area(chinese_text="", DEFAULT_VOICE="zh-CN-XiaoxiaoNeural",
         Div(
             Div(
                 hx_get="/minimax-progress",
-                hx_trigger="startProgress from:body, every 600ms",
+                hx_trigger="startProgress from:body, every 600ms[window.ttsPending]",
                 hx_target="this",
                 hx_swap="innerHTML",
                 cls="progress-container"

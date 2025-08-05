@@ -3,7 +3,7 @@ Main layout wrapper component for FastTTS application.
 """
 
 from fasthtml.common import *
-from .ui_elements import render_mobile_toggle, render_sidebar_toggles
+from .ui_elements import render_accessibility_controls
 from .sidebar import render_left_sidebar
 from .main_content import render_main_content
 from .vocabulary import render_right_sidebar
@@ -32,9 +32,6 @@ def render_main_layout(sessions, filter_params, current_session_id, chinese_text
         sessions_content = render_session_list_func(sessions, filter_params, current_session_id)
     
     return Div(
-        # Mobile menu toggle button
-        render_mobile_toggle(),
-        
         # App container wrapper
         Div(
             # Left Sidebar
@@ -48,9 +45,6 @@ def render_main_layout(sessions, filter_params, current_session_id, chinese_text
             
             cls="app-container"
         ),
-        
-        # Sidebar toggle buttons
-        render_sidebar_toggles(),
         
         # Settings Modal
         render_settings_modal(credentials_manager)

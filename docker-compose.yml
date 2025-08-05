@@ -1,0 +1,102 @@
+# FastTTS Docker Compose Configuration
+# Complete container orchestration for production deployment
+
+version: '3.8'
+
+services:
+  fasttts:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: cgalei/fasttts:latest
+    container_name: fasttts_app
+    
+    # Port mapping
+    ports:
+      - "5001:5001"
+    
+    # Environment variables
+    environment:
+      - FASTTTS_HOST=0.0.0.0
+      - FASTTTS_PORT=5001
+      - FASTTTS_LOG_LEVEL=INFO
+      - FASTTTS_DEBUG_MODE=false
+      # API Keys (set these in .env file)
+      - MINIMAX_API_KEY=${MINIMAX_API_KEY:-}
+      - MINIMAX_GROUP_ID=${MINIMAX_GROUP_ID:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      # Default settings
+      - FASTTTS_DEFAULT_VOICE=zh-CN-XiaoxiaoNeural
+      - FASTTTS_DEFAULT_ENGINE=edge
+    
+    # Environment file for API keys
+    env_file:
+      - .env
+    
+    # Volume mappings for persistent data
+    volumes:
+      - fasttts_db:/app/db
+      - fasttts_sessions:/app/sessions  
+      - fasttts_logs:/app/logs
+      # Optional: Mount custom configuration
+      # - ./custom.env:/app/.env:ro
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.25'
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Network configuration
+    networks:
+      - fasttts_network
+
+# Named volumes for data persistence
+volumes:
+  fasttts_db:
+    driver: local
+    labels:
+      - "fasttts.data.type=database"
+      - "fasttts.data.description=Vocabulary database"
+  
+  fasttts_sessions:
+    driver: local
+    labels:
+      - "fasttts.data.type=sessions"
+      - "fasttts.data.description=User TTS sessions and audio files"
+  
+  fasttts_logs:
+    driver: local
+    labels:
+      - "fasttts.data.type=logs"
+      - "fasttts.data.description=Application logs"
+
+# Network configuration
+networks:
+  fasttts_network:
+    driver: bridge
+    labels:
+      - "fasttts.network.description=FastTTS application network"

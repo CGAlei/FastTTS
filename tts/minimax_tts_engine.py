@@ -37,7 +37,10 @@ from debug_logger import log_mfa_call, log_conversion, log_error, log_session_da
 # Configure logging for MiniMax TTS
 logging.basicConfig(level=logging.INFO)
 minimax_logger = logging.getLogger('minimax_tts')
-minimax_logger.setLevel(logging.DEBUG)
+
+# Check for debug mode environment variable
+DEBUG_MODE = os.environ.get('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on')
+minimax_logger.setLevel(logging.DEBUG if DEBUG_MODE else logging.INFO)
 
 
 class MinimaxTTSEngine(BaseTTSEngine):
@@ -73,22 +76,8 @@ class MinimaxTTSEngine(BaseTTSEngine):
             {"id": "speech-01-hd", "name": "Speech-01 HD (Legacy)", "description": "Rich voices, expressive emotions"}
         ]
         
-        # Initialize OpenCC converter
-        try:
-            self.cc = OpenCC('tw2s') if OpenCC else None
-            if self.cc:
-                minimax_logger.info("✅ OpenCC converter initialized (tw2s).")
-        except Exception as e:
-            self.cc = None
-            minimax_logger.error(f"❌ Failed to initialize OpenCC converter: {e}")
-
-        # UI compatibility mapping for manual overrides
-        self.ui_compatibility_mapping = {
-            '那幺': '那么', '那麽': '那么',
-            '要幺': '要么', '要麽': '要么', 
-            '什幺': '什么', '什麽': '什么',
-            '瞭': '了', '麽': '么', '幺': '么',
-        }
+        # Chinese converter is now handled by shared utility
+        minimax_logger.info("🔤 Chinese Traditional→Simplified conversion handled by shared converter")
     
     def _load_credentials(self):
         """Load credentials and settings from environment variables."""
@@ -219,9 +208,20 @@ class MinimaxTTSEngine(BaseTTSEngine):
         return timings
 
     def _finalize_timings(self, word_timings: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Applies final conversion and filtering to a list of word timings."""
+        """Applies final conversion, filtering, and validation to word timings."""
         converted = self._convert_traditional_to_simplified(word_timings)
         filtered = self._filter_punctuation_timings(converted)
+        
+        # Validate that all characters are Simplified Chinese
+        from utils.chinese_converter import get_chinese_converter
+        converter = get_chinese_converter()
+        validation_result = converter.validate_simplified_chinese(filtered)
+        
+        if not validation_result['is_valid']:
+            minimax_logger.error(f"🚨 CRITICAL: Traditional characters found in final output!")
+            minimax_logger.error(f"🔍 Traditional chars: {validation_result['traditional_chars_found']}")
+            minimax_logger.error(f"📝 Affected words: {[w['word'] for w in validation_result['traditional_words']]}")
+        
         return filtered
     
     def get_supported_voices(self) -> List[Dict[str, str]]:
@@ -307,42 +307,11 @@ class MinimaxTTSEngine(BaseTTSEngine):
         Returns:
             List with Traditional Chinese converted to Simplified Chinese for UI compatibility
         """
-        # Check if the converter was successfully initialized in __init__
-        if not self.cc:
-            return word_timings  # Return original timings if converter is not available
-
-        converted_timings = []
-        opencc_conversions = 0
-        ui_compatibility_conversions = 0
+        # Use robust Chinese converter that NEVER fails
+        from utils.chinese_converter import get_chinese_converter
         
-        for timing in word_timings:
-            original_word = timing.get("word", "")
-            
-            # First try UI compatibility mapping for characters OpenCC doesn't convert
-            if original_word in self.ui_compatibility_mapping:
-                converted_word = self.ui_compatibility_mapping[original_word]
-                ui_compatibility_conversions += 1
-            else:
-                # Use OpenCC converter for standard Traditional→Simplified conversions
-                converted_word = self.cc.convert(original_word)
-                if original_word != converted_word:
-                    opencc_conversions += 1
-            
-            new_timing = timing.copy()
-            new_timing["word"] = converted_word
-            converted_timings.append(new_timing)
-        
-        total_conversions = opencc_conversions + ui_compatibility_conversions
-        if total_conversions > 0:
-            conversion_details = []
-            if opencc_conversions > 0:
-                conversion_details.append(f"{opencc_conversions} OpenCC")
-            if ui_compatibility_conversions > 0:
-                conversion_details.append(f"{ui_compatibility_conversions} UI-compatibility")
-            
-            minimax_logger.info(f"🔄 Traditional→Simplified UI conversion: {total_conversions}/{len(word_timings)} words converted ({', '.join(conversion_details)})")
-            
-        return converted_timings
+        converter = get_chinese_converter()
+        return converter.convert_word_timings(word_timings)
 
     def _filter_punctuation_timings(self, word_timings: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """

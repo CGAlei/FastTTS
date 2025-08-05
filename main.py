@@ -272,57 +272,81 @@ def update_session_metadata(session_id, **updates):
     return metadata[session_id]
 
 def get_sessions():
-    """Get list of saved sessions with metadata"""
-    import os
-    sessions_dir = str(path_manager.sessions_dir)
+    """Get list of saved sessions with metadata using recursive folder scanning"""
+    from utils.folder_manager import get_folder_manager
+    
     sessions = []
     metadata_dict = get_session_metadata()
     metadata_updated = False
+    folder_manager = get_folder_manager()
     
-    if os.path.exists(sessions_dir):
-        for session_dir in sorted(os.listdir(sessions_dir), reverse=True):
-            session_path = os.path.join(sessions_dir, session_dir)
-            if os.path.isdir(session_path):
-                metadata_file = os.path.join(session_path, "metadata.json")
-                if os.path.exists(metadata_file):
-                    try:
-                        with open(metadata_file, 'r', encoding='utf-8') as f:
-                            session_data = json.load(f)
-                        
-                        # Get UI metadata or create default
-                        if session_dir not in metadata_dict:
-                            # New session discovered - create metadata entry
-                            ui_metadata = {
-                                'is_favorite': False,
-                                'custom_name': None,
-                                'created_at': session_data.get('date', datetime.now().isoformat()),
-                                'modified_at': session_data.get('date', datetime.now().isoformat())
-                            }
-                            metadata_dict[session_dir] = ui_metadata
-                            metadata_updated = True
-                            logger.info(f"Auto-discovered new session: {session_dir}")
-                        else:
-                            ui_metadata = metadata_dict[session_dir]
-                        
-                        sessions.append({
-                            'id': session_dir,
-                            'text': session_data.get('text', 'No text'),
-                            'date': session_data.get('date', 'Unknown date'),
-                            'is_favorite': ui_metadata.get('is_favorite', False),
-                            'custom_name': ui_metadata.get('custom_name')
-                        })
-                    except:
-                        continue
+    # Use path manager to find all sessions recursively
+    sessions_found = path_manager.find_all_sessions()
+    
+    # Sync folder metadata with physical directory structure
+    sync_stats = folder_manager.sync_with_physical_structure()
+    if sync_stats['folders_created'] > 0 or sync_stats['sessions_remapped'] > 0:
+        logger.info(f"Folder sync completed: {sync_stats}")
+    
+    # Migrate any remaining unmapped sessions to Uncategorized
+    session_ids = list(sessions_found.keys())
+    folder_manager.migrate_existing_sessions(session_ids)
+    
+    # Process each session
+    for session_id, discovered_folder in sessions_found.items():
+        try:
+            # Get the correct session directory (folder-aware)
+            session_dir = path_manager.get_session_dir(session_id)
+            metadata_file = session_dir / "metadata.json"
+            
+            if metadata_file.exists():
+                with open(metadata_file, 'r', encoding='utf-8') as f:
+                    session_data = json.load(f)
+                
+                # Get UI metadata or create default
+                if session_id not in metadata_dict:
+                    # New session discovered - create metadata entry
+                    ui_metadata = {
+                        'is_favorite': False,
+                        'custom_name': None,
+                        'created_at': session_data.get('date', datetime.now().isoformat()),
+                        'modified_at': session_data.get('date', datetime.now().isoformat())
+                    }
+                    metadata_dict[session_id] = ui_metadata
+                    metadata_updated = True
+                    logger.info(f"Auto-discovered new session: {session_id}")
+                else:
+                    ui_metadata = metadata_dict[session_id]
+                
+                # Get folder information
+                folder_name = folder_manager.get_session_folder(session_id)
+                
+                sessions.append({
+                    'id': session_id,
+                    'text': session_data.get('text', 'No text'),
+                    'date': session_data.get('date', 'Unknown date'),
+                    'is_favorite': ui_metadata.get('is_favorite', False),
+                    'custom_name': ui_metadata.get('custom_name'),
+                    'folder': folder_name  # Add folder information
+                })
+        except Exception as e:
+            logger.warning(f"Error processing session {session_id}: {e}")
+            continue
     
     # Save updated metadata if new sessions were discovered
     if metadata_updated:
         save_session_metadata(metadata_dict)
         logger.info("Session metadata updated with newly discovered sessions")
     
+    # Sort sessions by date (newest first)
+    sessions.sort(key=lambda x: x.get('date', ''), reverse=True)
+    
     return sessions
 
 def render_session_list(sessions, filter_params=None, current_session_id=None):
-    """Render session list HTML fragment"""
+    """Render session list HTML fragment with folder accordion structure"""
+    from utils.folder_manager import get_folder_manager
+    
     if not sessions:
         return Div(
             Div(
@@ -333,52 +357,99 @@ def render_session_list(sessions, filter_params=None, current_session_id=None):
             cls="left-sidebar-content"
         )
     
-    return Div(
-        *[Div(
-            # Favorite button
+    folder_manager = get_folder_manager()
+    
+    # Group sessions by folder
+    folders_with_sessions = folder_manager.get_folders_with_sessions(sessions)
+    
+    # Render accordion structure
+    folder_elements = []
+    
+    for folder_name, folder_sessions in folders_with_sessions.items():
+        # Always show folders, including empty ones (especially Uncategorized)
+        # This ensures Uncategorized folder is always visible in the sidebar
+        is_expanded = folder_manager.is_folder_expanded(folder_name)
+        session_count = len(folder_sessions)
+        
+        # Folder header with expand/collapse button
+        folder_header = Div(
             Button(
-                "⭐" if session.get('is_favorite', False) else "☆",
-                cls=f"favorite-btn {'favorite-active' if session.get('is_favorite', False) else 'favorite-inactive'}",
-                hx_post=f"/toggle-favorite/{session['id']}",
-                hx_target="closest .favorite-btn",
-                hx_swap="outerHTML",
-                title="Toggle favorite"
+                "▼" if is_expanded else "▶",
+                cls="folder-toggle-btn",
+                onclick=f"toggleFolder('{folder_name}')",
+                **{"data-folder": folder_name}
             ),
-            # Session content with improved structure
-            Div(
-                Div(
-                    session.get('custom_name') or (session['text'][:60] + '...' if len(session['text']) > 60 else session['text']), 
-                    cls="session-title"
+            Span("📁", cls="folder-icon"),
+            Span(folder_name, cls="folder-name"),
+            Span(f"({session_count})", cls="folder-count"),
+            cls="folder-header",
+            **{"data-folder": folder_name}
+        )
+        
+        # Folder content (sessions)
+        folder_content = Div(
+            *[Div(
+                # Favorite button
+                Button(
+                    "⭐" if session.get('is_favorite', False) else "☆",
+                    cls=f"favorite-btn {'favorite-active' if session.get('is_favorite', False) else 'favorite-inactive'}",
+                    hx_post=f"/toggle-favorite/{session['id']}",
+                    hx_target="closest .favorite-btn",
+                    hx_swap="outerHTML",
+                    title="Toggle favorite"
                 ),
-                Div(session['date'], cls="session-date"),
-                cls="session-content",
+                # Session content
+                Div(
+                    Div(
+                        session.get('custom_name') or (session['text'][:50] + '...' if len(session['text']) > 50 else session['text']), 
+                        cls="session-title",
+                        **{"data-session-id": session['id']}
+                    ),
+                    cls="session-content"
+                ),
+                # Edit and Delete buttons
+                Div(
+                    Button(
+                        "✏️",
+                        cls="edit-btn",
+                        title="Edit session JSON file",
+                        onclick=f"openSessionJSON('{session['id']}')",
+                        **{"data-session-id": session['id']}
+                    ),
+                    Button(
+                        "🗑️",
+                        cls="delete-btn",
+                        hx_delete=f"/delete-session/{session['id']}",
+                        hx_target="#sessions-list",
+                        hx_confirm="Delete this session?",
+                        title="Delete session"
+                    ),
+                    cls="session-buttons"
+                ),
+                cls=f"session-item {'active' if session['id'] == current_session_id else ''}",
                 hx_get=f"/load-session/{session['id']}",
                 hx_target="#audio-container",
                 hx_indicator="#loading-indicator",
                 onclick=f"setCurrentSession('{session['id']}')"
-            ),
-            # Edit and Delete buttons
-            Div(
-                Button(
-                    "✏️",
-                    cls="edit-btn",
-                    title="Rename session",
-                    **{"data-session-id": session['id']}
-                ),
-                Button(
-                    "🗑️",
-                    cls="delete-btn",
-                    hx_delete=f"/delete-session/{session['id']}",
-                    hx_target="#sessions-list",
-                    hx_confirm="Delete this session?",
-                    title="Delete session"
-                ),
-                cls="session-buttons"
-            ),
-            cls=f"session-item {'active' if session['id'] == current_session_id else ''}"
-        ) for session in sessions],
+            ) for session in folder_sessions],
+            cls=f"folder-content {'expanded' if is_expanded else 'collapsed'}",
+            **{"data-folder": folder_name}
+        )
+        
+        # Complete folder element
+        folder_element = Div(
+            folder_header,
+            folder_content,
+            cls="folder-accordion",
+            **{"data-folder": folder_name}
+        )
+        
+        folder_elements.append(folder_element)
+    
+    return Div(
+        *folder_elements,
         id="sessions-list",
-        cls="left-sidebar-content"
+        cls="left-sidebar-content folder-view"
     )
 
 # Session routes moved to routes/sessions.py
@@ -457,8 +528,9 @@ async def filter_sessions(request):
                 if favorites_param and str(favorites_param).lower() in ['true', '1', 'yes', 'on']:
                     filter_params['show_favorites'] = True
         
-        # Debug logging
-        logger.debug(f"Filter params: {filter_params}")
+        # Debug logging (only in debug mode)
+        if os.getenv('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on'):
+            logger.debug(f"Filter params: {filter_params}")
         
         # Get all sessions
         all_sessions = get_sessions()
@@ -466,7 +538,8 @@ async def filter_sessions(request):
         
         # Apply filters
         filtered_sessions = apply_session_filters(all_sessions, filter_params)
-        logger.debug(f"Filtered sessions: {len(filtered_sessions)}")
+        if os.getenv('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on'):
+            logger.debug(f"Filtered sessions: {len(filtered_sessions)}")
         
         # Get current session ID if available - check both form and query params
         current_session_id = None
@@ -727,7 +800,8 @@ async def word_interaction(request):
         start_time = word_data.get('startTime')
         end_time = word_data.get('endTime')
         
-        logger.debug(f"Word interaction: {action} on '{word_text}' ({word_id})")
+        if os.getenv('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on'):
+            logger.debug(f"Word interaction: {action} on '{word_text}' ({word_id})")
         
         # Handle different interaction types
         if action == 'left-click':
@@ -790,7 +864,8 @@ async def word_interaction(request):
             }
         
         # Log interaction for analytics/learning
-        logger.debug(f"Processing {action} for word '{word_text}' at position {word_index}")
+        if os.getenv('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on'):
+            logger.debug(f"Processing {action} for word '{word_text}' at position {word_index}")
         
         return {
             'success': True,
@@ -898,17 +973,30 @@ async def save_session(request):
         import os
         import datetime
         from pathlib import Path
+        from utils.folder_manager import get_folder_manager
         
         data = await request.json()
         raw_text = data.get('text', '')
         text = preprocess_text_for_tts(raw_text)  # Preprocess text (number conversion + sanitization) before saving
         word_data = data.get('wordData', [])
         audio_data = data.get('audioData')
+        target_folder = data.get('folder', 'Uncategorized')  # Optional folder parameter
         
         # Create session ID with timestamp
         session_id = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        session_dir = path_manager.get_session_dir(session_id)
+        
+        # Get folder manager and ensure target folder exists
+        folder_manager = get_folder_manager()
+        if target_folder != 'Uncategorized' and target_folder not in folder_manager.get_folders():
+            # Create the folder if it doesn't exist
+            folder_manager.create_folder(target_folder)
+        
+        # Get session directory with folder support
+        session_dir = path_manager.get_session_dir(session_id, target_folder)
         session_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Map session to folder
+        folder_manager.move_session(session_id, target_folder)
         
         # Save metadata
         metadata = {
@@ -936,7 +1024,17 @@ async def save_session(request):
                                is_favorite=False,
                                created_at=datetime.datetime.now().isoformat())
         
-        return {"success": True, "session_id": session_id}
+        # Force metadata sync to ensure UI consistency
+        folder_manager.sync_with_physical_structure()
+        
+        # Return optimistic feedback with folder information
+        return {
+            "success": True, 
+            "session_id": session_id,
+            "message": f"Session saved successfully to '{target_folder}' folder!",
+            "folder": target_folder,
+            "word_count": len(word_data)
+        }
     
     except Exception as e:
         return {"success": False, "error": str(e)}
@@ -1600,17 +1698,34 @@ def tab_word_list():
                 hx_get="/search-words",
                 hx_trigger="keyup changed delay:300ms",
                 hx_target="#word-list-container",
-                hx_include="[name='page']",
+                hx_include="[name='page'], [name='sort']",
                 name="search"
             ),
             cls="word-search-container"
+        ),
+        
+        # Sort Section
+        Div(
+            Select(
+                Option("Chinese", value="chinese", selected=True),
+                Option("Pinyin", value="pinyin"),
+                Option("Rating", value="rating"),
+                name="sort",
+                cls="sort-select p-2 border border-gray-300 rounded-md text-sm",
+                hx_get="/search-words",
+                hx_trigger="change",
+                hx_target="#word-list-container",
+                hx_include="[name='search'], [name='page']",
+                **{"hx-on:change": "document.getElementById('current-page').value = '1';"}
+            ),
+            cls="sort-container mb-2"
         ),
         
         # Word List Container
         Div(
             # Initial load with first page
             **{
-                "hx-get": "/search-words?page=1",
+                "hx-get": "/search-words?page=1&sort=chinese",
                 "hx-trigger": "load",
                 "hx-target": "this",
                 "hx-swap": "innerHTML"
@@ -1632,6 +1747,7 @@ def search_words(request):
         # Get search parameters
         search_query = getattr(request, 'query_params', {}).get('search', '').strip()
         page_str = getattr(request, 'query_params', {}).get('page', '1')
+        sort_by = getattr(request, 'query_params', {}).get('sort', 'chinese')
         
         # Parse page number
         try:
@@ -1642,8 +1758,16 @@ def search_words(request):
             page = 1
         
         # Pagination settings
-        words_per_page = 6
+        words_per_page = 25
         offset = (page - 1) * words_per_page
+        
+        # Determine sort order
+        if sort_by == 'pinyin':
+            order_clause = "ORDER BY PinyinPronunciation ASC"
+        elif sort_by == 'rating':
+            order_clause = "ORDER BY rating DESC, ChineseWord ASC"
+        else:  # default to 'chinese'
+            order_clause = "ORDER BY ChineseWord ASC"
         
         # Connect to database
         conn = sqlite3.connect(str(path_manager.vocab_db_path))
@@ -1653,11 +1777,11 @@ def search_words(request):
         if search_query:
             # Search in Chinese word
             count_query = "SELECT COUNT(*) FROM vocabulary WHERE ChineseWord LIKE ?"
-            words_query = """
+            words_query = f"""
                 SELECT ChineseWord, SpanishMeaning, rating 
                 FROM vocabulary 
                 WHERE ChineseWord LIKE ? 
-                ORDER BY ChineseWord 
+                {order_clause}
                 LIMIT ? OFFSET ?
             """
             search_param = f"%{search_query}%"
@@ -1668,10 +1792,10 @@ def search_words(request):
             # Get all words
             cursor.execute("SELECT COUNT(*) FROM vocabulary")
             total_words = cursor.fetchone()[0]
-            cursor.execute("""
+            cursor.execute(f"""
                 SELECT ChineseWord, SpanishMeaning, rating 
                 FROM vocabulary 
-                ORDER BY ChineseWord 
+                {order_clause}
                 LIMIT ? OFFSET ?
             """, (words_per_page, offset))
         
@@ -1714,9 +1838,7 @@ def search_words(request):
                 Button(
                     "←",
                     cls="pagination-btn",
-                    hx_get=f"/search-words?page={page-1}&search={search_query}",
-                    hx_target="#word-list-container",
-                    hx_swap="innerHTML"
+                    onclick=f"htmx.ajax('GET', '/search-words?page={page-1}&search={search_query}&sort={sort_by}', '#word-list-container');"
                 )
             )
         
@@ -1729,9 +1851,7 @@ def search_words(request):
                 Button(
                     "→",
                     cls="pagination-btn",
-                    hx_get=f"/search-words?page={page+1}&search={search_query}",
-                    hx_target="#word-list-container",
-                    hx_swap="innerHTML"
+                    onclick=f"htmx.ajax('GET', '/search-words?page={page+1}&search={search_query}&sort={sort_by}', '#word-list-container');"
                 )
             )
         
@@ -1746,7 +1866,8 @@ def search_words(request):
             # Pagination
             Div(
                 *pagination_controls,
-                cls="word-pagination flex items-center justify-between p-4 border-t"
+                cls="word-pagination flex items-center justify-between p-4 border-t",
+                style="margin-bottom: 20px;"
             ) if total_pages > 1 else None,
             
             cls="word-list-container h-full flex flex-col"
@@ -1758,6 +1879,56 @@ def search_words(request):
             "Error loading vocabulary list",
             cls="text-center text-red-500 py-8"
         )
+
+@rt("/api/folder/toggle", methods=["POST"])
+async def toggle_folder_state(request):
+    """Toggle folder expanded/collapsed state"""
+    try:
+        from utils.folder_manager import get_folder_manager
+        
+        data = await request.json()
+        folder_name = data.get('folder_name', '').strip()
+        expanded = data.get('expanded', False)
+        
+        if not folder_name:
+            return JSONResponse({"success": False, "error": "Folder name is required"}, status_code=400)
+        
+        folder_manager = get_folder_manager()
+        folder_manager.set_folder_expanded(folder_name, expanded)
+        
+        return JSONResponse({"success": True, "folder": folder_name, "expanded": expanded})
+        
+    except Exception as e:
+        logger.error(f"Error toggling folder state: {e}")
+        return JSONResponse({"success": False, "error": str(e)}, status_code=500)
+
+
+@rt("/api/session/move", methods=["POST"])
+async def move_session_to_folder(request):
+    """Move a session to a different folder"""
+    try:
+        from utils.folder_manager import get_folder_manager
+        
+        data = await request.json()
+        session_id = data.get('session_id', '').strip()
+        target_folder = data.get('target_folder', '').strip()
+        
+        if not session_id or not target_folder:
+            return JSONResponse({"success": False, "error": "Session ID and target folder are required"}, status_code=400)
+        
+        folder_manager = get_folder_manager()
+        moved = folder_manager.move_session(session_id, target_folder)
+        
+        if moved:
+            return JSONResponse({"success": True, "session_id": session_id, "target_folder": target_folder})
+        else:
+            return JSONResponse({"success": False, "error": "Failed to move session"}, status_code=400)
+        
+    except ValueError as e:
+        return JSONResponse({"success": False, "error": str(e)}, status_code=400)
+    except Exception as e:
+        logger.error(f"Error moving session: {e}")
+        return JSONResponse({"success": False, "error": str(e)}, status_code=500)
 
 @rt("/update-word-rating", methods=["POST"])
 async def update_word_rating(request):
@@ -1808,5 +1979,67 @@ async def update_word_rating(request):
         return JSONResponse({"success": False, "error": str(e)}, status_code=500)
 
 
+@rt("/open-session-json/{session_id}")
+def open_session_json(session_id: str):
+    """Open session JSON file in system editor"""
+    try:
+        import subprocess
+        import platform
+        
+        # Get session directory
+        session_dir = path_manager.get_session_dir(session_id)
+        if not session_dir.exists():
+            return JSONResponse({"success": False, "error": "Session not found"}, status_code=404)
+        
+        # Look for JSON files in order of preference  
+        json_files = [
+            session_dir / "timestamps.json",
+            session_dir / "metadata.json"
+        ]
+        
+        json_file = None
+        for file_path in json_files:
+            if file_path.exists():
+                json_file = file_path
+                break
+        
+        if not json_file:
+            return JSONResponse({"success": False, "error": "No JSON file found for this session"}, status_code=404)
+        
+        # Open file with system editor
+        system = platform.system().lower()
+        try:
+            if system == "linux":
+                subprocess.run(['xdg-open', str(json_file)], check=True)
+            elif system == "darwin":  # macOS
+                subprocess.run(['open', str(json_file)], check=True)
+            elif system == "windows":
+                subprocess.run(['start', str(json_file)], shell=True, check=True)
+            else:
+                return JSONResponse({"success": False, "error": f"Unsupported system: {system}"}, status_code=400)
+                
+            logger.info(f"Opened JSON file for session {session_id}: {json_file}")
+            return JSONResponse({"success": True, "file": str(json_file)})
+            
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Failed to open JSON file: {e}")
+            return JSONResponse({"success": False, "error": "Failed to open file"}, status_code=500)
+            
+    except Exception as e:
+        logger.error(f"Error opening session JSON: {e}")
+        return JSONResponse({"success": False, "error": str(e)}, status_code=500)
+
+
 if __name__ == "__main__":
-    serve(host='127.0.0.1', port=5001)
+    # Reduce HTTP access logging noise unless debug mode is enabled
+    import uvicorn
+    debug_mode = os.getenv('FASTTTS_DEBUG_MODE', '').lower() in ('1', 'true', 'yes', 'on')
+    
+    # Configure uvicorn logging
+    log_config = uvicorn.config.LOGGING_CONFIG
+    log_config["loggers"]["uvicorn.access"]["level"] = "DEBUG" if debug_mode else "WARNING"
+    
+    # Disable auto-reload in production to reduce "change detected" logs
+    reload = debug_mode
+    
+    serve(host='127.0.0.1', port=5001, reload=reload)
