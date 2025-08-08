@@ -59,18 +59,19 @@ class MinimaxTTSEngine(BaseTTSEngine):
         # MiniMax voice options (including custom voices)
         self.supported_voices = [
             # Custom MiniMax voices
-            {"id": "moss_audio_96a80421-22ea-11f0-92db-0e8893cbb430", "name": "Aria (Custom Female)", "language": "zh-CN", "type": "custom"},
+            {"id": "moss_audio_4dc076ac-da6d-11ef-bd8d-f27a76fcd434", "name": "Trance (Custom Male)", "language": "zh-CN", "type": "custom"},
             {"id": "moss_audio_afeaf743-22e7-11f0-b934-42db1b8d9b3b", "name": "Kevin (Custom Male)", "language": "zh-CN", "type": "custom"},
-            {"id": "moss_audio_2d7de658-22bd-11f0-92db-0e8893cbb430", "name": "Nelson (Custom Male)", "language": "zh-CN", "type": "custom"},
+            {"id": "moss_audio_61163a37-7473-11f0-ad85-4a8957831abe", "name": "Nelson (Custom Male)", "language": "zh-CN", "type": "custom"},
             {"id": "moss_audio_943faac0-1fbf-11f0-97b0-d62ca20b6c41", "name": "Vera (Custom Female)", "language": "zh-CN", "type": "custom"},
             {"id": "Chinese (Mandarin)_Lyrical_Voice", "name": "Liyue (Lyrical Voice)", "language": "zh-CN", "type": "custom"},
             {"id": "Chinese (Mandarin)_Gentleman", "name": "Willi (Gentleman)", "language": "zh-CN", "type": "custom"},
             {"id": "Chinese (Mandarin)_Reliable_Executive", "name": "Exe (Reliable Executive)", "language": "zh-CN", "type": "custom"}
         ]
+
         
         # Available MiniMax models
         self.supported_models = [
-            {"id": "speech-02-turbo", "name": "Speech-02 Turbo (Fast & Efficient)", "description": "Enhanced multilingual with low latency"},
+            {"id": "speech-2.5-turbo-preview", "name": "Speech-02 Turbo (Fast & Efficient)", "description": "Enhanced multilingual with low latency"},
             {"id": "speech-02-hd", "name": "Speech-02 HD (High Quality)", "description": "Superior rhythm and stability with outstanding quality"},
             {"id": "speech-01-turbo", "name": "Speech-01 Turbo (Legacy)", "description": "Excellent performance and low latency"},
             {"id": "speech-01-hd", "name": "Speech-01 HD (Legacy)", "description": "Rich voices, expressive emotions"}
@@ -84,7 +85,7 @@ class MinimaxTTSEngine(BaseTTSEngine):
         self.api_key = os.getenv("MINIMAX_API_KEY")
         self.group_id = os.getenv("MINIMAX_GROUP_ID")
         self.custom_voice_id = os.getenv("MINIMAX_CUSTOM_VOICE_ID", "")
-        self.preferred_model = os.getenv("MINIMAX_MODEL", "speech-02-turbo")
+        self.preferred_model = os.getenv("MINIMAX_MODEL", "speech-2.5-turbo-preview")
         minimax_logger.info("🔑 MiniMax credentials loaded.")
     
     def is_configured(self) -> bool:

@@ -1,0 +1,439 @@
+#!/bin/bash
+
+# FastTTS Professional Global Launcher
+# Run from anywhere: just type 'fasttts'
+# Automatically detects installation, activates environment, and launches app
+
+set -euo pipefail  # Exit on any error
+
+# Color codes for professional output
+readonly RED='\033[0;31m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly BLUE='\033[0;34m'
+readonly CYAN='\033[0;36m'
+readonly NC='\033[0m' # No Color
+
+# Professional logging functions
+log_info() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
+
+log_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+log_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+log_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+log_step() {
+    echo -e "${CYAN}[STEP]${NC} $1"
+}
+
+# Error handler
+error_exit() {
+    log_error "$1"
+    echo ""
+    echo -e "${YELLOW}💡 For complete setup instructions, see: general_setup.md${NC}"
+    exit 1
+}
+
+# Detect FastTTS installation path
+detect_fasttts_path() {
+    log_step "Detecting FastTTS installation..."
+    
+    # Common installation locations
+    local possible_paths=(
+        "/home/alex/AI_Project/FastTTS"
+        "$(pwd)"
+        "$(dirname "$0")"
+        "$HOME/FastTTS"
+        "$HOME/AI_Project/FastTTS"
+        "$HOME/Projects/FastTTS"
+        "$HOME/Code/FastTTS"
+    )
+    
+    for path in "${possible_paths[@]}"; do
+        if [[ -f "$path/main.py" && -f "$path/environment.yml" ]]; then
+            echo "$path"
+            return 0
+        fi
+    done
+    
+    # Search in common directories
+    for search_dir in "$HOME" "/opt" "/usr/local"; do
+        if [[ -d "$search_dir" ]]; then
+            local found_path
+            found_path=$(find "$search_dir" -name "main.py" -path "*/FastTTS/*" 2>/dev/null | head -1)
+            if [[ -n "$found_path" ]]; then
+                local fasttts_dir
+                fasttts_dir=$(dirname "$found_path")
+                if [[ -f "$fasttts_dir/environment.yml" ]]; then
+                    echo "$fasttts_dir"
+                    return 0
+                fi
+            fi
+        fi
+    done
+    
+    return 1
+}
+
+# Check if conda is available
+check_conda() {
+    log_step "Checking conda installation..."
+    
+    if ! command -v conda &> /dev/null; then
+        error_exit "Conda not found. Please install Miniconda or Anaconda first."
+    fi
+    
+    log_success "Conda found: $(conda --version)"
+}
+
+# Initialize conda for script
+init_conda() {
+    log_step "Initializing conda..."
+    
+    # Try multiple conda initialization paths
+    local conda_paths=(
+        "$HOME/miniconda3/etc/profile.d/conda.sh"
+        "$HOME/anaconda3/etc/profile.d/conda.sh"
+        "/opt/miniconda3/etc/profile.d/conda.sh"
+        "/opt/anaconda3/etc/profile.d/conda.sh"
+        "/usr/local/miniconda3/etc/profile.d/conda.sh"
+    )
+    
+    local conda_init_found=false
+    for conda_path in "${conda_paths[@]}"; do
+        if [[ -f "$conda_path" ]]; then
+            # shellcheck source=/dev/null
+            source "$conda_path"
+            conda_init_found=true
+            log_success "Conda initialized from: $conda_path"
+            break
+        fi
+    done
+    
+    if [[ "$conda_init_found" = false ]]; then
+        error_exit "Could not find conda.sh. Please ensure conda is properly installed."
+    fi
+}
+
+# Check if FastTTS environment exists
+check_environment() {
+    log_step "Checking FastTTS conda environment..."
+    
+    if ! conda env list | grep -q "fasttts-mfa"; then
+        error_exit "FastTTS environment 'fasttts-mfa' not found. Please run: conda env create -f environment.yml"
+    fi
+    
+    log_success "FastTTS environment found"
+}
+
+# Activate conda environment
+activate_environment() {
+    log_step "Activating fasttts-mfa environment..."
+    
+    if conda activate fasttts-mfa; then
+        log_success "Environment activated successfully"
+    else
+        error_exit "Failed to activate fasttts-mfa environment"
+    fi
+}
+
+# Verify critical dependencies
+verify_dependencies() {
+    log_step "Verifying critical dependencies..."
+    
+    # Check Python packages
+    local missing_packages=()
+    
+    # Core packages
+    if ! python -c "import montreal_forced_aligner" 2>/dev/null; then
+        missing_packages+=("montreal-forced-aligner")
+    fi
+    
+    if ! python -c "import edge_tts" 2>/dev/null; then
+        missing_packages+=("edge-tts")
+    fi
+    
+    if ! python -c "import fasthtml" 2>/dev/null; then
+        missing_packages+=("python-fasthtml")
+    fi
+    
+    # Critical Chinese tokenization packages
+    if ! python -c "import spacy_pkuseg" 2>/dev/null; then
+        missing_packages+=("spacy-pkuseg")
+    fi
+    
+    if ! python -c "import dragonmapper" 2>/dev/null; then
+        missing_packages+=("dragonmapper")
+    fi
+    
+    if ! python -c "import hanziconv" 2>/dev/null; then
+        missing_packages+=("hanziconv")
+    fi
+    
+    if [[ ${#missing_packages[@]} -gt 0 ]]; then
+        log_error "Missing critical packages: ${missing_packages[*]}"
+        echo ""
+        echo "To fix this, run:"
+        echo "  conda activate fasttts-mfa"
+        echo "  pip install -r requirements.txt"
+        echo "  pip install spacy-pkuseg dragonmapper hanziconv"
+        exit 1
+    fi
+    
+    log_success "All critical dependencies verified"
+}
+
+# Check MFA models
+check_mfa_models() {
+    log_step "Checking MFA models..."
+    
+    local missing_models=()
+    
+    if ! mfa model list acoustic 2>/dev/null | grep -q "mandarin_mfa"; then
+        missing_models+=("acoustic:mandarin_mfa")
+    fi
+    
+    if ! mfa model list dictionary 2>/dev/null | grep -q "mandarin_mfa"; then
+        missing_models+=("dictionary:mandarin_mfa")
+    fi
+    
+    if [[ ${#missing_models[@]} -gt 0 ]]; then
+        log_warning "Missing MFA models: ${missing_models[*]}"
+        log_step "Downloading missing models..."
+        
+        for model in "${missing_models[@]}"; do
+            local model_type="${model%:*}"
+            local model_name="${model#*:}"
+            log_step "Downloading $model_type model: $model_name"
+            if ! mfa model download "$model_type" "$model_name"; then
+                log_warning "Failed to download $model_type:$model_name - continuing anyway"
+            fi
+        done
+    else
+        log_success "All MFA models verified"
+    fi
+}
+
+# Check if port is available
+check_port() {
+    log_step "Checking if port 5001 is available..."
+    
+    if lsof -Pi :5001 -sTCP:LISTEN -t >/dev/null 2>&1; then
+        log_warning "Port 5001 is already in use"
+        log_info "You may need to stop the existing process or use a different port"
+    else
+        log_success "Port 5001 is available"
+    fi
+}
+
+# Run comprehensive verification
+run_verification() {
+    log_step "Running comprehensive verification..."
+    
+    python -c "
+import sys
+sys.path.insert(0, '.')
+
+try:
+    # Test MFA alignment
+    from alignment.mfa_aligner import MFAAligner
+    aligner = MFAAligner()
+    
+    if not aligner.is_available:
+        print('❌ MFA not available')
+        sys.exit(1)
+    
+    models = aligner._check_models_available()
+    if not all(models.values()):
+        print(f'⚠️ Some MFA models missing: {models}')
+    else:
+        print('✅ MFA fully operational')
+    
+    # Test Chinese tokenization
+    import spacy_pkuseg, dragonmapper, hanziconv
+    print('✅ Chinese tokenization packages working')
+    
+    # Test jieba
+    import jieba
+    words = list(jieba.cut('你好世界'))
+    print(f'✅ Jieba working: {words}')
+    
+    print('🎉 All systems operational!')
+    
+except Exception as e:
+    print(f'❌ Verification failed: {e}')
+    sys.exit(1)
+"
+    
+    if [[ $? -eq 0 ]]; then
+        log_success "Verification completed successfully"
+    else
+        error_exit "System verification failed - check dependencies"
+    fi
+}
+
+# Launch FastTTS application
+launch_app() {
+    log_step "Launching FastTTS application..."
+    log_info "Starting server at http://localhost:5001"
+    log_info "Press Ctrl+C to stop the application"
+    echo ""
+    
+    # Launch with proper error handling
+    if python main.py; then
+        log_success "FastTTS stopped gracefully"
+    else
+        log_error "FastTTS encountered an error"
+        exit 1
+    fi
+}
+
+# Cleanup function
+cleanup() {
+    log_info "Cleaning up..."
+    # Kill any background processes if needed
+    # conda deactivate  # Don't deactivate as it affects the parent shell
+}
+
+# Set up trap for cleanup
+trap cleanup EXIT
+
+# Show help information
+show_help() {
+    echo ""
+    echo -e "${CYAN}🚀 FastTTS Professional Launcher${NC}"
+    echo -e "${CYAN}=================================${NC}"
+    echo ""
+    echo "Usage: fasttts [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  (no options)  Launch FastTTS quickly (default)"
+    echo "  --test        Run full system verification tests before launch"
+    echo "  --help        Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  fasttts           # Quick launch"
+    echo "  fasttts --test    # Full verification + launch"
+    echo ""
+}
+
+# Fast launch (minimal verification)
+fast_launch() {
+    echo ""
+    echo -e "${CYAN}🚀 FastTTS Quick Launch${NC}"
+    echo -e "${CYAN}======================${NC}"
+    echo ""
+    
+    # Essential steps only
+    local fasttts_path
+    if fasttts_path=$(detect_fasttts_path); then
+        log_success "FastTTS found at: $fasttts_path"
+        cd "$fasttts_path" || error_exit "Cannot access FastTTS directory"
+    else
+        error_exit "FastTTS installation not found. Please ensure it's installed in a standard location."
+    fi
+    
+    init_conda
+    activate_environment
+    
+    echo ""
+    log_success "Quick startup complete! Starting FastTTS..."
+    echo ""
+    
+    launch_app
+}
+
+# Full verification launch (current behavior)
+full_verification_launch() {
+    echo ""
+    echo -e "${CYAN}🚀 FastTTS Full Verification Launch${NC}"
+    echo -e "${CYAN}===================================${NC}"
+    echo ""
+    
+    # Step 1: Find FastTTS installation
+    local fasttts_path
+    if fasttts_path=$(detect_fasttts_path); then
+        log_success "FastTTS found at: $fasttts_path"
+        cd "$fasttts_path" || error_exit "Cannot access FastTTS directory"
+    else
+        error_exit "FastTTS installation not found. Please ensure it's installed in a standard location."
+    fi
+    
+    # Step 2: Check conda
+    check_conda
+    
+    # Step 3: Initialize conda
+    init_conda
+    
+    # Step 4: Check environment
+    check_environment
+    
+    # Step 5: Activate environment
+    activate_environment
+    
+    # Step 6: Verify dependencies
+    verify_dependencies
+    
+    # Step 7: Check MFA models
+    check_mfa_models
+    
+    # Step 8: Check port availability
+    check_port
+    
+    # Step 9: Run comprehensive verification
+    run_verification
+    
+    echo ""
+    log_success "All checks passed! Starting FastTTS..."
+    echo ""
+    
+    # Step 10: Launch application
+    launch_app
+}
+
+# Main execution
+main() {
+    # Parse command line arguments FIRST
+    local run_tests=false
+    
+    for arg in "$@"; do
+        case $arg in
+            --test)
+                run_tests=true
+                ;;
+            --help|-h)
+                show_help
+                exit 0
+                ;;
+            *)
+                if [[ -n "$arg" ]]; then
+                    echo -e "${RED}[ERROR]${NC} Unknown option: $arg"
+                    echo ""
+                    show_help
+                    exit 1
+                fi
+                ;;
+        esac
+    done
+    
+    # Execute based on flags
+    if [[ "$run_tests" == true ]]; then
+        full_verification_launch
+    else
+        fast_launch
+    fi
+}
+
+# Check if script is being sourced or executed
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    main "$@"
+fi

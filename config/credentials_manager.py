@@ -63,7 +63,7 @@ class CredentialsManager:
                 'api_key': os.getenv('MINIMAX_API_KEY', ''),
                 'group_id': os.getenv('MINIMAX_GROUP_ID', ''),
                 'custom_voice_id': os.getenv('MINIMAX_CUSTOM_VOICE_ID', ''),
-                'model': os.getenv('MINIMAX_MODEL', 'speech-02-turbo'),
+                'model': os.getenv('MINIMAX_MODEL', 'speech-2.5-turbo-preview'),
                 'configured': bool(os.getenv('MINIMAX_API_KEY') and os.getenv('MINIMAX_GROUP_ID'))
             },
             'edge': {
@@ -114,7 +114,7 @@ class CredentialsManager:
         api_key = credentials.get('api_key', '').strip()
         group_id = credentials.get('group_id', '').strip()
         custom_voice_id = credentials.get('custom_voice_id', '').strip()
-        model = credentials.get('model', 'speech-02-turbo').strip()
+        model = credentials.get('model', 'speech-2.5-turbo-preview').strip()
         chunk_size = credentials.get('chunk_size', 120)
         
         # Validation
@@ -232,7 +232,7 @@ class CredentialsManager:
         api_key = credentials.get('api_key', '')
         group_id = credentials.get('group_id', '')
         custom_voice_id = credentials.get('custom_voice_id', '')
-        model = credentials.get('model', 'speech-02-turbo')
+        model = credentials.get('model', 'speech-2.5-turbo-preview')
         
         if not api_key or not group_id:
             return {
@@ -267,7 +267,7 @@ class CredentialsManager:
             }
         
         # Validate model selection
-        valid_models = ['speech-02-turbo', 'speech-02-hd', 'speech-01-turbo', 'speech-01-hd']
+        valid_models = ['speech-2.5-turbo-preview', 'speech-02-hd', 'speech-01-turbo', 'speech-01-hd']
         if model not in valid_models:
             return {
                 'valid': False,
@@ -297,7 +297,7 @@ class CredentialsManager:
                     'api_key': bool(self.credentials_cache.get('minimax', {}).get('api_key')),
                     'group_id': bool(self.credentials_cache.get('minimax', {}).get('group_id'))
                 },
-                'model': self.credentials_cache.get('minimax', {}).get('model', 'speech-02-turbo'),
+                'model': self.credentials_cache.get('minimax', {}).get('model', 'speech-2.5-turbo-preview'),
                 'custom_voice_id': self.credentials_cache.get('minimax', {}).get('custom_voice_id', ''),
                 'chunk_size': self.credentials_cache.get('minimax', {}).get('chunk_size', 120)
             }
@@ -319,20 +319,20 @@ class CredentialsManager:
                 set_key(str(self.env_file), 'MINIMAX_API_KEY', '')
                 set_key(str(self.env_file), 'MINIMAX_GROUP_ID', '')
                 set_key(str(self.env_file), 'MINIMAX_CUSTOM_VOICE_ID', '')
-                set_key(str(self.env_file), 'MINIMAX_MODEL', 'speech-02-turbo')
+                set_key(str(self.env_file), 'MINIMAX_MODEL', 'speech-2.5-turbo-preview')
                 
                 # Clear from environment
                 os.environ.pop('MINIMAX_API_KEY', None)
                 os.environ.pop('MINIMAX_GROUP_ID', None)
                 os.environ.pop('MINIMAX_CUSTOM_VOICE_ID', None)
-                os.environ['MINIMAX_MODEL'] = 'speech-02-turbo'
+                os.environ['MINIMAX_MODEL'] = 'speech-2.5-turbo-preview'
                 
                 # Update cache
                 self.credentials_cache['minimax'] = {
                     'api_key': '',
                     'group_id': '',
                     'custom_voice_id': '',
-                    'model': 'speech-02-turbo',
+                    'model': 'speech-2.5-turbo-preview',
                     'configured': False
                 }
                 

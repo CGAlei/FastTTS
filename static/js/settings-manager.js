@@ -478,7 +478,7 @@ class SettingsManager {
         
         // Update model and custom voice (these can be pre-filled)
         if (this.minimaxModel && this.credentialsStatus.hailuo) {
-            const currentModel = this.credentialsStatus.hailuo.model || 'speech-02-turbo';
+            const currentModel = this.credentialsStatus.hailuo.model || 'speech-2.5-turbo-preview';
             this.minimaxModel.value = currentModel;
         }
         
@@ -571,7 +571,7 @@ class SettingsManager {
         const apiKey = this.minimaxApiKey.value.trim();
         const groupId = this.minimaxGroupId.value.trim();
         const customVoice = this.minimaxCustomVoice ? this.minimaxCustomVoice.value.trim() : '';
-        const model = this.minimaxModel ? this.minimaxModel.value : 'speech-02-turbo';
+        const model = this.minimaxModel ? this.minimaxModel.value : 'speech-2.5-turbo-preview';
         
         if (!apiKey || !groupId) {
             this.showNotification('Please enter both API Key and Group ID', 'error');
@@ -679,7 +679,7 @@ class SettingsManager {
                 if (this.minimaxApiKey) this.minimaxApiKey.value = '';
                 if (this.minimaxGroupId) this.minimaxGroupId.value = '';
                 if (this.minimaxCustomVoice) this.minimaxCustomVoice.value = '';
-                if (this.minimaxModel) this.minimaxModel.value = 'speech-02-turbo';
+                if (this.minimaxModel) this.minimaxModel.value = 'speech-2.5-turbo-preview';
             } else {
                 this.showNotification(`Error: ${data.error}`, 'error');
             }

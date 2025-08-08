@@ -263,14 +263,14 @@ def render_api_settings_tab(minimax_creds):
                     Div(
                         Label("Model:", cls="block text-sm font-medium mb-1 text-gray-700"),
                         Select(
-                            Option("Speech-02 Turbo (Recommended)", value="speech-02-turbo", 
-                                   selected=(minimax_creds.get('model', 'speech-02-turbo') == 'speech-02-turbo')),
+                            Option("Speech-02 Turbo (Recommended)", value="speech-2.5-turbo-preview", 
+                                   selected=(minimax_creds.get('model', 'speech-2.5-turbo-preview') == 'speech-2.5-turbo-preview')),
                             Option("Speech-02 HD (High Quality)", value="speech-02-hd",
-                                   selected=(minimax_creds.get('model', 'speech-02-turbo') == 'speech-02-hd')),
+                                   selected=(minimax_creds.get('model', 'speech-2.5-turbo-preview') == 'speech-02-hd')),
                             Option("Speech-01 Turbo (Legacy)", value="speech-01-turbo",
-                                   selected=(minimax_creds.get('model', 'speech-02-turbo') == 'speech-01-turbo')),
+                                   selected=(minimax_creds.get('model', 'speech-2.5-turbo-preview') == 'speech-01-turbo')),
                             Option("Speech-01 HD (Legacy)", value="speech-01-hd",
-                                   selected=(minimax_creds.get('model', 'speech-02-turbo') == 'speech-01-hd')),
+                                   selected=(minimax_creds.get('model', 'speech-2.5-turbo-preview') == 'speech-01-hd')),
                             cls="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500",
                             id="minimax-model",
                             onchange="validateMinimaxCredentials()"

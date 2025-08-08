@@ -1,0 +1,139 @@
+#!/bin/bash
+
+# FastTTS Audio Session Creator - Executable Script
+# Usage: ts audio.wav [options]
+
+set -euo pipefail
+
+# Color codes for output
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly RED='\033[0;31m'
+readonly NC='\033[0m' # No Color
+
+# Detect FastTTS installation path
+detect_fasttts_path() {
+    # Try script directory first
+    local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    if [[ -f "$script_dir/ftts_session_cli.py" && -f "$script_dir/environment.yml" ]]; then
+        echo "$script_dir"
+        return 0
+    fi
+    
+    # Common installation locations
+    local possible_paths=(
+        "/home/alex/AI_Project/FastTTS"
+        "$HOME/FastTTS"
+        "$HOME/AI_Project/FastTTS"
+        "$HOME/Projects/FastTTS"
+        "$HOME/Code/FastTTS"
+    )
+    
+    for path in "${possible_paths[@]}"; do
+        if [[ -f "$path/ftts_session_cli.py" && -f "$path/environment.yml" ]]; then
+            echo "$path"
+            return 0
+        fi
+    done
+    
+    return 1
+}
+
+# Initialize conda
+init_conda() {
+    local conda_paths=(
+        "$HOME/miniconda3/etc/profile.d/conda.sh"
+        "$HOME/anaconda3/etc/profile.d/conda.sh"
+        "/opt/miniconda3/etc/profile.d/conda.sh"
+        "/opt/anaconda3/etc/profile.d/conda.sh"
+        "/usr/local/miniconda3/etc/profile.d/conda.sh"
+    )
+    
+    for conda_path in "${conda_paths[@]}"; do
+        if [[ -f "$conda_path" ]]; then
+            # shellcheck source=/dev/null
+            source "$conda_path"
+            return 0
+        fi
+    done
+    
+    echo -e "${RED}❌ Could not find conda.sh. Please ensure conda is properly installed.${NC}"
+    exit 1
+}
+
+# Show usage information
+show_usage() {
+    echo -e "${GREEN}FastTTS Audio Session Creator${NC}"
+    echo "Usage: fts <audio_file> [options]"
+    echo ""
+    echo "Options:"
+    echo "  -o, --output DIR     Output directory (default: current directory)"
+    echo "  -v, --verbose       Show detailed processing information"
+    echo "  -h, --help          Show help message"
+    echo ""
+    echo "Examples:"
+    echo "  fts audio.wav                    # Creates ./audio/ folder with session files"
+    echo "  fts audio.wav -o /path/sessions/ # Creates session in specified directory"
+    echo "  fts audio.wav --verbose          # Show detailed processing"
+    echo ""
+}
+
+# Main execution
+main() {
+    # Check for help or no arguments
+    if [[ $# -eq 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+        show_usage
+        exit 0
+    fi
+    
+    # Store original working directory
+    local original_dir="$(pwd)"
+    
+    # Convert audio file path to absolute path if it exists
+    local audio_file="$1"
+    if [[ -f "$audio_file" ]]; then
+        audio_file="$(realpath "$audio_file")"
+        shift
+        set -- "$audio_file" "$@"
+    fi
+    
+    # Find FastTTS installation
+    local fasttts_path
+    if fasttts_path=$(detect_fasttts_path); then
+        echo -e "${GREEN}🚀 FastTTS found at: $fasttts_path${NC}"
+        cd "$fasttts_path" || exit 1
+    else
+        echo -e "${RED}❌ FastTTS installation not found.${NC}"
+        echo "Please ensure FastTTS is installed in a standard location."
+        exit 1
+    fi
+    
+    # Initialize conda
+    init_conda
+    
+    # Check if environment exists and activate
+    if ! conda env list | grep -q "fasttts-mfa"; then
+        echo -e "${RED}❌ FastTTS environment 'fasttts-mfa' not found.${NC}"
+        echo "Please run: conda env create -f environment.yml"
+        exit 1
+    fi
+    
+    # Activate environment
+    if ! conda activate fasttts-mfa 2>/dev/null; then
+        echo -e "${RED}❌ Failed to activate fasttts-mfa environment${NC}"
+        exit 1
+    fi
+    
+    echo -e "${GREEN}✅ Environment activated${NC}"
+    
+    # Set original working directory as environment variable
+    export ORIGINAL_CWD="$original_dir"
+    
+    # Run the Python CLI tool with all arguments
+    python ftts_session_cli.py "$@"
+}
+
+# Check if script is being sourced or executed
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    main "$@"
+fi
